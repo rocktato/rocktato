@@ -38,15 +38,6 @@ init:
         linear rate xoffset (strength*0) yoffset (strength*0)
         repeat loop
 
-init:
-    transform shakecenter(rate, strength, loop=1):
-        linear rate xoffset (strength*-12) yoffset (strength*-6)
-        linear rate xoffset (strength*-14.8) yoffset (strength*-2)
-        linear rate xoffset (strength*-11.2) yoffset (strength*-2)
-        linear rate xoffset (strength*-16) yoffset (strength*-6)
-        linear rate xoffset (strength*-14) yoffset (strength*0)
-        repeat loop
-
 
 ## Repeated shaking (slow and fast)
 init:

@@ -745,7 +745,7 @@ screen preferences():
 
         vbox:
             xpos 150
-            ypos -55
+            ypos -100
 
             hbox:
                 box_wrap True
@@ -793,8 +793,8 @@ screen preferences():
                         hbox:
                             bar value Preference("sound volume")
 
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
+                            # if config.sample_sound:
+                            #     textbutton _("Test") action Play("sound", config.sample_sound)
 
 
                     if config.has_voice:
@@ -803,15 +803,16 @@ screen preferences():
                         hbox:
                             bar value Preference("voice volume")
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                            # if config.sample_voice:
+                            #     textbutton _("Test") action Play("voice", config.sample_voice)
 
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
+                    label _("blip volume")
 
-                        textbutton _("mute all"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
+                    hbox:
+                        bar value Preference("blip volume")
+
+                        # if config.sample_blip:
+                        #     textbutton _("Test") action Play("blip", config.sample_blip)
 
                 vbox:
                     style_prefix "radio"
@@ -819,6 +820,15 @@ screen preferences():
                     textbutton _("chill :)") action Preference("text speed", 20)
                     textbutton _("default steve") action Preference("text speed", 40)
                     textbutton _("SPEEEEEED") action Preference("text speed", 60)
+
+                    text ("") size 23
+
+                    if config.has_music or config.has_sound or config.has_voice:
+                        null height gui.pref_spacing
+
+                        textbutton _("mute all"):
+                            action Preference("all mute", "toggle")
+                            style "mute_all_button"
 
 
 style pref_label is gui_label
@@ -963,7 +973,7 @@ screen mm_preferences():
 
         vbox:
             xpos 100
-            ypos 50
+            ypos 15
 
             hbox:
                 box_wrap True
@@ -1016,8 +1026,8 @@ screen mm_preferences():
                         hbox:
                             bar value Preference("sound volume")
 
-                            if config.sample_sound:
-                                textbutton _("Test") action Play("sound", config.sample_sound)
+                            # if config.sample_sound:
+                            #     textbutton _("Test") action Play("sound", config.sample_sound)
 
 
                     if config.has_voice:
@@ -1026,15 +1036,17 @@ screen mm_preferences():
                         hbox:
                             bar value Preference("voice volume")
 
-                            if config.sample_voice:
-                                textbutton _("Test") action Play("voice", config.sample_voice)
+                            # #if config.sample_voice:
+                            #     textbutton _("Test") action Play("voice", config.sample_voice)
 
-                    if config.has_music or config.has_sound or config.has_voice:
-                        null height gui.pref_spacing
+                    label _("blip volume")
 
-                        textbutton _("mute all"):
-                            action Preference("all mute", "toggle")
-                            style "mute_all_button"
+                    hbox:
+                        bar value Preference("blip volume")
+
+                        # if config.sample_blip:
+                        #     textbutton _("Test") action Play("blip", config.sample_blip)
+
 
                 vbox:
                     style_prefix "radio"
@@ -1042,6 +1054,15 @@ screen mm_preferences():
                     textbutton _("chill :)") action Preference("text speed", 20)
                     textbutton _("default steve") action Preference("text speed", 40)
                     textbutton _("SPEEEEEED") action Preference("text speed", 60)
+
+                    text ("") size 23
+
+                    if config.has_music or config.has_sound or config.has_voice:
+                        null height gui.pref_spacing
+
+                        textbutton _("mute all"):
+                            action Preference("all mute", "toggle")
+                            style "mute_all_button"
 
 
                 vbox:

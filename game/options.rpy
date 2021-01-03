@@ -48,19 +48,23 @@ define config.has_sound = True
 define config.has_music = True
 define config.has_voice = True
 
+init python:
+    renpy.music.register_channel("blip", mixer="blip")
+
 
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
 
 # define config.sample_sound = "sample-sound.ogg"
 # define config.sample_voice = "sample-voice.ogg"
+# define config.sample_blip = ""
 
 
 ## Uncomment the following line to set an audio file that will be played while
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-define config.main_menu_music = "audio/music/midnight stinkies/midnight p3.wav"
+#define config.main_menu_music = "audio/music/midnight stinkies/midnight p3.wav"
 
 
 ## Transitions #################################################################

@@ -1,46 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/episode1.rpy", line 799, in script
-IndexError: list index out of range
+  File "game/episode1.rpy", line 1032, in script
+    Character("Random Citizen 1", size=25, color="#ffffff"callback=no_blip) "\"OH MY GOD!!!\""
+SyntaxError: invalid syntax (<none>, line 1)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/episode1.rpy", line 799, in script
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, **display_args)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
-    **display_args)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\core.py", line 3130, in interact_core
-    renpy.audio.audio.interact()
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1107, in interact
-    periodic()
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1060, in periodic
-    six.reraise(exc[0], exc[1], exc[2])
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 1038, in periodic_thread_main
-    periodic_pass()
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 979, in periodic_pass
-    c.periodic()
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 497, in periodic
-    want_pause = self.context.pause or global_pause
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\audio\audio.py", line 306, in get_context
-    mcd = renpy.game.context().music
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\game.py", line 245, in context
-    return contexts[index]
-IndexError: list index out of range
+  File "game/episode1.rpy", line 1032, in script
+    Character("Random Citizen 1", size=25, color="#ffffff"callback=no_blip) "\"OH MY GOD!!!\""
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ast.py", line 678, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ast.py", line 580, in eval_who
+    return renpy.python.py_eval(who)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\python.py", line 2057, in py_eval
+    code = py_compile(code, 'eval')
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\python.py", line 692, in py_compile
+    raise e
+SyntaxError: invalid syntax (<none>, line 1)
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Rocktato 0.0
-Sat Jan 02 21:55:24 2021
+Sun Jan 03 14:43:19 2021
