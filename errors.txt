@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/episode1.rpy", line 1212: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation.
+    with dissolve
+    ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Sat Jan 02 23:47:51 2021
