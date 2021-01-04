@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 51: expected statement.
-    renpy.music.register_channel("blip", mixer="sfx", loop=True)
-                                                                ^
+File "game/episode1.rpy", line 1284: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation.
+    with dissolve
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Jan 03 14:01:39 2021
+Mon Jan 04 14:11:26 2021

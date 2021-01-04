@@ -1,18 +1,27 @@
 label ep_1:
 
+    image sky:
+      "images/imgs/1/bg 1 sky.png"
+      0.1
+      "images/imgs/1/bg 1 sky 2.png"
+      0.1
+      "images/imgs/1/bg 1 sky 3.png"
+      0.1
+      repeat
+
     stop music fadeout 1.0
 
-    show bg sky
+    show sky
 
-    show fr1 rumboy at fast_shaking
+    show obj 1 rumboy at fast_shaking
 
     space ""
 
-    show img rumboy at hpunch
+    show img 1 rumboy crashed at hpunch
 
-    hide bg sky
+    hide sky
 
-    hide fr1 rumboy
+    hide obj
 
     space ""
 
@@ -27,7 +36,7 @@ label ep_1:
     rt "\"No way...\""
 
 
-    show img rumboy freezeframe with hpunch
+    show img 1 rumboy crashed freezeframe with hpunch
 
     rt "Well this is me."
 
@@ -38,7 +47,7 @@ label ep_1:
 
     show bg black with dissolve
 
-    hide img rumboy freezeframe
+    hide img 1 rumboy crashed freezeframe
 
     rt "Today started just like every other morning."
 
@@ -392,7 +401,13 @@ label ep_1:
 
     rt "\"Maybe he's in there!\""
 
-    show bg black with dissolve
+    hide rt
+
+    hide ph
+
+    show img 1 alley 1
+
+    with dissolve
 
     no "Across from them were two buildings that had a convenient amount of space in them."
 
@@ -416,16 +431,19 @@ label ep_1:
 
     space ""
 
-    show rt disturbed at shake(rate=0.01,strength=1,loop=3)
-    show ph scared at shake(rate=0.01,strength=1,loop=3)
+    show img 1 alley 2 with hpunch
 
     space ""
 
     space ""
+
+    hide img 1 alley 2
 
     show bg beegcity
 
-    show ph scared 2
+    show ph scared 2 at Position(xpos=900)
+
+    show rt disturbed at Position(xpos=400)
 
     ph "\"NOPE NOPE NOPE NOPe!!!!\""
 
@@ -1013,19 +1031,19 @@ label ep_1:
 
     hide gin
 
-    show bg sky
+    show sky
 
-    show fr1 rumboy at fast_shaking
+    show obj 1 rumboy at fast_shaking
 
     with dissolve
 
     space ""
 
-    show img rumboy at hpunch
+    show img 1 rumboy crashed at hpunch
 
-    hide bg sky
+    hide obj
 
-    hide fr1 rumboy
+    hide sky
 
     space ""
 
@@ -1041,7 +1059,7 @@ label ep_1:
 
     show bg citypark
 
-    hide img rumboy
+    hide obj 1 rumboy crashed
 
     with dissolve
 
@@ -1229,7 +1247,7 @@ label ep_1:
 
     no "Rocktato picks up Mr. Rock, {w=0.3}looking at his Sharpie-scribbled face."
 
-    show img rumboy freezeframe
+    show img 1 mr rock
 
     hide bg
 
@@ -1259,9 +1277,11 @@ label ep_1:
 
     rt "\"Cookie dough after?? {w=0.3}Heck yeah!\""
 
-    show bg black with dissolve
+    show bg black
 
     hide img
+
+    with dissolve
 
     no "Rocktato started walking away from the scene and waving to his friends."
 
