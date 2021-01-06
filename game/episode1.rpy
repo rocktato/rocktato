@@ -927,7 +927,7 @@ label ep_1:
     rt "\"Oh yeahhhhhh\""
 
 
-    show bg citypark notbroke
+    show bg citypark
 
     show rt joy
 
@@ -1057,9 +1057,9 @@ label ep_1:
 
     rt "\"No way...\""
 
-    show bg citypark
+    show bg 1 rumboy crashed
 
-    hide obj 1 rumboy crashed
+    hide img 1 rumboy crashed
 
     with dissolve
 
