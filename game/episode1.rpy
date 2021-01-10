@@ -1,4 +1,4 @@
-label ep_1:
+label start:
 
     image sky:
       "images/imgs/1/bg 1 sky.png"
@@ -1225,7 +1225,98 @@ label ep_1:
 
     wiz_yell "\"Was he... {w=0.3}THERE THE WHOLE TIME?\""
 
-    gin "\"yep he uh... {w=0.3}was...\""
+    show rt sad 2
+
+    rt "\"Well... {w=0.3}now that I think about it....\""
+
+    show bg white
+
+    hide rt
+    hide wiz
+    hide mr
+
+    with dissolve
+
+
+    show rt cry
+
+    show bg rtcave
+
+    with dissolve
+
+    space ""
+
+    show mr at Position(xpos=900,ypos=580) with dissolve
+
+    space ""
+
+    show bg white
+
+    hide rt
+    hide mr
+
+    with dissolve
+
+    show bg swamp
+
+    show rt sad at Position(xpos=400)
+
+    show ph bruh at Position(xpos=900)
+
+    with dissolve
+
+    space ""
+
+    show mr at Position(xpos=640,ypos=580) with dissolve
+
+    space ""
+
+    show bg white
+
+    hide rt
+    hide mr
+    hide ph
+
+    with dissolve
+
+    show bg mcdondals
+
+    show bl bruh at Position(xpos=200)
+
+    show rt joy at Position(xpos=600)
+
+    show ph smug at Position(xpos=1000)
+
+    with dissolve
+
+    space ""
+
+    show mr at Position(xpos=1250,ypos=200) with dissolve
+
+    space ""
+
+    show bg white
+
+    hide rt
+    hide mr
+    hide ph
+    hide bl
+
+    with dissolve
+
+    show bg 1 rumboy crashed
+
+    show wiz angey at Position(xpos=400, ypos=605)
+
+    show rt o at Position(xpos=900)
+
+    with dissolve
+
+    space ""
+
+    show mr at Position(xpos=1100,ypos=700) with dissolve
+
+    space ""
 
     wiz_yell "\"DID NONE OF YOU IDIOTS SAY ANYTHING TO HIM?\""
 

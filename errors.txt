@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/episode1.rpy", line 1284: Line is indented, but the preceding hide statement statement does not expect a block. Please check this line's indentation.
-    with dissolve
-    ^
+File "game/episode1.rpy", line 1249: end of line expected.
+    show mr at Position(xpos=900,ypos=580) with dissolve 5.0
+                                                         ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Jan 04 14:11:26 2021
+Sun Jan 10 12:11:32 2021

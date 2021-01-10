@@ -915,7 +915,11 @@ init:
 init python:
     import os
     def show_ep_desc(i):
-        renpy.run(Show("ep_desc", None, ep_titles[i], ep_descs[i], ep_thumbs[i], "ep_" + str(i+1))) # thumb_file.name
+        if i == 0:
+            l_name = "start"
+        else:
+            l_name = "ep_" + str(i+1)
+        renpy.run(Show("ep_desc", None, ep_titles[i], ep_descs[i], ep_thumbs[i], l_name)) # thumb_file.name
 
     def exit_ep_sel():
         renpy.run(Hide("ep_desc"))
