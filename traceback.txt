@@ -1,44 +1,34 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00keymap.rpy", line 281, in _screenshot
-    config.screenshot_callback(fn)
-  File "renpy/common/00keymap.rpy", line 284, in _screenshot_callback
-    renpy.notify(__("Saved screenshot as %s.") % fn)
-TypeError: not all arguments converted during string formatting
+  File "game/episode1.rpy", line 18, in script
+    space ""
+Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
+Stack was <Layer: 'transient'>
+<Many: <Fixed at 300c250>>
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in script
-    python hide:
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
-    exec bytecode in globals, locals
-  File "renpy/common/_layout/screen_main_menu.rpym", line 28, in <module>
-    python hide:
-  File "renpy/common/_layout/screen_main_menu.rpym", line 35, in _execute_python_hide
-    ui.interact()
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\core.py", line 3518, in interact_core
-    rv = root_widget.event(ev, x, y, 0)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\layout.py", line 998, in event
-    rv = i.event(ev, x - xo, y - yo, cst)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\behavior.py", line 463, in event
-    rv = run(action)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\behavior.py", line 320, in run
-    return action(*args, **kwargs)
-  File "renpy/common/00keymap.rpy", line 281, in _screenshot
-    config.screenshot_callback(fn)
-  File "renpy/common/00keymap.rpy", line 284, in _screenshot_callback
-    renpy.notify(__("Saved screenshot as %s.") % fn)
-TypeError: not all arguments converted during string formatting
+  File "game/episode1.rpy", line 18, in script
+    space ""
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\character.py", line 1142, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, **display_args)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\character.py", line 842, in do_display
+    **display_args)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\character.py", line 591, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ui.py", line 291, in interact
+    raise Exception("ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?\nStack was "+('\n'.join([str(item) for item in stack])))
+Exception: ui.interact called with non-empty widget/layer stack. Did you forget a ui.close() somewhere?
+Stack was <Layer: 'transient'>
+<Many: <Fixed at 300c250>>
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Rocktato 0.0
-Sun Jan 10 12:04:27 2021
+Sun Jan 10 21:51:54 2021

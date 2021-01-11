@@ -1,5 +1,13 @@
-﻿## Contains the descriptions for each episodes as well as other things that
-## I do not know yet
+## Loading screen things
+
+init python:
+    import random
+
+    img = random.randint(1,6)
+
+
+
+## Descriptions for each episodes
 
 init python:
     ep_titles = [

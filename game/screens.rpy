@@ -914,6 +914,9 @@ init:
 
 init python:
     import os
+    import random
+    from threading import Timer
+
     def show_ep_desc(i):
         if i == 0:
             l_name = "start"
@@ -924,6 +927,11 @@ init python:
     def exit_ep_sel():
         renpy.run(Hide("ep_desc"))
         renpy.run(Return())
+
+    def load_start(l):
+        renpy.run(Hide("ep_desc"))
+        renpy.run(Show("loading_screen", None, l))
+        #renpy.run(Start(l))
 
 screen ep_select():
 
@@ -960,8 +968,20 @@ screen ep_desc(title, desc, thumb, l):
         text title font "gui/fonts/BigJohnPRO-Bold.otf" xsize 630 size 40
         text desc xsize 650 size 30
     add thumb xpos 100 ypos 40 zoom 0.35
-    imagebutton auto "gui/main menu/start_%s.png" action Start(l) xpos 100 ypos 300
+    imagebutton auto "gui/main menu/start_%s.png" action Function(load_start, l) xpos 100 ypos 300
 
+
+################################################################################
+## Loading screen
+###
+
+screen loading_screen(l):
+
+    tag menu
+
+    add "images/loading/bl.PNG"
+
+    timer 5.0 action Start(l)
 
 ################################################################################
 ## MM Settings screen
