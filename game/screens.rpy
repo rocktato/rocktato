@@ -244,8 +244,12 @@ style choice_button_text is default:
 ##
 
 screen pause():
+    python:
+        renpy.music.stop(channel="blip", fadeout=None)
 
     tag menu
+    zorder 300
+    modal True
 
     key "K_ESCAPE" action Return()
 
@@ -318,6 +322,8 @@ style quick_button_text:
 ## to other menus.
 
 screen navigation():
+    python:
+        renpy.music.stop(channel="blip", fadeout=None)
 
     fixed:
         style_prefix "navigation"
@@ -366,9 +372,15 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 
-
 screen main_menu():
+    python:
+        renpy.music.stop(channel="blip", fadeout=None)
+        renpy.music.stop(channel="music", fadeout=None)
+        renpy.music.stop(channel="sound", fadeout=None)
+        renpy.music.stop(channel="voice", fadeout=None)
 
+
+    key "ctrl_shift_K_q" action renpy.quit
     key "K_SPACE" action ShowMenu("continue")
 
     ## This ensures that any other menu screen is replaced.
@@ -469,6 +481,9 @@ style main_menu_version:
 
 
 screen game_menu(title, scroll=None, yinitial=0.0):
+    python:
+        renpy.music.stop(channel="blip", fadeout=None)
+
     # KEYMAP
     key "a" action MainMenu()
     key "ctrl_shift_K_q" action renpy.quit
@@ -928,9 +943,23 @@ init python:
         renpy.run(Hide("ep_desc"))
         renpy.run(Return())
 
-    def load_start(l):
+    def load_start(what):
+        character = random.randint(0, 4)
+        character_tips = tips[character]
+        if character == 0:
+            tip_font = "gui/fonts/calibri/Calibri Regular.ttf"
+        else:
+            tip_font = "gui/fonts/Rouli.ttf"
         renpy.run(Hide("ep_desc"))
-        renpy.run(Show("loading_screen", None, l))
+        renpy.run(Show(
+            "loading_screen",
+            None,
+            what,
+            load_imgs[character],
+            character_tips[random.randint(0, len(character_tips) - 1)],
+            tip_font,
+            tip_colors[character]
+        ))
         #renpy.run(Start(l))
 
 screen ep_select():
@@ -968,20 +997,43 @@ screen ep_desc(title, desc, thumb, l):
         text title font "gui/fonts/BigJohnPRO-Bold.otf" xsize 630 size 40
         text desc xsize 650 size 30
     add thumb xpos 100 ypos 40 zoom 0.35
-    imagebutton auto "gui/main menu/start_%s.png" action Function(load_start, l) xpos 100 ypos 300
+    imagebutton auto "gui/main menu/start_%s.png" action Function(load_start, Start(l)) xpos 100 ypos 300
 
 
 ################################################################################
 ## Loading screen
 ###
 
-screen loading_screen(l):
+#TODO UH THE BOOP BOOP BOOPS
+
+screen loading_screen(what, img, tip, tip_font, tip_color):
+    python:
+        renpy.music.stop(channel="blip", fadeout=None)
+        renpy.music.stop(channel="music", fadeout=None)
+        renpy.music.stop(channel="sound", fadeout=None)
+        renpy.music.stop(channel="voice", fadeout=None)
+
+    key "ctrl_shift_K_q" action renpy.quit
+
+    zorder 300
+    modal True
 
     tag menu
 
-    add "images/loading/bl.PNG"
+    add img
 
-    timer 5.0 action Start(l)
+    add "gui/loading/loading_icon.png" at loading_anim xpos 1070 ypos 520
+
+    $ randomterribleload = renpy.random.randint(1,100)
+
+    if randomterribleload == 88:
+        timer 30.0 action what
+        text "Did you know that the game has a 1 in 100 chance of the game taking 30 seconds to load!" font tip_font xalign 0.5 ypos 400 text_align 0.5 xsize 1000 size 40 color tip_color
+    else:
+        $ randomtime = renpy.random.random() + 3.0
+        timer randomtime action what
+
+        text tip font tip_font xalign 0.5 ypos 400 text_align 0.5 xsize 1000 size 40 color tip_color
 
 ################################################################################
 ## MM Settings screen
@@ -1154,7 +1206,7 @@ screen continue():
                 $ slot = i + 1
 
                 button:
-                    action FileLoad(slot)
+                    action Function(load_start, FileLoad(slot))
 
                     has vbox
 
@@ -1203,7 +1255,17 @@ style continue_bg:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#confirm
 
+init python:
+    def replace_yes_action(yes_action_baby, message):
+        print(message)
+        if "main menu" in message:
+            load_start(MainMenu(False))
+        else:
+            renpy.run(yes_action_baby)
+
 screen confirm(message, yes_action, no_action):
+    python:
+        renpy.music.stop(channel="blip", fadeout=None)
 
     ## Ensure other screens do not get input while this screen is displayed.
     modal True
@@ -1225,12 +1287,22 @@ screen confirm(message, yes_action, no_action):
                 style "confirm_prompt"
                 xalign 0.5
 
+            # if message :
+            #     hbox:
+            #         xalign 0.5
+            #         spacing 100
+            #
+            #         textbutton _("yes") action Function(load_start, MainMenu(False))
+            #         textbutton _("nah") action no_action
+            #
+            # else:
             hbox:
                 xalign 0.5
                 spacing 100
 
-                textbutton _("yes") action yes_action
+                textbutton _("yes") action Function(replace_yes_action, yes_action, message)
                 textbutton _("nah") action no_action
+
 
     ## Right-click and escape answer "no".
     key "game_menu" action no_action

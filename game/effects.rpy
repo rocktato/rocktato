@@ -101,3 +101,15 @@ init:
             linear 0.01 xoffset 12 yoffset 12
 
             repeat
+
+## Animation used in loading screen.
+init:
+    transform loading_anim:
+        xzoom 0.5 yzoom 0.5
+
+        block:
+            rotate None
+            ease 0.5 rotate 360.0
+            pause 0.5
+
+            repeat

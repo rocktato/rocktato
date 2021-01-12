@@ -145,7 +145,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "Rocktato-1608584223"
+define config.save_directory = "Rocktata Data (NO MESSING WITH TIMELINES)"
 
 
 ## Icon ########################################################################

@@ -33,10 +33,14 @@ label start:
 
     Character("Random Citizen 3.5", size=23, color="#ffffff",callback=no_blip) "\"AHHHHHHHHHHHHHH SCREAMING!!\""
 
+    show rt disgusted at right
+
     rt "\"No way...\""
 
 
     show img 1 rumboy crashed freezeframe with hpunch
+
+    show rt o at bounce
 
     rt "Well this is me."
 
@@ -45,7 +49,11 @@ label start:
     rt "Oh, {w=0.3}this is narration by the way."
 
 
-    show bg black with dissolve
+    show bg black
+
+    hide rt
+
+    with dissolve
 
     hide img 1 rumboy crashed freezeframe
 
