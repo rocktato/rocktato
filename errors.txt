@@ -2,9 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 325: u'renpy' is not a keyword argument or valid child for the screen statement.
-    renpy.music.stop(channel="blip", fadeout=None)
-         ^
+File "game/screens.rpy", line 626: invalid syntax
+    def deletefiles:
+                    ^
+    
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Jan 11 19:08:19 2021
+Sun Jan 17 18:37:40 2021

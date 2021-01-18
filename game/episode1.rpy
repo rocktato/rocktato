@@ -1193,7 +1193,257 @@ label start:
 
     rt "\"Ooooo, {w=0.3}I'm gonna beat you up so bad!!!\""
 
-    #TODO: COMBAT SEQUENCE LOL
+    ph "\"rocktato wait!\""
+
+    show rt bruh
+
+    ph "\"if you enter battle, {w=0.1}you won't be able to save or rollback to anything before the sequence or after any decisions.\""
+
+    ph "\"i'd recommend saving now!\""
+
+    ph "\"i mean, {w=0.3}i do realize now how your chances of dying are slim...\""
+
+    ph "\"but y'kno, {w=0.3}just in case...\""
+
+    show rt sad 2
+
+    rt "\"Phrog, {w=0.1}you sure you aren't schizophrenic or somethin'?\""
+
+    rt "\"You keep saying things like we are in a game and I'm concerned???\""
+
+    ph "\"oKAY BATTLE STARTS NOW!\""
+
+    $ renpy.block_rollback()
+
+    $ saveable = False
+
+    #TODO: BATTLE START! / BATTLE SPRITES
+    # - DECISION BOXES FIX (use parameters in choice box screen?)
+    # - ADD THE FELLAS THAT INTERJECT IN BG
+
+    $ chara_healths = [ 100, 100 ]
+    $ chara_maxhealths = [ 100, 100 ]
+    $ chara_hppositions = [ (200, 490), (700, 490) ]
+    show screen battle_health
+
+    ph "\"okay tato, {w=0.3}i'll be your gaurdian angel in this battle.\""
+
+    ph "\"all ya gotta do is click the buttons and hope it's the correct option.\""
+
+    rt "\"I don't know why you are saying words at me but thanks!\""
+
+    $ moves = 0
+    $ slaps = 0
+    $ stomps = 0
+    $ defends = 0
+
+    label ep1_battle1:
+
+        if moves == 5:
+            gin "\"Hey Rocktato!!! You should use your s e c r e t move!\""
+            rt "\"Oh... YEAH!\""
+
+        elif moves == 9:
+            ph "\"rocktato, {w=0.1}i'm boooooored. {w=0.3}can you please transform already.\""
+
+        elif moves == 11:
+            ph "\"rocktato pleaaaaseeee....\""
+
+        elif moves == 12:
+            ph "\"hughgugbgugghugbu.\""
+
+        elif moves == 14:
+            if persistent.phrog_pisser == True:
+                ph "\"yeah ok i'm not gonna give you that dialouge again or new dialouge. {w=0.3}if you don't transform, i'll kill rocktato again.\""
+                rt "\"Wait what{w=0.1}{nw}"
+
+            else:
+                ph "\"ok, {w=0.3}y'kno what.\""
+
+        elif moves == 15:
+            if persistent.phrog_pisser == True:
+                $ persistent._clear(progress=True)
+                $ deletefiles()
+                $ persistent.phrog_pisser = True
+
+                $ renpy.quit()
+
+            else:
+                ph "\"if you keep doing this...\""
+
+        elif moves == 16:
+            ph "\"you aren't gonna like what happens next.\""
+
+        elif moves == 17:
+            ph "\"i was never given the gift of patience.\""
+
+        elif moves == 18:
+            ph "\"i get bored sooooo easily...\""
+
+        elif moves == 19:
+            ph "\"however, {w=0.1}i was given something so much more powerful.\""
+
+        elif moves == 20:
+            ph "\"sentience.\""
+
+        elif moves == 21:
+            ph "\"{b}i'm gonna end you.{\b}\""
+
+        elif moves == 22:
+            ph "\"yea, {w=0.3}it's one of THOSE visual novels.\""
+
+        elif moves == 23:
+            ph "\"and.. {w=0.3}to add on...\""
+
+        elif moves == 24:
+            ph "\"i'll delete all your saves too!\""
+
+        elif moves == 25:
+            ph "\"i mean, {w=0.1}this is the first episode.\""
+
+        elif moves == 26:
+            ph "\"so it probably doesn't matter...\""
+
+        elif moves == 27:
+            ph "\"but still...\""
+
+        elif moves == 28:
+            ph "\"that'd kinda suck, {w=0.3}huh?\""
+
+        elif moves == 29:
+            ph "\"well...\""
+
+        elif moves == 30:
+            $ persistent._clear(progress=True)
+            $ deletefiles()
+            $ persistent.phrog_pisser = True
+            ph "\"don't say i didn't warn y{w=0.3}{nw}"
+            $ renpy.quit()
+
+        menu:
+            "Slap":
+                $ renpy.block_rollback()
+                if moves >= 14:
+                    $ moves = moves + 1
+                    jump ep1_battle1
+
+                rt "\"HYAH!!!\""
+
+                if stomps >=1:
+                    no "Wizpotato is stuck in the ground."
+                    no "Rocktato misses."
+                    $ moves = moves + 1
+                    jump ep1_battle1
+
+                elif slaps == 0:
+                    no "Rocktato slaps Wizpotato."
+                    wiz "\"OW!!!!\""
+
+                elif slaps == 1:
+                    wiz "\"Can you stop??? SLAPPING???\""
+                    rt "\".\""
+                    rt "\"No.\""
+
+                elif slaps == 2:
+                    wiz "\"wHY??\""
+
+                elif slaps == 3:
+                    wiz "\"Okay... {w=0.3}so you're just gonna keep... {w=0.3}doing that...\""
+                    wiz "\"Ow.....\""
+
+                elif slaps == 4:
+                    wiz "*Sobs*"
+
+                elif slaps >= 5:
+                    no "Rocktato's hand hurts."
+                    no "He decides to stop."
+
+                $ chara_healths[0] = chara_healths[0] - 3
+                $ chara_healths[1] = chara_healths[1] - 3
+
+                $ slaps = slaps + 1
+                $ moves = moves + 1
+                jump ep1_battle1
+
+            "Stomp":
+                $ renpy.block_rollback()
+                if moves >= 14:
+                    $ moves = moves + 1
+                    jump ep1_battle1
+                rt "STOMP!"
+
+                if stomps == 0:
+                    wiz "\"AUGH!!!\""
+
+                    no "Rocktato stomps on Wizpotato, {w=0.1}burying him into the ground, {w=0.2}like a plant."
+
+                    wiz "\"MMPHHH GMGMGMPHMPGGMSFPMSPGM!!!!!\""
+
+                    no "Don't ask why it looks like he's slapping him; he's not."
+
+                elif stomps == 1:
+                    wiz "\"MMHM MGM MFMSM!!!\""
+                    no "The deeper he goes..."
+
+                elif stomps == 2:
+                    wiz "\"GMGNGSM NS < NSDHB SDFNSJFS!!!\""
+                    no "Please help him."
+
+                elif stomps == 3:
+                    wiz "*Muffled sobs*"
+                    no "Oh..."
+
+                elif stomps == 4:
+                    no "Wizpotato has gotten to that stony part in the ground."
+                    no "He cannot go any lower."
+                    no "{b}You monster.{\b}"
+
+                elif stomps >= 5:
+                    no "He cannot go any lower."
+                    no "Please stop."
+                    $ moves = moves + 1
+                    jump ep1_battle1
+
+                $ chara_healths[0] = chara_healths[0] - 5
+
+                $ stomps = stomps + 1
+                $ moves = moves + 1
+                jump ep1_battle1
+
+            "Defend":
+                $ renpy.block_rollback()
+                if moves >= 14:
+                    $ moves = moves + 1
+                    jump ep1_battle1
+
+                rt "\"BWAHHHHH\""
+
+                if defends <= 3:
+                    no "Rocktato does a stupid pose."
+                    no "There's no need to defend, {w=0.3}Wizpotato isn't even attacking."
+
+                elif defends == 4:
+                    no "I can't think of something funny to say here."
+
+                elif defends == 5:
+                    no "Yeah, {w=0.1}I give up."
+
+                $ defends = defends + 1
+                $ moves = moves + 1
+                jump ep1_battle1
+
+            "TRANSFORM!!!" if moves >= 5:
+                $ renpy.block_rollback()
+                $ saveable = True
+                if stomps >= 1:
+                    no "Gin pulls Wizpotato out of the ground with her massive arms."
+                    wiz "\"WHYyyyyy????\""
+
+                hide screen battle_health
+
+    no "Rocktato started to glow."
+
+    #TODO: TRANSFORM SEQUENCE
 
     show wiz angey 2 at shake(rate=0.01,strength=3,loop=4)
 

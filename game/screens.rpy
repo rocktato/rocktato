@@ -6,6 +6,10 @@ init offset = -1
 
 default persistent.confirm_saveload = True
 
+default saveable = True
+
+default persistent.phrog_pisser = False
+
 ################################################################################
 ## Styles
 ################################################################################
@@ -43,13 +47,13 @@ style prompt_text is gui_text:
 
 style bar:
     ysize gui.bar_size
-    left_bar Frame("gui/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
-    right_bar Frame("gui/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
+    left_bar Frame("gui/bar/bar_left.png", gui.bar_borders, tile=gui.bar_tile)
+    right_bar Frame("gui/bar/bar_right.png", gui.bar_borders, tile=gui.bar_tile)
 
 style vbar:
     xsize gui.bar_size
-    top_bar Frame("gui/bar/top.png", gui.vbar_borders, tile=gui.bar_tile)
-    bottom_bar Frame("gui/bar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
+    top_bar Frame("gui/bar/bar_top.png", gui.vbar_borders, tile=gui.bar_tile)
+    bottom_bar Frame("gui/bar/bar_bottom.png", gui.vbar_borders, tile=gui.bar_tile)
 
 style scrollbar:
     ysize gui.scrollbar_size
@@ -212,10 +216,12 @@ style input:
 screen choice(items):
     style_prefix "choice"
 
-    vbox:
-        for i in items:
-            textbutton i.caption action i.action
+    window:
+        vbox:
+            style "choice_vbox"
 
+            for i in items:
+                textbutton i.caption action i.action
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
@@ -228,7 +234,7 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 270
+    ypos -250
     yanchor 0.5
 
     spacing gui.choice_spacing
@@ -242,6 +248,8 @@ style choice_button_text is default:
 
 ## The Pause sCREen #############################################################
 ##
+
+## TODO FIX
 
 screen pause():
     python:
@@ -612,6 +620,16 @@ style return_button:
 ## https://www.renpy.org/doc/html/screen_special.html#save https://
 ## www.renpy.org/doc/html/screen_special.html#load
 
+#TODO: MAKE INNACTIVE SPRITE FOR SAVE
+
+init:
+    python:
+        def deletefiles():
+            for i in range(6):
+                fn = str(i+1) + "-" + str(1)
+
+                renpy.unlink_save(fn)
+
 init:
     python:
         def savefile(slot):
@@ -678,7 +696,7 @@ screen save():
                 xpos 200
                 ypos 450
 
-                imagebutton auto "gui/save menu/save_%s.png" action Function(savefile, slot) #FileSave(slot, confirm=True, newest=True)
+                imagebutton auto "gui/save menu/save_%s.png" action [ Function(savefile, slot), SensitiveIf(saveable == True) ] #FileSave(slot, confirm=True, newest=True)
 
             fixed:
                 xpos 460
@@ -771,8 +789,8 @@ screen preferences():
                     vbox:
                         style_prefix "check"
                         label _("skip unseen text?")
-                        textbutton _("yeah") action Preference("skip", "all")
                         textbutton _("no") action Preference("skip", "seen")
+                        textbutton _("yeah") action Preference("skip", "all")
 
                     vbox:
                         style_prefix "check"
@@ -1060,8 +1078,8 @@ screen mm_preferences():
                     vbox:
                         style_prefix "check"
                         label _("skip unseen text?")
-                        textbutton _("yeah") action Preference("skip", "all")
                         textbutton _("no") action Preference("skip", "seen")
+                        textbutton _("yeah") action Preference("skip", "all")
 
                     vbox:
                         style_prefix "check"
