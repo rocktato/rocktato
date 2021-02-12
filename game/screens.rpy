@@ -213,11 +213,23 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
+# TODO CHOICE BOXES SPRITES
+
+init:
+    transform choiceboxfadein:
+        subpixel True
+        alpha 0.0
+        parallel:
+            easein 0.3 alpha 1.0
+        on hide:
+            alpha 1 zoom 1 xanchor 0.5 yanchor 0.5
+
 screen choice(items):
     style_prefix "choice"
 
     window:
         vbox:
+            at choiceboxfadein
             style "choice_vbox"
 
             for i in items:
@@ -619,8 +631,6 @@ style return_button:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#save https://
 ## www.renpy.org/doc/html/screen_special.html#load
-
-#TODO: MAKE INNACTIVE SPRITE FOR SAVE
 
 init:
     python:
@@ -1057,6 +1067,22 @@ screen loading_screen(what, img, tip, tip_font, tip_color):
 ## MM Settings screen
 ###
 
+init python:
+    def heat_death_action():
+        deletefiles()
+        persistent._clear(progress=True)
+        renpy.quit()
+
+    def heat_death():
+        yes_five = Show("confirm", transition=None, message="Last one. You sure?", yes_action = Function(heat_death_action), no_action=Return())
+        yes_four = Show("confirm", transition=None, message="LOL I'M GONNA REVERSE YES AND NO. CLICK YES TO NOT PROCEED.", yes_action=Return(), no_action=yes_five)
+        yes_three = Show("confirm", transition=None, message="YOU WILL COMPLETELY DESTROY ALL TIMELINES!", yes_action=yes_four, no_action=Return())
+        yes_two = Show("confirm", transition=None, message="REALLY??? ALL YOUR SAVES, YOUR FRIENDS, YOUR THINGS???", yes_action=yes_three, no_action=Return())
+        yes_one = Show("confirm", transition=None, message="ARE YOU SURE MAN???", yes_action=yes_two, no_action=Return())
+
+
+        renpy.run(Show("confirm", transition=None, message="DELETE ALL DATA FOREVER???", yes_action=yes_one, no_action=Return()))
+
 
 screen mm_preferences():
 
@@ -1096,7 +1122,7 @@ screen mm_preferences():
                     vbox:
                         style_prefix "check"
                         label _("tato heat death")
-                        textbutton _(":(") action renpy.quit
+                        textbutton _(":(") action Function(heat_death)
 
             null height (0.1 * gui.pref_spacing)
 
@@ -1186,6 +1212,12 @@ style mm_preferences_bg:
 ## Continue screen
 ## Where you load or KILL save files
 
+init:
+    # TODO: SOMETHING IS WRONG WITH THE LOADABLE FUNCTION
+    python:
+        def fileloadable(slot):
+            return renpy.loadable(str(slot.get_page()) + "-" + str(1))
+
 screen continue():
     tag menu
 
@@ -1224,7 +1256,8 @@ screen continue():
                 $ slot = i + 1
 
                 button:
-                    action Function(load_start, FileLoad(slot))
+                    if fileloadable(page_name_value):
+                        action Function(load_start, FileLoad(slot))
 
                     has vbox
 

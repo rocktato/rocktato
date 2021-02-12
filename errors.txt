@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 626: invalid syntax
-    def deletefiles:
-                    ^
-    
+File "game/screens.rpy", line 1275: u'else' is not a keyword argument or valid child for the grid statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Jan 17 18:37:40 2021
+Thu Feb 11 19:20:28 2021

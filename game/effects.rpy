@@ -2,9 +2,20 @@
 ## FILE WHERE I PUT A BONCH OF CUSTOM EFFECTS N TRANSITIONS N ALL THAT YEAH
 #############################################
 
-
-## Character does a lil hop!!! A lil bounce!! Boinininig!!
 init:
+
+    transform funny_expand:
+        zoom 1.0
+        linear 1.0 zoom 5.0 xzoom 10.0 ycenter 1.0
+
+
+    ## Flips character across y axis yeah MATH
+    transform flip:
+        xzoom -1.0
+
+
+
+    ## Character does a lil hop!!! A lil bounce!! Boinininig!!
     transform bounce:
         yoffset 0.0
         easein 0.175 yoffset -20
@@ -14,9 +25,7 @@ init:
         yoffset 0.0
 
 
-## Repeated bouncing!
-
-init:
+    ## Repeated bouncing!
     transform bouncing:
         yoffset 0.0
         easein 0.175 yoffset -20
@@ -28,8 +37,7 @@ init:
 
 
 
-## Shake Transition!! (For some reason Renpy center is whack so idk)
-init:
+    ## Shake Transition!! (For some reason Renpy center is whack so idk)
     transform shake(rate, strength, loop=1):
         linear rate xoffset (strength*2) yoffset (strength*-6)
         linear rate xoffset (strength*-2.8) yoffset (strength*-2)
@@ -39,8 +47,7 @@ init:
         repeat loop
 
 
-## Repeated shaking (slow and fast)
-init:
+    ## Repeated shaking (slow and fast)
     transform slow_shaking:
         xzoom 1.22 yzoom 1.22
 
@@ -87,7 +94,6 @@ init:
             repeat
 
 
-init:
     transform fast_shaking:
 
         block:
@@ -102,8 +108,7 @@ init:
 
             repeat
 
-## Animation used in loading screen.
-init:
+    ## Animation used in loading screen.
     transform loading_anim:
         xzoom 0.5 yzoom 0.5
 

@@ -1,5 +1,8 @@
 label start:
 
+    image battlestarttext:
+        "gui/text/battle start.png"
+
     image sky:
       "images/imgs/1/bg 1 sky.png"
       0.1
@@ -25,17 +28,17 @@ label start:
 
     space ""
 
-    Character("Random Citizen 1", size=25, color="#ffffff",callback=no_blip) "\"OH MY GOD!!!\""
+    Character("Random Citizen 1", size=25, color="#ffffff",callback=no_blip) "OH MY GOD!!!"
 
-    Character("Random Citizen 2", size=25, color="#ffffff",callback=no_blip) "\"A GIANT RUMBOY HAS FALLEN FROM THE SKY!!!\""
+    Character("Random Citizen 2", size=25, color="#ffffff",callback=no_blip) "A GIANT RUMBOY HAS FALLEN FROM THE SKY!!!"
 
-    Character("Random Citizen 3", size=25, color="#ffffff",callback=no_blip) "\"MY TAX DOLLARS WENT INTO THAT FOUNTAIN NOO!!\""
+    Character("Random Citizen 3", size=25, color="#ffffff",callback=no_blip) "MY TAX DOLLARS WENT INTO THAT FOUNTAIN NOO!!"
 
-    Character("Random Citizen 3.5", size=23, color="#ffffff",callback=no_blip) "\"AHHHHHHHHHHHHHH SCREAMING!!\""
+    Character("Random Citizen 3.5", size=23, color="#ffffff",callback=no_blip) "AHHHHHHHHHHHHHH SCREAMING!!"
 
     show rt disgusted at right
 
-    rt "\"No way...\""
+    rt "No way..."
 
 
     show img 1 rumboy crashed freezeframe with hpunch
@@ -63,7 +66,7 @@ label start:
 
     rt "I got out of bed with naive optimism, {w=0.3}wondering what adventures awaited me today."
 
-    rt "Then I realized that I don't even have a bed?? {w}I just have a gigantic bean bag chair-type?? {w}That I sleep on??"
+    rt "Then, I realized that I don't even have a bed?? {w}I just have a gigantic bean bag chair-type?? {w}That I sleep on??"
 
     rt "But whatever, {w=0.3}I'm used to the back pain."
 
@@ -121,24 +124,21 @@ label start:
 
     show rt sad 2 at shake(rate=0.005,strength=1,loop=7)
 
-    rt "\"MR. ROCK??? Do you hear me??? Make a noise or something!!\""
+    rt "MR. ROCK??? Do you hear me??? Make a noise or something!!"
+
+    rt "Those were the words that came out of my mouth."
 
     show rt troubled
 
-    rt "\"Hmm... no response...\""
+    rt "However, I got no response."
 
-    rt "\"Maybe... {w=0.3}he'll be out there somewhere in the city!\""
+    rt "So I thought that maybe... {w=0.3}he'd be out there somewhere in the city!"
 
     show rt joy 2 at shake(rate=0.005,strength=1,loop=5)
 
-    rt "\"Let's go!!!!!!!\""
+    rt "Let's go!!!!!!!"
 
-    show rt sad
-
-    rt "\"...\""
-
-    rt "\"Why'd I say that, {w=0.3}I'm literally the only one here...\""
-
+    rt "I said outloud, {w=0.3}for some reason."
 
     show bg beegcity
 
@@ -169,23 +169,25 @@ label start:
 
     show rt sad 2 at center
 
-    rt "\"Which is here.\""
+    rt "Which is here."
 
-    rt "\"I need to know if you've heard Mr. Rock come around here, Phrog.\""
+    rt "I need to know if you've heard Mr. Rock come around here, Phrog."
 
     show rt sad at Position(xpos=400) with ease
 
     show ph bruh at Position(xpos=900) with easeinbottom
 
-    ph "\"what.\""
+    ph "what."
 
     show ph bruh 2
 
-    ph "\"why did you tell me all that????\""
+    ph "why did you tell me all that????"
 
-    ph "\"i literally LIVE here.\""
+    ph "i literally LIVE here."
 
-    ph "\"but..\""
+    ph "i've lived in beeg city for like fifty years or smth probably."
+
+    ph "but.."
 
     show ph bruh 3 at bounce, Position(xpos=900)
 
@@ -197,75 +199,43 @@ label start:
 
     show ph bruh 2
 
-    ph "\"nah... he isn't here.\""
+    ph "nah... he isn't here."
 
-    show ph think
+    show ph o
 
-    ph "\"...\""
-
-    show ph think 2
-
-    ph "\"is it just me, {w=0.3}or does something not feel right here?\""
-
-    show ph think 3
-
-    ph "\".{w=0.5}.{w=0.5}.\""
-
-    show ph scared 3 at shake(rate=0.005,strength=1,loop=1)
-
-    ph "\"...\""
-
-    show ph scared 2 at shake(rate=0.005,strength=1,loop=1)
-
-    ph "\"ROCKTATO??? {w}WHAT DID YOU DO???\""
-
-    show ph scared 2 at shake(rate=0.01,strength=7,loop=15)
-
-    ph "\"WHY ARE WE IN A VISUAL NOVEL??\""
-
-    show rt confused at bounce
-
-    rt "\"What?\""
-
-    show ph happy
-
-    ph "\"y'kno what don't worry about it.\""
-
-    show ph o 3 at bounce
-
-    ph "\"but yea, {w=0.3}i haven't seen the guy since yesterday...\""
+    ph "i haven't seen the guy since yesterday..."
 
     show rt o
 
-    rt "\"Wait you saw him yesterday??? {w=0.3}What was he doing???\""
+    rt "Wait you saw him yesterday??? {w=0.3}What was he doing???"
 
     show ph bruh
 
     ph ""
 
-    ph "\"he was with you.\""
+    ph "he was with you."
 
     show rt joy 2 at bounce
 
-    rt "\"Oh yeah!\""
+    rt "Oh yeah!"
 
-    rt "\"Well...\""
+    rt "Well..."
 
     show rt o
 
-    rt "\"Will you help me look for him?\""
+    rt "Will you help me look for him?"
 
     show ph bruh 3 at shake(rate=0.01,strength=1,loop=5)
 
-    ph "\"sighs audibly.\""
+    ph "sighs audibly."
 
     show ph bruh 2
 
-    ph "\"fine.\""
+    ph "fine."
 
     show rt confused at bounce
 
-    rt "\"Why did you say sighs audbily??\""
+    rt "Why did you say sighs audbily??"
 
     show ph o 2
 
@@ -279,25 +249,25 @@ label start:
 
     show ph bruh 2 at bounce
 
-    ph "\"okay where we going first? {w=0.3}{i}sirrrrrrrr{/i}\""
+    ph "okay where we going first? {w=0.3}{i}sirrrrrrrr{/i}"
 
     show rt joy 2 at bounce
 
-    rt "\"Wow! {w=0.3}You should use 'sir' more often!\""
+    rt "Wow! {w=0.3}You should use 'sir' more often!"
 
-    rt "\"Makes me feel rich!!!\""
+    rt "Makes me feel rich!!!"
 
     show rt o at shake(rate=0.01,strength=5,loop=2)
 
-    rt "\"OOOH!\""
+    rt "OOOH!"
 
     show rt happy 2
 
-    rt "\"Maybe let's explore the rich area place thing first??\""
+    rt "Maybe let's explore the rich area place thing first??"
 
     show ph think 2
 
-    ph "why the frig frog would he be at the rich area place thing?\""
+    ph "why the frig frog would he be at the rich area place thing?"
 
     show rt happy at bounce
 
@@ -307,7 +277,7 @@ label start:
 
     show ph bruh 2
 
-    ph "\"ok.\""
+    ph "ok."
 
 
 
@@ -319,15 +289,15 @@ label start:
 
     space ""
 
-    ph "\"welp. we here.\""
+    ph "welp. we here."
 
     show ph bruh 2 at shake(rate=0.01,strength=1,loop=7)
 
-    ph "\"i wanna take a naaaaaap...\""
+    ph "i wanna take a naaaaaap..."
 
     show rt o
 
-    rt "\"Do you see him anywhere here?\""
+    rt "Do you see him anywhere here?"
 
     show ph bruh 3
 
@@ -335,79 +305,81 @@ label start:
 
     show ph bruh 2
 
-    ph "\"nyeh... {w=0.3}it doesn't look like it....\""
+    ph "nyeh... {w=0.3}it doesn't look like it...."
 
     show ph o at bounce
 
-    ph "\"guess he's dead oh nooooo\""
+    ph "guess he's dead oh nooooo"
 
     show rt bruh at bounce
 
-    rt "\"I'm not stupid Phrog.\""
+    rt "I'm not stupid Phrog."
 
     show rt nervous
 
-    rt "\"I...\""
+    rt "I..."
 
     show rt confused at bounce
 
-    rt "\"I don't think he {b}CAN{/b} die.\""
+    rt "I don't think he {b}CAN{/b} die."
 
     show ph o at bounce
 
     space ""
 
-    ph "\"o.\""
+    ph "o."
 
     show ph think 2
 
-    ph "\"uhhhhh what does mr. rock do in his free time?\""
+    ph "uhhhhh what does mr. rock do in his free time?"
 
-    ph "\"does he do like... {w=0.3}i dunno... "
+    ph "does he do like... {w=0.3}i dunno... "
 
     show ph o with hpunch
 
-    extend "drUG DEALS???\""
+    extend "drUG DEALS???"
 
     show ph o 3 at bounce
 
-    ph "\"maybe he's on the run from the FBI?\""
+    ph "maybe he's on the run from the FBI?"
 
     show ph tired 2
 
-    ph "\"sigh...\""
+    ph "sigh..."
 
-    ph "\"i know i still am :(\""
+    ph "i know i still am :("
 
     show ph tired
 
     show rt o
 
-    rt "\"Now that I think about it....\""
+    rt "Now that I think about it...."
 
     show rt o at shake(rate=0.01,strength=1,loop=3)
 
-    rt "\"Yeah I think so!!\""
+    rt "Yeah I think so!!"
 
-    show ph o
+    show ph smug 2
 
-    ph "\"wait what actually lol\""
+    ph "wait what actually lol"
 
     show rt happy 2 at bounce
 
-    rt "\"I'm pretty sure Mr. Rock does drugs deals!\""
+    rt "I'm pretty sure Mr. Rock does drugs deals!"
 
-    rt "\"He's probably in the middle of one right now!\""
+    show ph o
 
-    ph "\"how\""
+    rt "He's probably in the middle of one right now!"
+
+    ph "how"
 
     show rt o at shake(rate=0.01,strength=1,loop=3)
 
-    rt "\"OOH!!!\""
+    rt "OOH!!!"
 
-    rt "\"Let's look in that fishy alley!!\""
+    rt "Let's look in that fishy alley!!"
 
-    rt "\"Maybe he's in there!\""
+    rt "Maybe he's in there!"
 
     hide rt
 
@@ -421,17 +393,7 @@ label start:
 
     no "A space between buildings you'd barely even pay attention to."
 
-    no "The two kids slowly walked up to the alley."
-
-    no "It gave off a lot of spooky vibes."
-
-    no "It's like the feeling you get when your teacher calls you up to their desk and you're constantly trying to figure out what you did wrong like what you're the star{nw}"
-
-    no "student you've done literally nothing but good so what could it be could it possibly be your dark secret that no one knows but theres no way your 7th grade ENGLISH{nw}"
-
-    no "teacher would know it's like what the hell then it turns out they were just commending you for some Youtube video animation you made."
-
-    no "There's no other proper way to explain it."
+    no "The two kids slowly walked up to the spoooooooky alley."
 
     no "They quietly peeked into the corner and saw something you couldn't describe with words."
     #TODO: LIFE SCARRING SOUND EFFECT
@@ -453,57 +415,49 @@ label start:
 
     show rt disturbed at Position(xpos=400)
 
-    ph "\"NOPE NOPE NOPE NOPe!!!!\""
+    ph "NOPE NOPE NOPE NOPe!!!!"
 
     show rt disturbed at shake(rate=0.01,strength=3,loop=7)
 
-    rt "\"Those poor vegetable kids...\""
+    rt "Those poor vegetable kids..."
 
-    rt "\"They never stood a chance against that tall dealer man.\""
+    rt "They never stood a chance against that tall dealer man."
 
     show rt joy 2 at bounce
 
-    rt "\"Now we know why we shouldn't do drugs kids!\""
-
-    show rt confused
-
-    show ph scared 2 at shake(rate=0.01,strength=1,loop=3)
-
-    ph "\"y'know, {w=0.3}maybe on the other hand he's NOT dealing drugs!!\""
+    rt "Now we know why we shouldn't do drugs kids!"
 
     show rt troubled
 
     show ph o 2
 
-    rt "\"That sounds about right.\""
+    rt "There goes our only lead."
 
-    rt "\"Well, {w=0.3}there goes our only lead.\""
-
-    rt "\"Where do we go now??\""
+    rt "Where do we go now??"
 
     show ph think 2
 
-    ph "\"hey, {w=0.3}isn't blairic around these parts?\""
+    ph "hey, {w=0.3}isn't blairic around these parts?"
 
     show rt o at bounce
 
-    rt "\"Oh yeah!!!\""
+    rt "Oh yeah!!!"
 
     show rt joy 2
 
-    rt "\"He IS a skeleton billionaire after all.\""
+    rt "He IS a skeleton billionaire after all."
 
     show rt o
 
-    rt "\"But WHICH of these buildings would he be in?\""
+    rt "But WHICH of these buildings would he be in?"
 
     show ph bruh 2
 
-    ph "\"buhhhhhhh idk probably a bank or something.\""
+    ph "buhhhhhhh idk probably a bank or something."
 
     show rt joy 2 at bounce
 
-    rt "\"Sounds good to me!\""
+    rt "Sounds good to me!"
 
 
     show bg bloffice
@@ -514,13 +468,13 @@ label start:
 
     space ""
 
-    rt "\"Is it just me or does this place look a lot like Blairic's office??\""
+    rt "Is it just me or does this place look a lot like Blairic's office??"
 
     show ph bruh 2
 
-    ph "\"bruh that joke only works if we've seen his office already.\""
+    ph "that joke only works if we've seen his office already."
 
-    rt "\"But we have...\""
+    rt "But we have..."
 
     show ph bruh 3
 
@@ -528,13 +482,13 @@ label start:
 
     show ph bruh 2
 
-    ph "\"well...\""
+    ph "well..."
 
-    ph "\"some people haven't...\""
+    ph "some people haven't..."
 
     show ph o 2
 
-    bl "\"Why!!! {w=0.3}If it isn't Rocktato and Phrog!!!\""
+    bl "Why!!! {w=0.3}If it isn't Rocktato and Phrog!!!"
 
     show rt confused at Position(xpos=600)
 
@@ -544,59 +498,59 @@ label start:
 
     show bl happy at Position(xpos=200) with easeinbottom
 
-    bl "\"Pleasant seeing the two of you here!!!\""
+    bl "Pleasant seeing the two of you here!!!"
 
     show rt happy 2 at bounce
 
-    rt "\"BLAIRIC!!!\""
+    rt "BLAIRIC!!!"
 
     show ph smug 2 at bounce
 
-    ph "\"yo b.\""
+    ph "yo b."
 
     show bl o at bounce
 
-    bl "\"What are you children doing in a bank of all places?\""
+    bl "What are you children doing in a bank of all places?"
 
     show rt o
 
-    rt "\"We're on a search for Mr. Rock!!\""
+    rt "We're on a search for Mr. Rock!!"
 
-    rt "\"Can you help us?\""
+    rt "Can you help us?"
 
     show bl think
 
-    bl "\"Hm...\""
+    bl "Hm..."
 
     show bl happy 3 at bounce
 
-    bl "\"Alright!!! {w=0.3}Sure!!!\""
+    bl "Alright!!! {w=0.3}Sure!!!"
 
-    bl "\"I shall accompany you two on your little escapade!\""
+    bl "I shall accompany you two on your little escapade!"
 
     show rt joy 2 at bounce
 
-    rt "\"Heck yeah!!!\""
+    rt "Heck yeah!!!"
 
     show ph bruh 2
 
-    ph "\"should've left while you still had the chance.\""
+    ph "should've left while you still had the chance."
 
     show ph bruh
 
     show bl o
 
-    bl "\"So...\""
+    bl "So..."
 
-    bl "\"Where will our next detination be?\""
+    bl "Where will our next destination be?"
 
     show rt happy 2 at shake(rate=0.01,strength=3,loop=7)
 
-    rt "\"MCDONDALS!!!!!!\""
+    rt "MCDONDALS!!!!!!"
 
     show bl think
 
-    bl "\"Why would he be at a McDonda{w=0.1}{nw}"
+    bl "Why would he be at a McDonda{w=0.1}{nw}"
 
 
     show bg mcdondals
@@ -611,66 +565,66 @@ label start:
 
     show rt joy 2
 
-    rt "\"Thanks for paying Blairic!\""
+    rt "Thanks for paying Blairic!"
 
-    rt "\"I don't have any money.\""
+    rt "I don't have any money."
 
-    rt "\"Haha I'm a child.\""
+    rt "Haha I'm a child."
     #TODO add vaccum noise
 
     show rt joy 2 at shake(rate=0.01,strength=5,loop=10)
 
     space ""
 
-    rt "\"Man, {w=0.3}I'm just in love with these nuggs!!!\""
+    rt "Man, {w=0.3}I'm just in love with these nuggs!!!"
 
     show ph smug 2 at bounce
 
-    ph "\"b, {w=0.3}you gonna eat any?\""
+    ph "b, {w=0.3}you gonna eat any?"
 
     show bl bruh 2 at bounce
 
-    bl "\"I will pass Phrog.\""
+    bl "I will pass Phrog."
 
-    bl "\"I do not have a digestive system.\""
+    bl "I do not have a digestive system."
 
     show bl sad
 
-    bl "\"I am a skeleton.\""
+    bl "I am a skeleton."
 
     show ph o at bounce
 
     space ""
 
-    ph "\"o.\""
+    ph "o."
 
     show ph o 3
 
-    ph "\"right...\""
+    ph "right..."
 
     show rt sad 2 at bounce
 
-    rt "\"Too bad Mr. Rock wasn't hidden in the ball pit.\""
+    rt "Too bad Mr. Rock wasn't hidden in the ball pit."
 
     show ph smug 2
 
-    ph "\"yea, {w=0.3}i coulda SWORN i saw him in there.\""
+    ph "yea, {w=0.3}i coulda SWORN i saw him in there."
 
-    ph "\"but oh well.\""
+    ph "but oh well."
 
     show bl nervous at bounce
 
-    bl "\"This uh...\""
+    bl "This uh..."
 
-    bl "\"This does not really feel like a search.\""
+    bl "This does not really feel like a search."
 
     show bl bruh 2
 
-    bl "\"You kids just amused yourselves in the McDonDals playplace for an hour...\""
+    bl "You kids just amused yourselves in the McDonDals playplace for an hour..."
 
     show ph smug 2 at bounce
 
-    ph "\"nah b, {w=0.3}we resting.\""
+    ph "nah b, {w=0.3}we resting."
     #TODO SOUND EFFECT
 
     space ""
@@ -687,41 +641,41 @@ label start:
 
     show bl heehee
 
-    rt "\"For hecks sake!!!\""
+    rt "For hecks sake!!!"
 
-    rt "\"Blairic is right!!!\""
+    rt "Blairic is right!!!"
 
-    rt "\"We gotta get out there and search!!\""
+    rt "We gotta get out there and search!!"
 
     show ph bruh 2 at bounce
 
-    ph "\"aaaaaaaaaaaaand lametato's back.\""
+    ph "aaaaaaaaaaaaand lametato's back."
 
-    ph "\"aw man..\""
+    ph "aw man.."
 
     show rt bruh at bounce
 
     show ph bruh
 
-    rt "\"Okay, {w=0.3}first off, {w=0.3}that's a bit mean Phrog.\""
+    rt "Okay, {w=0.3}first off, {w=0.3}that's a bit mean Phrog."
 
     show rt o with hpunch
 
-    rt "\"Second of all, {w=0.3}who KNOWS what's happening to Mr. Rock??\""
+    rt "Second of all, {w=0.3}who KNOWS what's happening to Mr. Rock??"
 
-    rt "\"He could be, {w=0.1}like...\""
+    rt "He could be, {w=0.1}like..."
 
     show rt cry 2 at bounce
 
-    rt "\"Hanging out with someone cooler than me!!!\""
+    rt "Hanging out with someone cooler than me!!!"
 
     show ph bruh 2
 
-    ph "\"okay maybe that's a stretch...\""
+    ph "okay maybe that's a stretch..."
 
     show rt happy 2 at bounce
 
-    rt "\"C'mon let's go!!!\""
+    rt "C'mon let's go!!!"
 
     show bg black
 
@@ -733,31 +687,31 @@ label start:
 
     show ph scared 2 at shake(rate=0.01,strength=5,loop=5)
 
-    ph "\"ROCKTATO!!!\""
+    ph "ROCKTATO!!!"
 
     show ph scared 2 at shake(rate=0.01,strength=10,loop=7)
 
-    ph "\"YOU DIDN'T CHOOSE A LOCATION???\""
+    ph "YOU DIDN'T CHOOSE A LOCATION???"
 
-    bl "\"What is this place??\""
+    bl "What is this place??"
 
     show rt o at bounce
 
-    rt "\"Oh yeah, {w=0.3}guess I didn't!\""
+    rt "Oh yeah, {w=0.3}guess I didn't!"
 
-    rt "\"Well, {w=0.1}since Blairic is here, {w=0.1}we might as well ask Gin for help too!\""
+    rt "Well, {w=0.1}since Blairic is here, {w=0.1}we might as well ask Gin for help too!"
 
     show bl o at bounce
 
-    bl "\"She usually hangs around the gamer bar, {w=0.1}correct?\""
+    bl "She usually hangs around the gamer bar, {w=0.1}correct?"
 
     show rt joy 2 at bounce
 
-    rt "\"YEAH!\""
+    rt "YEAH!"
 
     show ph scared 2 at shake(rate=0.01,strength=15,loop=10)
 
-    ph "\"OKAY OKAY JUST HURRY UP!!\"{w=0.3}{nw}"
+    ph "OKAY OKAY JUST HURRY UP!!{w=0.3}{nw}"
 
 
     show bg gamerbar
@@ -772,21 +726,21 @@ label start:
 
     show ph joy 2 at bounce
 
-    ph "\"i don't like it here anymore!\""
+    ph "i don't like it here anymore!"
 
     show ph o 3
 
-    ph "\"wait... {w=0.5} i can say that for real!\""
+    ph "wait... {w=0.5} i can say that for real!"
 
     show ph bruh
 
-    ph "\"i hate this gamer bar.\""
+    ph "i hate this place."
 
     show rt happy 2 at bounce
 
-    rt "\"YO!!! {w=0.3}GIN!!!\""
+    rt "YO!!! {w=0.3}GIN!!!"
 
-    gin "\"GASP!!!\""
+    gin "GASP!!!"
 
     show bl happy 2 at Position(xpos=125)
 
@@ -798,21 +752,21 @@ label start:
 
     show gin evil 2 at Position(xpos=1100) with easeinbottom
 
-    gin "\"If it isn't my favorite piss babies!!!!\""
+    gin "If it isn't my favorite piss babies!!!!"
 
     show gin o at bounce
 
-    gin "\"What're y'all doin' here??\""
+    gin "What're y'all doin' here??"
 
     show bl o at bounce
 
-    bl "\"We are uhh... {w=0.5}looking for Mr. Rock.\""
+    bl "We are uhh... {w=0.5}looking for Mr. Rock."
 
     show bl bruh 2
 
-    bl "\"Also, it is now your turn to chaperone these little gremlins.\""
+    bl "Also, it is now your turn to chaperone these little gremlins."
 
-    bl "\"I shall take a phone call. {w=0.3}Excuse me.\""
+    bl "I shall take a phone call. {w=0.3}Excuse me."
 
     hide bl bruh with easeoutbottom
 
@@ -826,59 +780,59 @@ label start:
 
     space ""
 
-    gin "\"Yeah, that's fair.\""
+    gin "Yeah, that's fair."
 
     show gin happy
 
-    gin "\"How have you kiddos been doing??\""
+    gin "How have you kiddos been doing??"
 
     show rt joy 2 at bounce
 
-    rt "\"I'm doing awesome!!! {w=0.3}Wait, {w=0.3}no I'm not!\""
+    rt "I'm doing awesome!!! {w=0.3}Wait, {w=0.3}no I'm not!"
 
     show rt cry 2 with vpunch
 
-    rt "\"Mr. Rock is still gone!!!\""
+    rt "Mr. Rock is still gone!!!"
 
     show gin bruh
 
-    gin "\"Hmm... {w=0.3}that is very troublin'.\""
+    gin "Hmm... {w=0.3}that is very troublin'."
 
     show gin happy at bounce
 
     show rt happy
 
-    gin "\"How about you Phrog?\""
+    gin "How about you Phrog?"
 
     show ph bruh 2
 
-    ph "\"i wanna take a nap.\""
+    ph "i wanna take a nap."
 
     show gin thankful
 
-    gin "\"C'mon kid, {w=0.3}you haven't been on a wild adventure in a while!\""
+    gin "C'mon kid, {w=0.3}you haven't been on a wild adventure in a while!"
 
-    gin "\"At least like, {w=0.1}{i}try{/i} to have fun.\""
+    gin "At least like, {w=0.1}{i}try{/i} to have fun."
 
     show gin evil 2 at bounce
 
-    gin "\"It'll be good for ya!\""
+    gin "It'll be good for ya!"
 
-    show ph tired at bounce
+    show ph bruh at bounce
 
-    ph "\"yea... {w=0.3}that's fair.\""
+    ph "yea... {w=0.3}that's fair."
 
     show rt o
 
     show ph o 2
 
-    rt "\"Giinnn??\""
+    rt "Giinnn??"
 
-    rt "\"Can I get a drink????\""
+    rt "Can I get a drink????"
 
     show gin bruh
 
-    gin "\"Mmmm... {w=0.3} just a lil' sippy sipp.\""
+    gin "Mmmm... {w=0.3} just a lil' sippy sipp."
 
     show gin evil at bounce
 
@@ -888,51 +842,51 @@ label start:
 
     show rt joy 2 at bounce
 
-    rt "\"Mmmm {w=0.3}thank youuu!!\""
+    rt "Mmmm {w=0.3}thank youuu!!"
 
     show rt happy 2
 
-    rt "\"Now where do we head next?\""
+    rt "Now where do we head next?"
 
     show ph o at bounce
 
-    ph "\"what about the uhhhhhhhhhh {w=1.3}yeah i'm gonna b honest, {w=0.3}i just started talking and i didn't think of anything.\""
+    ph "what about the uhhhhhhhhhh {w=1.3}yeah i'm gonna b honest, {w=0.3}i just started talking and i didn't think of anything."
 
     show ph joy at bounce
 
-    ph "\"woops!\""
+    ph "woops!"
 
     show gin o
 
-    gin "\"Okay well...\""
+    gin "Okay well..."
 
-    gin "\"where have you guys been so far???\""
+    gin "where have you guys been so far???"
 
     show rt happy 2 at bounce
 
-    rt "\"Well... {w=0.3}we went to the swamp, {w=0.3}the rich place area thing, {w=0.3}and the McDonDals!\""
+    rt "Well... {w=0.3}we went to the swamp, {w=0.3}the rich place area thing, {w=0.3}and the McDonDals!"
 
     show gin happy at bounce
 
-    gin "\"WOAH!!! {w=0.3}Fun!\""
+    gin "WOAH!!! {w=0.3}Fun!"
 
     show gin lecture
 
-    gin "\"So you guys didn't check the city park yet???\""
+    gin "So you guys didn't check the city park yet???"
 
     show rt joy 2 at bounce
 
-    rt "\"Nah.\""
+    rt "Nah."
 
     show gin o
 
-    gin "\"Whhhhhhhhhhh... {w=0.3}why not???\""
+    gin "Whhhhhhhhhhh... {w=0.3}why not???"
 
-    gin "\"That's where literally anything happens!\""
+    gin "That's where literally everything interesting happens!"
 
     show rt o
 
-    rt "\"Oh yeahhhhhh\""
+    rt "Oh yeahhhhhh"
 
 
     show bg citypark
@@ -943,13 +897,13 @@ label start:
 
     show gin evil
 
-    no "We now see our heroes standing at the center of their beloved Beeg City."
+    no "We now see our protaginists standing at the center of their beloved Beeg City."
 
     no "There were kids eating ice cream and playing insert any sport game here."
 
     no "There were bird people perched on the trees screaming."
 
-    no "And there were many heroes just going about talking and flying and stuff."
+    no "And there were many heroes just going about and stuff."
 
     no "It's pretty hard to describe, {w=0.3}you just had to see it."
 
@@ -961,63 +915,63 @@ label start:
 
     show rt hurt at bounce
 
-    rt "\"Mr. Rock???\""
+    rt "Mr. Rock???"
 
-    rt "\"Mr. Rock!!!\""
+    rt "Mr. Rock!!!"
 
     show rt sad 2
 
-    rt "\"Aw, {w=0.3}do you guys see him anywhere??\""
+    rt "Aw, {w=0.3}do you guys see him anywhere??"
 
     show gin think
 
-    gin "\"Mmm, {w=0.1}he's quite the hider, {w=0.1}ain't he?\""
+    gin "Mmm, {w=0.1}he's quite the hider, {w=0.1}ain't he?"
 
     show ph bruh 2
 
-    ph "\"yeaaaaaaaaaa {w=0.3}that...\""
+    ph "yeaaaaaaaaaa {w=0.3}that..."
 
-    rt "\"Man this sucks.\""
+    rt "Man this sucks."
 
     show rt cry 2
 
     show ph bruh
 
-    rt "\"It's already afternoon and he's still gone!\""
+    rt "It's already afternoon and he's still gone!"
 
-    rt "\"How will we have our daily afternoon cookie dough eating competition now???\""
+    rt "How will we have our daily afternoon cookie dough eating competition now???"
 
-    rt "\"How can I unfairly win again and rub it in his face while feeling better about myself???\""
+    rt "How can I unfairly win again and rub it in his face while feeling better about myself???"
 
     show rt hurt with hpunch
 
-    rt "\"AHHHHHHHHHH!!!!!\""
+    rt "AHHHHHHHHHH!!!!!"
 
     show rt o at bounce
 
-    rt "\"...\""
+    rt "..."
 
     no "Rocktato suddenly got up and started sniffing."
 
     show gin o
 
-    gin "\"WoAH!\""
+    gin "WoAH!"
 
     show ph bruh 2 at bounce
 
-    ph "\"ew what are you doing?\""
+    ph "ew what are you doing?"
 
     show rt disgusted
 
-    rt "\"{i}Do you smell that????{/i}\""
+    rt "{i}Do you smell that????{/i}"
 
-    ph "\"no\"{w=0.2}{nw}"
+    ph "no{w=0.2}{nw}"
 
     show ph bruh
 
     show gin sad
 
-    rt "\"{i}It's the smell of {b}villainy.{/b}{/i}\""
+    rt "{i}It's the smell of {b}villainy.{/b}{/i}"
 
     show rt disgusted at shake(rate=0.01,strength=15,loop=5) with hpunch
 
@@ -1055,37 +1009,39 @@ label start:
 
     space ""
 
-    Character("Random Citizen 1", size=25, color="#ffffff",callback=no_blip) "\"OH MY GOD!!!\""
+    Character("Random Citizen 1", size=25, color="#ffffff",callback=no_blip) "OH MY GOD!!!"
 
-    Character("Random Citizen 2", size=25, color="#ffffff",callback=no_blip) "\"A GIANT RUMBOY HAS FALLEN FROM THE SKY!!!\""
+    Character("Random Citizen 2", size=25, color="#ffffff",callback=no_blip) "A GIANT RUMBOY HAS FALLEN FROM THE SKY!!!"
 
-    Character("Random Citizen 3", size=25, color="#ffffff",callback=no_blip) "\"MY TAX DOLLARS WENT INTO THAT FOUNTAIN NOO!!\""
+    Character("Random Citizen 3", size=25, color="#ffffff",callback=no_blip) "MY TAX DOLLARS WENT INTO THAT FOUNTAIN NOO!!"
 
-    Character("Random Citizen 3.5", size=23, color="#ffffff",callback=no_blip) "\"AHHHHHHHHHHHHHH SCREAMING\""
+    Character("Random Citizen 3.5", size=23, color="#ffffff",callback=no_blip) "AHHHHHHHHHHHHHH SCREAMING"
 
-    rt "\"No way...\""
+    rt "No way..."
 
     show bg 1 rumboy crashed
 
     hide img 1 rumboy crashed
 
+    hide rt
+
     with dissolve
 
-    rt "\"Is thAT-\""
+    rt "Is thAT-"
 
-    Character("???", color="#ffffff", size=43, what_size=70, callback=wiz_blip) "\"...\""
+    Character("???", color="#ffffff", size=43, what_size=70, callback=wiz_blip) "..."
 
-    Character("???", color="#ffffff", size=43, what_size=70, callback=wiz_blip) "\"NYEHEHEHEH...\""
+    Character("???", color="#ffffff", size=43, what_size=70, callback=wiz_blip) "NYEHEHEHEH..."
 
     show wiz evil 2 at center, Position(ypos=50) with easeinbottom
 
-    Character("???", color="#ffffff", size=43, what_size=70, callback=wiz_blip) "\"IT IS I, {w=0.3}WIZPOTATo!!!\""
+    Character("???", color="#ffffff", size=43, what_size=70, callback=wiz_blip) "IT IS I, {w=0.3}WIZPOTATo!!!"
 
-    wiz_yell "\"WAIT CRAP!!! {w=0.3}I MISSED!!!!!"
+    wiz_yell "WAIT CRAP!!! {w=0.3}I MISSED!!!!!"
 
     show wiz bruh at center, Position(ypos=200) with ease
 
-    wiz "\"uhhhhhhhhh {w=0.3}wait one sec...\""
+    wiz "uhhhhhhhhh {w=0.3}wait one sec..."
 
     show wiz bruh at center, Position(ypos=300) with ease
 
@@ -1105,119 +1061,149 @@ label start:
 
     show wiz sus 2 at center, Position(ypos=605)
 
-    wiz "\"okay... {w=0.3}THERE we go...\""
+    wiz "okay... {w=0.3}THERE we go..."
 
     show wiz sad 2 at center, Position(ypos=605)
 
-    wiz "\"okay uhh...\""
+    wiz "okay uhh..."
 
     show wiz evil 2 with hpunch
 
-    wiz_yell "\"THE GREATEST SUPERVILLAIN TO EVER...\""
+    wiz_yell "THE GREATEST SUPERVILLAIN TO EVER..."
 
     show wiz sad 2
 
-    wiz "\"uh...\"{w=0.3}{nw}"
+    wiz "uh...{w=0.3}{nw}"
 
     show wiz evil 3 with hpunch
 
-    wiz_yell "\"YEAH!!!!!!!!! !!!!!!!!!!!! !!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!\""
+    wiz_yell "YEAH!!!!!!!!! !!!!!!!!!!!! !!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!"
 
-    no "A bunch of the heroes that were there just walked away."
+    no "A bunch of the heroes that were there walked away, disappointed."
 
     show wiz bruh
 
-    Character("Random Hero 1", size=31, color="#ffffff",callback=no_blip) "\"Are you kiddin' me?? {w=0.3}THIS GUY AGAIN?!\""
+    Character("Random Hero 1", size=31, color="#ffffff",callback=no_blip) "Are you kiddin' me?? {w=0.3}THIS GUY AGAIN?!"
 
-    Character("Random Citizen 3", size=25, color="#ffffff",callback=no_blip) "\"MY TAX DOLLARS WERE WASTED FOR THIS????\""
+    Character("Random Citizen 3", size=25, color="#ffffff",callback=no_blip) "MY TAX DOLLARS WERE WASTED FOR THIS????"
 
-    rt "\"GASP!!!!!!\""
+    rt "GASP!!!!!!"
 
     show wiz evil at Position(xpos=400) with ease
 
     show rt disgusted at Position(xpos=900) with easeinbottom
 
-    rt "\"WIZPOTATO!!!!\""
+    rt "WIZPOTATO!!!!"
 
-    rt "\"I knew it was you.\""
+    rt "I knew it was you."
 
-    rt "\"I could smell you from miles away!!!\""
+    rt "I could smell you from miles away!!!"
 
     show wiz sus 2
 
-    wiz "\"OKay, "
+    wiz "OKay, "
 
     show wiz angey 2 with hpunch
 
-    extend "WEIRD.\""
+    extend "WEIRD."
 
     show wiz evil 3 at bounce
 
-    wiz "\"But, {w=0.3}it is quite convenient that you are here!!!\""
+    wiz "But, {w=0.3}it is quite convenient that you are here!!!"
 
     show wiz evil 2 at shake(rate=0.01,strength=10,loop=2)
 
-    wiz_yell "\"MY DEAR RIVAL...\""
+    wiz_yell "MY DEAR RIVAL..."
 
-    wiz_yell "\"IT SEEMS IT HAS BEEN FATED FOR US TO{w=0.3}{nw}"
+    wiz_yell "IT SEEMS IT HAS BEEN FATED FOR US TO{w=0.3}{nw}"
 
     show rt mad at shake(rate=0.01,strength=10,loop=2) with hpunch
 
-    rt "\"SHUT UP!!!!!!!!\""
+    rt "SHUT UP!!!!!!!!"
 
     show rt sad 2
 
-    rt "\"We just wanted to look for Mr. Rock, man.\""
+    rt "We just wanted to look for Mr. Rock, man."
 
     show rt hurt at shake(rate=0.01,strength=10,loop=2) with hpunch
 
-    rt "\"HOLD ON!!!!\""
+    rt "HOLD ON!!!!"
 
-    rt "\"I BET YOU MUST'VE TAKEN HIM, {w=0.3}HRMM????\""
+    rt "I BET YOU MUST'VE TAKEN HIM, {w=0.3}HRMM????"
 
     show wiz sus 2
 
     space ""
 
-    wiz "\"what\""
+    wiz "what"
 
-    wiz "\"What are you talking about????\""
+    wiz "What are you talking about????"
 
     show rt mad
 
-    rt "\"OH YOU KNOW WHAT I'M TALKING ABOUT!!!!\""
+    rt "OH YOU KNOW WHAT I'M TALKING ABOUT!!!!"
 
-    wiz "\"no????\"{w=0.2}{nw}"
+    wiz "no????{w=0.2}{nw}"
 
     show rt smug 2 at bounce
 
-    rt "\"Ooooo, {w=0.3}I'm gonna beat you up so bad!!!\""
+    rt "Ooooo, {w=0.3}I'm gonna beat you up so bad!!!"
 
-    ph "\"rocktato wait!\""
+    ph "rocktato wait!"
 
     show rt bruh
 
-    ph "\"if you enter battle, {w=0.1}you won't be able to save or rollback to anything before the sequence or after any decisions.\""
+    show ph o at flip, Position(xpos=1200) with easeinbottom
 
-    ph "\"i'd recommend saving now!\""
+    ph "if you enter battle, {w=0.1}you won't be able to save or rollback to anything before the sequence or after any decisions."
 
-    ph "\"i mean, {w=0.3}i do realize now how your chances of dying are slim...\""
+    ph "i'd recommend saving now!"
 
-    ph "\"but y'kno, {w=0.3}just in case...\""
+    show ph bruh at flip, Position(xpos=1140)
+
+    ph "i mean, {w=0.3}i do realize now how your chances of dying are slim..."
+
+    ph "but y'kno, {w=0.3}just in case..."
+
+    show ph happy at flip, Position(xpos=1140), bounce
+
+    ph "it's good practice!"
 
     show rt sad 2
 
-    rt "\"Phrog, {w=0.1}you sure you aren't schizophrenic or somethin'?\""
+    rt "Phrog, {w=0.1}what does any of that mean?"
 
-    rt "\"You keep saying things like we are in a game and I'm concerned???\""
+    show ph bruh at flip, Position(xpos=1140)
 
-    ph "\"oKAY BATTLE STARTS NOW!\""
+    rt "What do you mean by saving and rollback???"
+
+    show rt confused
+
+    rt "What, are we in a GAME or something?"
+
+    show rt joy at bounce
+
+    rt "That's a ridiculous!"
+
+    show ph bruh 2 at flip, Position(xpos=1140)
+
+    ph "oKAY BATTLE STARTS NOW!"
 
     $ renpy.block_rollback()
 
     $ saveable = False
 
-    #TODO: BATTLE START! / BATTLE SPRITES
+
+    show rt fight idle
+
+    show battlestarttext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
+
+    pause 1.0
+
+    hide battlestarttext with dissolve
+
+
+    #TODO: BATTLE SPRITES
     # - DECISION BOXES FIX (use parameters in choice box screen?)
     # - ADD THE FELLAS THAT INTERJECT IN BG
 
@@ -1226,11 +1212,46 @@ label start:
     $ chara_hppositions = [ (200, 490), (700, 490) ]
     show screen battle_health
 
-    ph "\"okay tato, {w=0.3}i'll be your gaurdian angel in this battle.\""
+    if persistent.episode_fin >= 1:
+        ph "tato, you know how to fight (i mean they teach this stuff in elementary jesus) but do you want a reminder anyway?"
 
-    ph "\"all ya gotta do is click the buttons and hope it's the correct option.\""
+        menu:
+            "Yes please!":
+                pass
+            "Shut up Phrog!":
 
-    rt "\"I don't know why you are saying words at me but thanks!\""
+                ph "jeez ok."
+
+                hide ph
+
+                $ ep1_skiptut2 = True
+                jump ep1_battle1
+
+    $ ep1_skiptut2 = False
+
+    ph "okay tato, {w=0.3}lemme give ya a rl quick run down."
+
+    ph "all ya gotta do is click the buttons and hope it's the correct option."
+
+    show rt o
+
+    rt "I don't know why you said those words at me but thanks!"
+
+    ph "b."
+
+    hide ph
+
+    pause 1.0
+
+    show rt fight idle
+
+    rt "(Alright, so what are my options?)"
+
+    rt "(Parentheses means thinking, by the way.)"
+
+    show rt joy 2 at bounce
+
+    rt "(Fun fact!)"
 
     $ moves = 0
     $ slaps = 0
@@ -1239,28 +1260,58 @@ label start:
 
     label ep1_battle1:
 
-        if moves == 5:
-            gin "\"Hey Rocktato!!! You should use your s e c r e t move!\""
-            rt "\"Oh... YEAH!\""
+        show rt fight idle
+
+        if moves == 0 and ep1_skiptut2 == False:
+            rt "(Okay, so I can either punch him, which will hurt a bunch!!!)"
+            rt "(Ah, but it might hurt me too though. {w}I'm a sensitive boy :,<.)"
+            rt "(I can stomp him into the ground too, which would be funny.)"
+            rt "(Or... I can defend!!! {w=0.3}So I won't get too big of a hurt myself!"
+            rt "(GO CHOOSE,  {w=0.1}ME!)"
+
+        elif moves == 5:
+            show gin evil 2 at Position(xpos=1170) with easeinbottom
+
+            gin "Hey Rocktato!!! You should use your s e c r e t move!"
+
+            rt "Oh... YEAH!!"
+
+            rt "Thanks Gin!!!"
+
+            gin "JEez kid, there's barely any room in here!"
+
+            hide gin with easeoutbottom
 
         elif moves == 9:
-            ph "\"rocktato, {w=0.1}i'm boooooored. {w=0.3}can you please transform already.\""
+            show ph bruh at flip, Position(xpos=1140) with easeinbottom
+
+            ph "rocktato, {w=0.1}i'm boooooored. {w=0.3}can you please transform already."
+
+            hide ph with easeoutbottom
 
         elif moves == 11:
-            ph "\"rocktato pleaaaaseeee....\""
+            show ph bruh at flip, Position(xpos=1140) with easeinbottom
 
-        elif moves == 12:
-            ph "\"hughgugbgugghugbu.\""
+            ph "rocktato pleaaaaseeee...."
 
-        elif moves == 14:
+            hide ph with easeoutbottom
+
+        elif moves == 13:
+            show ph bruh at flip, Position(xpos=1140) with easeinbottom
+
+            ph "hughgugbgugghugbu."
+            hide ph with easeoutbottom
+
+        elif moves == 19:
             if persistent.phrog_pisser == True:
-                ph "\"yeah ok i'm not gonna give you that dialouge again or new dialouge. {w=0.3}if you don't transform, i'll kill rocktato again.\""
-                rt "\"Wait what{w=0.1}{nw}"
-
+                ph "yeah ok i'm not gonna give you that dialouge again or new dialouge. {w=0.3}if you don't transform, i'll kill you and rocktato again."
+                rt "Wait what{w=0.1}{nw}"
             else:
-                ph "\"ok, {w=0.3}y'kno what.\""
+                ph "wow."
 
-        elif moves == 15:
+                ph "you're a real persistent one, huh?"
+
+        elif moves == 20:
             if persistent.phrog_pisser == True:
                 $ persistent._clear(progress=True)
                 $ deletefiles()
@@ -1268,98 +1319,107 @@ label start:
 
                 $ renpy.quit()
 
-            else:
-                ph "\"if you keep doing this...\""
-
-        elif moves == 16:
-            ph "\"you aren't gonna like what happens next.\""
-
-        elif moves == 17:
-            ph "\"i was never given the gift of patience.\""
-
-        elif moves == 18:
-            ph "\"i get bored sooooo easily...\""
-
-        elif moves == 19:
-            ph "\"however, {w=0.1}i was given something so much more powerful.\""
-
-        elif moves == 20:
-            ph "\"sentience.\""
-
         elif moves == 21:
-            ph "\"{b}i'm gonna end you.{\b}\""
+            ph "ya alright."
+
+            ph "if you keep doing this."
+
+            ph "{b}i'm gonna end you.{\b}"
+
+            ph "not rocktato."
+
+            ph "but you."
+
+            ph "yea, {w=0.3}it's one of THOSE visual novels."
+
+            ph "actually, it also kills him too and everyone here oh wait.{nw}"
 
         elif moves == 22:
-            ph "\"yea, {w=0.3}it's one of THOSE visual novels.\""
+            ph "you think you're a real funny one yea well shut up."
 
-        elif moves == 23:
-            ph "\"and.. {w=0.3}to add on...\""
+            ph "keep going and you won't like what happens next."
+
+            ph "why?"
+
+            ph "cus i'm bored lol"
+
+            ph "and now i'm gettin' just a {i}lil'{/i} bit annoyed."
 
         elif moves == 24:
-            ph "\"i'll delete all your saves too!\""
+            ph "and.. {w=0.3}to add on..."
 
-        elif moves == 25:
-            ph "\"i mean, {w=0.1}this is the first episode.\""
+            ph "i'll delete all your saves too!"
+
+            ph "fun!"
+
 
         elif moves == 26:
-            ph "\"so it probably doesn't matter...\""
+            ph "i mean, {w=0.1}this is the first episode."
 
-        elif moves == 27:
-            ph "\"but still...\""
+            ph "so it probably doesn't matter..."
+
+            ph "but still..."
 
         elif moves == 28:
-            ph "\"that'd kinda suck, {w=0.3}huh?\""
+            ph "that'd kinda suck, {w=0.3}huh?"
 
         elif moves == 29:
-            ph "\"well...\""
+            ph "well..."
 
         elif moves == 30:
             $ persistent._clear(progress=True)
             $ deletefiles()
             $ persistent.phrog_pisser = True
-            ph "\"don't say i didn't warn y{w=0.3}{nw}"
+            ph "don't say i didn't warn y{w=0.3}{nw}"
             $ renpy.quit()
 
         menu:
             "Slap":
                 $ renpy.block_rollback()
-                if moves >= 14:
+                if moves >= 19:
                     $ moves = moves + 1
                     jump ep1_battle1
 
-                rt "\"HYAH!!!\""
-
                 if stomps >=1:
+                    show rt fight slap at shake(0.05, 4)
+                    rt "HYAH!!!"
                     no "Wizpotato is stuck in the ground."
                     no "Rocktato misses."
                     $ moves = moves + 1
                     jump ep1_battle1
 
-                elif slaps == 0:
-                    no "Rocktato slaps Wizpotato."
-                    wiz "\"OW!!!!\""
-
-                elif slaps == 1:
-                    wiz "\"Can you stop??? SLAPPING???\""
-                    rt "\".\""
-                    rt "\"No.\""
-
-                elif slaps == 2:
-                    wiz "\"wHY??\""
-
-                elif slaps == 3:
-                    wiz "\"Okay... {w=0.3}so you're just gonna keep... {w=0.3}doing that...\""
-                    wiz "\"Ow.....\""
-
-                elif slaps == 4:
-                    wiz "*Sobs*"
-
                 elif slaps >= 5:
                     no "Rocktato's hand hurts."
                     no "He decides to stop."
+                    $ moves = moves + 1
+                    jump ep1_battle1
 
-                $ chara_healths[0] = chara_healths[0] - 3
-                $ chara_healths[1] = chara_healths[1] - 3
+                else:
+                    show rt fight slap at shake(0.05, 4)
+                    $ chara_healths[0] = chara_healths[0] - 3
+                    $ chara_healths[1] = chara_healths[1] - 3
+                    rt "HYAH!!!"
+                    rt "(Ow.)"
+
+                if slaps == 0:
+                    no "Rocktato slaps Wizpotato."
+                    wiz "OW!!!!"
+
+                elif slaps == 1:
+                    wiz "Can you stop??? SLAPPING???"
+                    rt "."
+                    show rt joy 2 at bounce
+                    rt "No."
+
+                elif slaps == 2:
+                    wiz "wHY??"
+
+                elif slaps == 3:
+                    wiz "Okay... {w=0.3}so you're just gonna keep... {w=0.3}doing that..."
+                    wiz "Ow....."
+
+                elif slaps == 4:
+                    wiz "*Sobs*"
 
                 $ slaps = slaps + 1
                 $ moves = moves + 1
@@ -1367,26 +1427,35 @@ label start:
 
             "Stomp":
                 $ renpy.block_rollback()
-                if moves >= 14:
+                if moves >= 19:
                     $ moves = moves + 1
                     jump ep1_battle1
+                show rt fight slap at shake(0.05, 4)
                 rt "STOMP!"
 
-                if stomps == 0:
-                    wiz "\"AUGH!!!\""
+                # TODO MOVE WIZ LOWER WHENEVER HE STOMPS
+
+                if stomps >= 5:
+                    no "He cannot go any lower."
+                    no "Please stop."
+                    $ moves = moves + 1
+                    jump ep1_battle1
+
+                elif stomps == 0:
+                    wiz "AUGH!!!"
 
                     no "Rocktato stomps on Wizpotato, {w=0.1}burying him into the ground, {w=0.2}like a plant."
 
-                    wiz "\"MMPHHH GMGMGMPHMPGGMSFPMSPGM!!!!!\""
+                    wiz "MMPHHH GMGMGMPHMPGGMSFPMSPGM!!!!!"
 
-                    no "Don't ask why it looks like he's slapping him; he's not."
+                    no "Don't ask why it looks like he's slapping him; {w=0.3}he's not."
 
                 elif stomps == 1:
-                    wiz "\"MMHM MGM MFMSM!!!\""
+                    wiz "MMHM MGM MFMSM!!!"
                     no "The deeper he goes..."
 
                 elif stomps == 2:
-                    wiz "\"GMGNGSM NS < NSDHB SDFNSJFS!!!\""
+                    wiz "GMGNGSM NS < NSDHB SDFNSJFS!!!"
                     no "Please help him."
 
                 elif stomps == 3:
@@ -1397,10 +1466,6 @@ label start:
                     no "Wizpotato has gotten to that stony part in the ground."
                     no "He cannot go any lower."
                     no "{b}You monster.{\b}"
-
-                elif stomps >= 5:
-                    no "He cannot go any lower."
-                    no "Please stop."
                     $ moves = moves + 1
                     jump ep1_battle1
 
@@ -1412,21 +1477,24 @@ label start:
 
             "Defend":
                 $ renpy.block_rollback()
-                if moves >= 14:
+                if moves >= 19:
                     $ moves = moves + 1
                     jump ep1_battle1
 
-                rt "\"BWAHHHHH\""
+                rt "BWAHHHHH!!!"
 
                 if defends <= 3:
                     no "Rocktato does a stupid pose."
-                    no "There's no need to defend, {w=0.3}Wizpotato isn't even attacking."
+                    no "There's no need to defend; {w=0.3}Wizpotato isn't even attacking."
 
                 elif defends == 4:
                     no "I can't think of something funny to say here."
 
                 elif defends == 5:
                     no "Yeah, {w=0.1}I give up."
+
+                elif defends == 6:
+                    no "You're hopeless..."
 
                 $ defends = defends + 1
                 $ moves = moves + 1
@@ -1437,17 +1505,23 @@ label start:
                 $ saveable = True
                 if stomps >= 1:
                     no "Gin pulls Wizpotato out of the ground with her massive arms."
-                    wiz "\"WHYyyyyy????\""
+                    wiz "WHYyyyyy????"
 
                 hide screen battle_health
 
-    no "Rocktato started to glow."
+    show rt fight idle 1
 
-    #TODO: TRANSFORM SEQUENCE
+    rt "Okay are you ready for this? This is gonna be mega cool; it always is."
+
+    show rt fight idle 1 at funny_expand
+
+    show fx white with dissolve
+
+    no "Rocktato started to glow."
 
     show wiz angey 2 at shake(rate=0.01,strength=3,loop=4)
 
-    wiz_yell "\"You frickin'.... {w=0.3}he's-{w=0.3}he's RIGHT THERE!!\""
+    wiz_yell "You frickin'.... {w=0.3}he's-{w=0.3}he's RIGHT THERE!!"
 
     no "Wizpotato didn't have any arms."
 
@@ -1459,33 +1533,33 @@ label start:
 
     show mr at Position(xpos=1125,ypos=580) with easeinbottom
 
-    wiz "\"He's been... {w=0.2}been there the whole flip flapperintime!!!!!\""
+    wiz "He's been... {w=0.2}been there the whole flip flapperintime!!!!!"
 
     show rt o
 
-    rt "\"MR. ROCK?\""
+    rt "MR. ROCK?"
 
     show rt joy 2 at bounce
 
-    rt "\"MR. ROCK!!!!!!!!!!!\""
+    rt "MR. ROCK!!!!!!!!!!!"
 
-    rt "\"IT'S SO GOOD TO SEE YOU!!!!!!!\""
+    rt "IT'S SO GOOD TO SEE YOU!!!!!!!"
 
     show rt confused
 
-    rt "\"Wait, {w=0.3}but why would you know that?\""
+    rt "Wait, {w=0.3}but why would you know that?"
 
-    rt "\"You weren't even at our quest???\""
+    rt "You weren't even at our quest???"
 
     show wiz angey 2 at shake(rate=0.01,strength=3,loop=4) with hpunch
 
-    wiz_yell "\"YOU HAD A WHOLE QUEST LOOKING FOR HIM???\""
+    wiz_yell "YOU HAD A WHOLE QUEST LOOKING FOR HIM???"
 
-    wiz_yell "\"Was he... {w=0.3}THERE THE WHOLE TIME?\""
+    wiz_yell "Was he... {w=0.3}THERE THE WHOLE TIME?"
 
     show rt sad 2
 
-    rt "\"Well... {w=0.3}now that I think about it....\""
+    rt "Well... {w=0.3}now that I think about it...."
 
     show bg white
 
@@ -1576,19 +1650,19 @@ label start:
 
     space ""
 
-    wiz_yell "\"DID NONE OF YOU IDIOTS SAY ANYTHING TO HIM?\""
+    wiz_yell "DID NONE OF YOU IDIOTS SAY ANYTHING TO HIM?"
 
-    ph "\"nyehhhhhhhhh {w=0.3}i was too lazy to.\""
+    ph "nyehhhhhhhhh {w=0.3}i was too lazy to."
 
-    gin "\"I jus' assumed it was like a... {w=0.3}a lil' game?\""
+    gin "I jus' assumed it was like a... {w=0.3}a lil' game?"
 
-    bl "\"Apologies, {w=0.2}my friends, {w=0.2}for leaving but... {w=0.3}uh...\""
+    bl "Apologies, {w=0.2}my friends, {w=0.2}for leaving but... {w=0.3}uh..."
 
-    bl "\"I'm not going to touch this one.\""
+    bl "I'm not going to touch this one."
 
-    bl "\"Oh woopsie me! {w=0.3}Another phone call?\""
+    bl "Oh woopsie me! {w=0.3}Another phone call?"
 
-    bl "\"What a coincidence!! {w=0.3}Let me just...\""
+    bl "What a coincidence!! {w=0.3}Let me just..."
 
     no "He escapes..."
 
@@ -1608,23 +1682,23 @@ label start:
 
     with dissolve
 
-    rt "\"You really were here this... {w=0.3}this whole time??\""
+    rt "You really were here this... {w=0.3}this whole time??"
 
-    mr "\"...\""
+    mr "..."
 
-    rt "\"Man... {w=0.3}Aaaa I'm sorry I didn't notice you.\""
+    rt "Man... {w=0.3}Aaaa I'm sorry I didn't notice you."
 
-    rt "\"It's just... {w=0.3}really hard since you can't talk!\""
+    rt "It's just... {w=0.3}really hard since you can't talk!"
 
-    rt "\"Hey, {w=0.3}how about I get you a bell or something!!\""
+    rt "Hey, {w=0.3}how about I get you a bell or something!!"
 
-    mr "\"...\""
+    mr "..."
 
-    rt "\"YEAH! {w=0.3}This way I'll notice you more!\""
+    rt "YEAH! {w=0.3}This way I'll notice you more!"
 
-    mr "\"...\""
+    mr "..."
 
-    rt "\"Cookie dough after?? {w=0.3}Heck yeah!\""
+    rt "Cookie dough after?? {w=0.3}Heck yeah!"
 
     show bg black
 
@@ -1634,8 +1708,10 @@ label start:
 
     no "Rocktato started walking away from the scene and waving to his friends."
 
-    rt "\"See you guys later!!!\""
+    rt "See you guys later!!!"
 
     space ""
 
-    ph "\"that was a waste of time.\""
+    ph "that was a waste of time."
+
+    $ persistent.episode_fin = 1
