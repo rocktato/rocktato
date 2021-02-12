@@ -4,9 +4,24 @@
 
 init:
 
+
+    transform super_cool_rocktato_tm_kick_attack:
+        rotate 0.0
+        yanchor 0.875
+        linear 0.5 xoffset 200 rotate 90.0 yoffset 80
+        linear 0.3 xoffset -1100
+
+
+    transform super_cool_rocktato_tm_kick_attack_victim(wait=0):
+        pause wait
+        linear 0.3 xoffset -1100
+
+
+
     transform funny_expand:
         zoom 1.0
         linear 1.0 zoom 5.0 xzoom 10.0 ycenter 1.0
+
 
 
     ## Flips character across y axis yeah MATH
@@ -107,6 +122,20 @@ init:
             linear 0.01 xoffset 12 yoffset 12
 
             repeat
+
+
+
+    transform transform_offset(x=0, y=0, speed=0.0):
+        linear speed xoffset x
+        linear speed yoffset y
+
+
+
+    transform transform_zoom(x=1.0, y=1.0):
+        xzoom x
+        yzoom y
+
+
 
     ## Animation used in loading screen.
     transform loading_anim:

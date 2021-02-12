@@ -1196,6 +1196,8 @@ label start:
 
     show rt fight idle
 
+    show wiz fight idle
+
     show battlestarttext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
 
     pause 1.0
@@ -1205,24 +1207,34 @@ label start:
 
     #TODO: BATTLE SPRITES
     # - DECISION BOXES FIX (use parameters in choice box screen?)
-    # - ADD THE FELLAS THAT INTERJECT IN BG
 
     $ chara_healths = [ 100, 100 ]
     $ chara_maxhealths = [ 100, 100 ]
     $ chara_hppositions = [ (200, 490), (700, 490) ]
     show screen battle_health
 
+    $ moves = 0
+    $ slaps = 0
+    $ stomps = 0
+    $ defends = 0
+
     if persistent.episode_fin >= 1:
         ph "tato, you know how to fight (i mean they teach this stuff in elementary jesus) but do you want a reminder anyway?"
 
         menu:
             "Yes please!":
+                $ renpy.block_rollback()
                 pass
             "Shut up Phrog!":
+                $ renpy.block_rollback()
 
                 ph "jeez ok."
 
                 hide ph
+
+                space ""
+
+                rt "Okay, it's go time baby!"
 
                 $ ep1_skiptut2 = True
                 jump ep1_battle1
@@ -1252,11 +1264,6 @@ label start:
     show rt joy 2 at bounce
 
     rt "(Fun fact!)"
-
-    $ moves = 0
-    $ slaps = 0
-    $ stomps = 0
-    $ defends = 0
 
     label ep1_battle1:
 
@@ -1302,16 +1309,16 @@ label start:
             ph "hughgugbgugghugbu."
             hide ph with easeoutbottom
 
-        elif moves == 19:
+        elif moves == 50:
             if persistent.phrog_pisser == True:
                 ph "yeah ok i'm not gonna give you that dialouge again or new dialouge. {w=0.3}if you don't transform, i'll kill you and rocktato again."
-                rt "Wait what{w=0.1}{nw}"
+                rt "Wait what-{w=0.1}{nw}"
             else:
                 ph "wow."
 
                 ph "you're a real persistent one, huh?"
 
-        elif moves == 20:
+        elif moves == 51:
             if persistent.phrog_pisser == True:
                 $ persistent._clear(progress=True)
                 $ deletefiles()
@@ -1319,22 +1326,30 @@ label start:
 
                 $ renpy.quit()
 
-        elif moves == 21:
+        elif moves == 53:
             ph "ya alright."
 
             ph "if you keep doing this."
 
             ph "{b}i'm gonna end you.{\b}"
 
-            ph "not rocktato."
+            ph "not just rocktato."
 
-            ph "but you."
+            ph "but you too."
 
             ph "yea, {w=0.3}it's one of THOSE visual novels."
 
-            ph "actually, it also kills him too and everyone here oh wait.{nw}"
+            ph "omg!! {w=0.3}rocktato is secretly edgy!!! {w=0.3}and phrog is sans undertale???"
 
-        elif moves == 22:
+            ph "no way"
+
+            show ph sans at center, Position(ypos=2400), transform_zoom(x=6.0, y=6.0)
+
+            pause 0.2
+
+            hide ph
+
+        elif moves == 55:
             ph "you think you're a real funny one yea well shut up."
 
             ph "keep going and you won't like what happens next."
@@ -1343,9 +1358,10 @@ label start:
 
             ph "cus i'm bored lol"
 
-            ph "and now i'm gettin' just a {i}lil'{/i} bit annoyed."
+            ph "and a {i}lil'{/i} bit annoyed."
 
-        elif moves == 24:
+
+        elif moves == 57:
             ph "and.. {w=0.3}to add on..."
 
             ph "i'll delete all your saves too!"
@@ -1353,20 +1369,20 @@ label start:
             ph "fun!"
 
 
-        elif moves == 26:
+        elif moves == 59:
             ph "i mean, {w=0.1}this is the first episode."
 
             ph "so it probably doesn't matter..."
 
             ph "but still..."
 
-        elif moves == 28:
+        elif moves == 61:
             ph "that'd kinda suck, {w=0.3}huh?"
 
-        elif moves == 29:
+        elif moves == 62:
             ph "well..."
 
-        elif moves == 30:
+        elif moves == 63:
             $ persistent._clear(progress=True)
             $ deletefiles()
             $ persistent.phrog_pisser = True
@@ -1376,11 +1392,17 @@ label start:
         menu:
             "Slap":
                 $ renpy.block_rollback()
-                if moves >= 19:
+                if moves >= 50:
                     $ moves = moves + 1
                     jump ep1_battle1
 
-                if stomps >=1:
+                if slaps >= 5:
+                    no "Rocktato's hand hurts."
+                    no "He decides to stop."
+                    $ moves = moves + 1
+                    jump ep1_battle1
+
+                elif stomps >=1:
                     show rt fight slap at shake(0.05, 4)
                     rt "HYAH!!!"
                     no "Wizpotato is stuck in the ground."
@@ -1388,38 +1410,54 @@ label start:
                     $ moves = moves + 1
                     jump ep1_battle1
 
-                elif slaps >= 5:
-                    no "Rocktato's hand hurts."
-                    no "He decides to stop."
-                    $ moves = moves + 1
-                    jump ep1_battle1
-
                 else:
                     show rt fight slap at shake(0.05, 4)
+                    show wiz fight hurt at shake(0.05, 4)
+
                     $ chara_healths[0] = chara_healths[0] - 3
                     $ chara_healths[1] = chara_healths[1] - 3
                     rt "HYAH!!!"
-                    rt "(Ow.)"
 
                 if slaps == 0:
+                    rt "Ow"
                     no "Rocktato slaps Wizpotato."
+
+                    show wiz hurt at shake(0.05, 4)
+
                     wiz "OW!!!!"
 
                 elif slaps == 1:
-                    wiz "Can you stop??? SLAPPING???"
+                    show wiz angey 2 at shake(0.05, 4)
+
+                    wiz "Can you stop???"
+
+                    show wiz with hpunch
+
+                    extend " SLAPPING???"
+
                     rt "."
+
                     show rt joy 2 at bounce
+
                     rt "No."
 
                 elif slaps == 2:
+                    show wiz hurt at shake(0.05, 4)
+
                     wiz "wHY??"
 
                 elif slaps == 3:
+                    show wiz sad 2
+
                     wiz "Okay... {w=0.3}so you're just gonna keep... {w=0.3}doing that..."
                     wiz "Ow....."
 
                 elif slaps == 4:
+                    show wiz hurt 2 at shake(0.05, 4)
+
                     wiz "*Sobs*"
+
+                show wiz fight idle
 
                 $ slaps = slaps + 1
                 $ moves = moves + 1
@@ -1427,21 +1465,32 @@ label start:
 
             "Stomp":
                 $ renpy.block_rollback()
-                if moves >= 19:
+                if moves >= 50:
                     $ moves = moves + 1
                     jump ep1_battle1
-                show rt fight slap at shake(0.05, 4)
-                rt "STOMP!"
-
-                # TODO MOVE WIZ LOWER WHENEVER HE STOMPS
 
                 if stomps >= 5:
+                    show rt fight slap at shake(0.05, 4)
+
+                    rt "STOMP!"
+
                     no "He cannot go any lower."
                     no "Please stop."
+
                     $ moves = moves + 1
                     jump ep1_battle1
 
-                elif stomps == 0:
+                $ stomp_depth = (stomps+1) * 100
+
+                show rt fight slap at shake(0.05, 4)
+                show wiz fight squish at transform_offset(0,stomp_depth, 0.04), transform_zoom(1, 0.7)
+
+                $ chara_healths[0] = chara_healths[0] - 5
+
+                rt "STOMP!"
+
+
+                if stomps == 0:
                     wiz "AUGH!!!"
 
                     no "Rocktato stomps on Wizpotato, {w=0.1}burying him into the ground, {w=0.2}like a plant."
@@ -1466,10 +1515,11 @@ label start:
                     no "Wizpotato has gotten to that stony part in the ground."
                     no "He cannot go any lower."
                     no "{b}You monster.{\b}"
+                    $ stomps = stomps + 1
                     $ moves = moves + 1
                     jump ep1_battle1
 
-                $ chara_healths[0] = chara_healths[0] - 5
+
 
                 $ stomps = stomps + 1
                 $ moves = moves + 1
@@ -1477,7 +1527,7 @@ label start:
 
             "Defend":
                 $ renpy.block_rollback()
-                if moves >= 19:
+                if moves >= 50:
                     $ moves = moves + 1
                     jump ep1_battle1
 
@@ -1505,13 +1555,18 @@ label start:
                 $ saveable = True
                 if stomps >= 1:
                     no "Gin pulls Wizpotato out of the ground with her massive arms."
+
+                    show wiz hurt 2 at transform_zoom(1.0, 1.429), Position(xpos=400, ypos=605) with ease
+
                     wiz "WHYyyyyy????"
+
+                    show wiz angey at transform_zoom(1.0, 1.0)
 
                 hide screen battle_health
 
     show rt fight idle 1
 
-    rt "Okay are you ready for this? This is gonna be mega cool; it always is."
+    rt "Okay are you ready for this? {w=0.3}This is gonna be mega cool; {w=0.1}it always is."
 
     show rt fight idle 1 at funny_expand
 
@@ -1519,9 +1574,71 @@ label start:
 
     no "Rocktato started to glow."
 
+    hide wiz
+
+    hide rt
+
+    no "Everything turned white."
+
+    no "At least our FX budget can afford that."
+
+    rt "My true form...."
+
+    hide fx white
+
+    show rt trueform smile at center, Position(ypos=605)
+
+    rt "BEHOLD!"
+
+    show rt trueform happy 2 at Position(xpos=900) with ease
+
+    show wiz angey at Position(xpos=400, ypos=605) with easeinbottom
+
+    rt "Time to show you the power of my super cool Rocktato (TM) kick attack!!"
+
+    show rt at super_cool_rocktato_tm_kick_attack
+
+    show wiz angey
+
+    pause 0.51
+
+    show wiz hurt at super_cool_rocktato_tm_kick_attack_victim
+
+    with hpunch
+
+    rt "HYAAHH!!!!!!"
+
+    wiz "WAHHHHHHHHH!!"
+
+    space ""
+
+    hide rt
+
+    hide wiz
+
+    space ""
+
+    show rt trueform happy 2 at center, Position(ypos=605)
+
+    rt "Yay, I won the battle!"
+
+    show rt joy 2 at center
+
+    space ""
+
+    show rt mad at shake(rate=0.01,strength=3,loop=4)
+
+    rt "Now, WHERE IS HE?"
+
+    rt "WHERE IS MR. ROCK???"
+
+    show wiz angey 2 at Position(xpos=200, ypos=660) with easeinleft
+
+    wiz_yell "You frickin'.... {w=0.3}he's-{w=0.3}"
+
     show wiz angey 2 at shake(rate=0.01,strength=3,loop=4)
 
-    wiz_yell "You frickin'.... {w=0.3}he's-{w=0.3}he's RIGHT THERE!!"
+    extend "he's RIGHT THERE!!"
 
     no "Wizpotato didn't have any arms."
 
@@ -1531,7 +1648,7 @@ label start:
 
     no "But he gestured towards behind the textbox where, {w=0.2}indeed, {w=0.2}the stupid little stone stood."
 
-    show mr at Position(xpos=1125,ypos=580) with easeinbottom
+    show mr at Position(xpos=900,ypos=580) with easeinbottom
 
     wiz "He's been... {w=0.2}been there the whole flip flapperintime!!!!!"
 
@@ -1638,15 +1755,15 @@ label start:
 
     show bg 1 rumboy crashed
 
-    show wiz angey at Position(xpos=400, ypos=605)
+    show wiz angey at Position(xpos=200, ypos=660)
 
-    show rt o at Position(xpos=900)
+    show rt o at center
 
     with dissolve
 
     space ""
 
-    show mr at Position(xpos=1100,ypos=700) with dissolve
+    show mr at Position(xpos=900,ypos=580) with dissolve
 
     space ""
 
@@ -1654,7 +1771,7 @@ label start:
 
     ph "nyehhhhhhhhh {w=0.3}i was too lazy to."
 
-    gin "I jus' assumed it was like a... {w=0.3}a lil' game?"
+    gin "I jus' assumed it was like a... {w=0.3}a lil' game? {w=0.3}Or somethin'.."
 
     bl "Apologies, {w=0.2}my friends, {w=0.2}for leaving but... {w=0.3}uh..."
 
@@ -1684,7 +1801,7 @@ label start:
 
     rt "You really were here this... {w=0.3}this whole time??"
 
-    mr "..."
+    mr "{w=0.6}.{w=0.6}.{w=0.6}."
 
     rt "Man... {w=0.3}Aaaa I'm sorry I didn't notice you."
 
@@ -1692,11 +1809,11 @@ label start:
 
     rt "Hey, {w=0.3}how about I get you a bell or something!!"
 
-    mr "..."
+    mr "{w=0.6}.{w=0.6}.{w=0.6}."
 
     rt "YEAH! {w=0.3}This way I'll notice you more!"
 
-    mr "..."
+    mr "{w=0.6}.{w=0.6}.{w=0.6}."
 
     rt "Cookie dough after?? {w=0.3}Heck yeah!"
 

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1275: u'else' is not a keyword argument or valid child for the grid statement.
-    else:
-        ^
+File "game/episode1.rpy", line 1536: expected 'simple_expression' not found.
+    show wiz hurt 2 at
+                      ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Thu Feb 11 19:20:28 2021
+Fri Feb 12 14:52:18 2021

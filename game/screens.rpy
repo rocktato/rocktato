@@ -1212,12 +1212,6 @@ style mm_preferences_bg:
 ## Continue screen
 ## Where you load or KILL save files
 
-init:
-    # TODO: SOMETHING IS WRONG WITH THE LOADABLE FUNCTION
-    python:
-        def fileloadable(slot):
-            return renpy.loadable(str(slot.get_page()) + "-" + str(1))
-
 screen continue():
     tag menu
 
@@ -1256,7 +1250,7 @@ screen continue():
                 $ slot = i + 1
 
                 button:
-                    if fileloadable(page_name_value):
+                    if FileLoadable(1, page_name_value.get_page()):
                         action Function(load_start, FileLoad(slot))
 
                     has vbox
