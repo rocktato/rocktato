@@ -1219,6 +1219,8 @@ label start:
     $ defends = 0
 
     if persistent.episode_fin >= 1:
+        $ choice_screen_type = "choice"
+
         ph "tato, you know how to fight (i mean they teach this stuff in elementary jesus) but do you want a reminder anyway?"
 
         menu:
@@ -1269,11 +1271,15 @@ label start:
 
         show rt fight idle
 
+        $ choice_screen_type = "fight_choice"
+
         if moves == 0 and ep1_skiptut2 == False:
             rt "(Okay, so I can either punch him, which will hurt a bunch!!!)"
             rt "(Ah, but it might hurt me too though. {w}I'm a sensitive boy :,<.)"
             rt "(I can stomp him into the ground too, which would be funny.)"
             rt "(Or... I can defend!!! {w=0.3}So I won't get too big of a hurt myself!"
+            rt ")"
+
             rt "(GO CHOOSE,  {w=0.1}ME!)"
 
         elif moves == 5:
@@ -1531,20 +1537,42 @@ label start:
                     $ moves = moves + 1
                     jump ep1_battle1
 
-                rt "BWAHHHHH!!!"
+                if defends == 0:
+                    show rt fight defn 1
 
-                if defends <= 3:
+                    rt "*Snapping noises*"
+
                     no "Rocktato does a stupid pose."
                     no "There's no need to defend; {w=0.3}Wizpotato isn't even attacking."
+                    no "(But like, would you count that as defending though?)"
 
-                elif defends == 4:
-                    no "I can't think of something funny to say here."
+                elif defends == 1:
+                    show rt fight defn 2
+
+                    no "Rocktato does another stupid pose."
+                    no "I mean... {w=0.2}sure."
+                    no "Alright."
+
+                elif defends == 2:
+                    show rt fight defn 3
+
+                    rt "Nyah~!{w=0.2}{nw}"
+
+                    no "NOOOOOOOOOOO!!!!"
+                    no "WHYYYY???"
 
                 elif defends == 5:
-                    no "Yeah, {w=0.1}I give up."
+                    no "Well, {w=0.2}if you say so."
 
-                elif defends == 6:
-                    no "You're hopeless..."
+                    show rt fight defn terrible
+
+                    pause 3.0
+
+                elif defends >= 3:
+                    no "Rocktato couldn't think of any other pose to do."
+                    no "So... he didn't. {w=0.3}Pose."
+
+
 
                 $ defends = defends + 1
                 $ moves = moves + 1

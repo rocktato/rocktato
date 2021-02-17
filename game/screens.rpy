@@ -10,6 +10,8 @@ default saveable = True
 
 default persistent.phrog_pisser = False
 
+default choice_screen_type = "choice"
+
 ################################################################################
 ## Styles
 ################################################################################
@@ -225,27 +227,35 @@ init:
             alpha 1 zoom 1 xanchor 0.5 yanchor 0.5
 
 screen choice(items):
-    style_prefix "choice"
+    style_prefix choice_screen_type
 
     window:
-        vbox:
-            at choiceboxfadein
-            style "choice_vbox"
+        frame:
+            background None
 
-            for i in items:
-                textbutton i.caption action i.action
+            vbox:
+                at choiceboxfadein
+                style str(choice_screen_type) + "_vbox"
+
+                for i in items:
+                    textbutton i.caption action i.action
+
+
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
 ## menu captions will be displayed as empty buttons.
 define config.narrator_menu = True
 
 
+## Change pos of choice buttons!!!!
+
 style choice_vbox is vbox
 style choice_button is button
 style choice_button_text is button_text
 
 style choice_vbox:
-    xalign 0.5
+    xanchor 0.5
+    xpos 640
     ypos -250
     yanchor 0.5
 
@@ -258,6 +268,26 @@ style choice_button_text is default:
     properties gui.button_text_properties("choice_button")
 
 
+style fight_choice_vbox is hbox
+style fight_choice_button is button
+style fight_choice_button_text is button_text
+
+style fight_choice_vbox:
+    xanchor 0.5
+    xpos 640
+    ypos -400
+    yanchor 0.5
+
+
+    spacing gui.choice_spacing
+
+style fight_choice_button is default:
+    properties gui.button_properties("fight_choice_button")
+
+style fight_choice_button_text is default:
+    properties gui.button_text_properties("fight_choice_button")
+
+
 ## The Pause sCREen #############################################################
 ##
 
@@ -268,7 +298,7 @@ screen pause():
         renpy.music.stop(channel="blip", fadeout=None)
 
     tag menu
-    zorder 300
+    zorder 1000
     modal True
 
     key "K_ESCAPE" action Return()
@@ -1074,14 +1104,14 @@ init python:
         renpy.quit()
 
     def heat_death():
-        yes_five = Show("confirm", transition=None, message="Last one. You sure?", yes_action = Function(heat_death_action), no_action=Return())
-        yes_four = Show("confirm", transition=None, message="LOL I'M GONNA REVERSE YES AND NO. CLICK YES TO NOT PROCEED.", yes_action=Return(), no_action=yes_five)
-        yes_three = Show("confirm", transition=None, message="YOU WILL COMPLETELY DESTROY ALL TIMELINES!", yes_action=yes_four, no_action=Return())
-        yes_two = Show("confirm", transition=None, message="REALLY??? ALL YOUR SAVES, YOUR FRIENDS, YOUR THINGS???", yes_action=yes_three, no_action=Return())
-        yes_one = Show("confirm", transition=None, message="ARE YOU SURE MAN???", yes_action=yes_two, no_action=Return())
+        yes_five = Show("confirm", transition=None, message="Last one. You sure?", yes_action = Function(heat_death_action), no_action=Hide("confirm"))
+        yes_four = Show("confirm", transition=None, message="LOL I'M GONNA REVERSE YES AND NO. CLICK YES TO NOT PROCEED.", yes_action=Hide("confirm"), no_action=yes_five)
+        yes_three = Show("confirm", transition=None, message="YOU WILL COMPLETELY DESTROY ALL TIMELINES!", yes_action=yes_four, no_action=Hide("confirm"))
+        yes_two = Show("confirm", transition=None, message="REALLY??? ALL YOUR SAVES, YOUR FRIENDS, YOUR THINGS???", yes_action=yes_three, no_action=Hide("confirm"))
+        yes_one = Show("confirm", transition=None, message="ARE YOU SURE MAN???", yes_action=yes_two, no_action=Hide("confirm"))
 
 
-        renpy.run(Show("confirm", transition=None, message="DELETE ALL DATA FOREVER???", yes_action=yes_one, no_action=Return()))
+        renpy.run(Show("confirm", transition=None, message="DELETE ALL DATA FOREVER???", yes_action=yes_one, no_action=Hide("confirm")))
 
 
 screen mm_preferences():

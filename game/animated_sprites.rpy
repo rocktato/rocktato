@@ -1,5 +1,6 @@
 ## Fight sprites (Shakespeare)
 
+
 image rt fight idle:
     "images/main chars/rocktato/fight/rt fight idle 1.PNG"
     pause 0.1
@@ -36,6 +37,23 @@ image rt fight slap:
     pause 0.05
     "images/main chars/rocktato/fight/rt fight slap 11.PNG"
     pause 0.05
+
+image rt fight defn 1:
+    "images/main chars/rocktato/fight/rt fight defn 1 1.PNG"
+    pause 0.02
+    "images/main chars/rocktato/fight/rt fight defn 1 2.PNG"
+
+image rt fight defn 2:
+    "images/main chars/rocktato/fight/rt fight defn 2 1.PNG"
+    pause 0.02
+    "images/main chars/rocktato/fight/rt fight defn 2 2.PNG"
+
+image rt fight defn 3:
+    "images/main chars/rocktato/fight/rt fight defn 3 1.PNG"
+    pause 0.02
+    "images/main chars/rocktato/fight/rt fight defn 3 2.PNG"
+
+
 
 image wiz fight idle:
     "images/main chars/wizpotato/fight/wiz fight idle 1.PNG"

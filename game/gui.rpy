@@ -197,23 +197,36 @@ define gui.quick_button_text_selected_color = gui.accent_color
 
 # define gui.navigation_button_width = 250
 
-define gui.border = "gui/border.png"
+# define gui.border = "gui/border.png"
 
 
 ## Choice Buttons ##############################################################
 ##
 ## Choice buttons are used in the in-game menus.
+## CHoice button properties
 
 define gui.choice_button_width = 790
-define gui.choice_button_height = None
+define gui.choice_button_height = 70
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(100, 5, 100, 5)
+define gui.choice_button_borders = None
 define gui.choice_button_text_font = gui.text_font
-define gui.choice_button_text_size = gui.text_size
+define gui.choice_button_text_size = 62
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_idle_color = "9c927b"
 define gui.choice_button_text_hover_color = "#ffffff"
 define gui.choice_button_text_insensitive_color = "#444444"
+
+
+define gui.fight_choice_button_width = 270
+define gui.fight_choice_button_height = None
+define gui.fight_choice_button_tile = False
+define gui.fight_choice_button_borders = Borders(100, 5, 100, 5)
+define gui.fight_choice_button_text_font = gui.text_font
+define gui.fight_choice_button_text_size = gui.text_size
+define gui.fight_choice_button_text_xalign = 0.5
+define gui.fight_choice_button_text_idle_color = "#ffffff"
+define gui.fight_choice_button_text_hover_color = "#ffffff"
+define gui.fight_choice_button_text_insensitive_color = "#b3b3cc"
 
 
 ## File Slot Buttons ###########################################################

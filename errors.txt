@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/episode1.rpy", line 1536: expected 'simple_expression' not found.
-    show wiz hurt 2 at
-                      ^
+File "game/episode1.rpy", line 1552: expected statement.
+    rt fight defn 2
+                   ^
+
+File "game/episode1.rpy", line 1559: expected statement.
+    rt fight defn 3
+                   ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Fri Feb 12 14:52:18 2021
+Tue Feb 16 20:51:34 2021
