@@ -420,7 +420,9 @@ style navigation_button_text:
 ## Used to display the main menu when Ren'Py starts.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
-
+init:
+    transform mm_zoom:
+        zoom 0.85
 
 screen main_menu():
     python:
@@ -452,33 +454,33 @@ screen main_menu():
 
     fixed:
         xpos 20
-        ypos 180
+        ypos 270
 
-        imagebutton auto "gui/main menu/epSel_%s.png" action ShowMenu("ep_select")
+        imagebutton auto "gui/main menu/epSel_%s.png" action ShowMenu("ep_select") at mm_zoom
 
     fixed:
         xpos 100
-        ypos 325
+        ypos 395
 
-        imagebutton auto "gui/main menu/continue_%s.png" action ShowMenu("continue")
+        imagebutton auto "gui/main menu/continue_%s.png" action ShowMenu("continue") at mm_zoom
 
     fixed:
         xpos 20
-        ypos 460
+        ypos 510
 
-        imagebutton auto "gui/main menu/extras_%s.png" action ShowMenu("mm_preferences")
-
-    fixed:
-        xpos 50
-        ypos 610
-
-        imagebutton auto "gui/main menu/settings_%s.png" action ShowMenu("mm_preferences")
+        imagebutton auto "gui/main menu/extras_%s.png" action ShowMenu("mm_preferences") at mm_zoom
 
     fixed:
-        xpos 220
-        ypos 610
+        xpos 100
+        ypos 628
 
-        imagebutton auto "gui/main menu/exit_%s.png" action Quit(confirm=not main_menu)
+        imagebutton auto "gui/main menu/settings_%s.png" action ShowMenu("mm_preferences") at mm_zoom
+
+    fixed:
+        xpos 250
+        ypos 628
+
+        imagebutton auto "gui/main menu/exit_%s.png" action Quit(confirm=not main_menu) at mm_zoom
 
     # if gui.show_name:
 
