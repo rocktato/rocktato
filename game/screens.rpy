@@ -247,8 +247,6 @@ screen choice(items):
 define config.narrator_menu = True
 
 
-## Change pos of choice buttons!!!!
-
 style choice_vbox is vbox
 style choice_button is button
 style choice_button_text is button_text
@@ -262,6 +260,8 @@ style choice_vbox:
     spacing gui.choice_spacing
 
 style choice_button is default:
+    hover_sound "audio/ui/choice_hover.ogg"
+    activate_sound "audio/ui/choice_activate.ogg"
     properties gui.button_properties("choice_button")
 
 style choice_button_text is default:
@@ -282,6 +282,8 @@ style fight_choice_vbox:
     spacing gui.choice_spacing
 
 style fight_choice_button is default:
+    hover_sound "audio/ui/choice_hover.ogg"
+    activate_sound "audio/ui/choice_activate.ogg"
     properties gui.button_properties("fight_choice_button")
 
 style fight_choice_button_text is default:
@@ -319,7 +321,7 @@ screen quick_menu():
 
     # KEYMAPS
     key "ctrl_shift_K_q" action renpy.quit
-    key "K_ESCAPE" action ShowMenu("pause")
+    key "K_ESCAPE" action Play("sound", "audio/ui/pause.ogg"), ShowMenu("pause")
     key "a" action MainMenu()
     key "s" action ShowMenu("save")
     key "d" action ShowMenu('preferences')
@@ -333,12 +335,12 @@ screen quick_menu():
             ypos 15
             spacing 10
 
-            imagebutton auto "gui/quick menu/menubutton_%s.png" action MainMenu()
-            imagebutton auto "gui/quick menu/savebutton_%s.png" action ShowMenu('save')
-            imagebutton auto "gui/quick menu/settingsbutton_%s.png" action ShowMenu('preferences')
-            imagebutton auto "gui/quick menu/rollback_%s.png" action Rollback()
-            imagebutton auto "gui/quick menu/forward_%s.png" action RollForward()
-            imagebutton auto "gui/quick menu/fastforward_%s.png" action Skip(fast=False)
+            imagebutton auto "gui/quick menu/menubutton_%s.png" action MainMenu() hover_sound "audio/ui/menu_hover.ogg"
+            imagebutton auto "gui/quick menu/savebutton_%s.png" action ShowMenu('save') hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
+            imagebutton auto "gui/quick menu/settingsbutton_%s.png" action ShowMenu('preferences') hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
+            imagebutton auto "gui/quick menu/rollback_%s.png" action Rollback() hover_sound "audio/ui/menu_hover.ogg"
+            imagebutton auto "gui/quick menu/forward_%s.png" action RollForward() hover_sound "audio/ui/menu_hover.ogg"
+            imagebutton auto "gui/quick menu/fastforward_%s.png" action Skip(fast=False) hover_sound "audio/ui/menu_hover.ogg"
 
 
 
@@ -391,17 +393,17 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        imagebutton auto "gui/game menu/savefiles_%s.png" action ShowMenu("save")
+        imagebutton auto "gui/game menu/savefiles_%s.png" action ShowMenu("save") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
 
-        imagebutton auto "gui/game menu/settings_%s.png" action ShowMenu("preferences")
+        imagebutton auto "gui/game menu/settings_%s.png" action ShowMenu("preferences") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
 
         # if _in_replay:
             # textbutton _("End Replay") action EndReplay(confirm=True)
 
         if not main_menu:
-            imagebutton auto "gui/game menu/mainmenu_%s.png" action MainMenu()
+            imagebutton auto "gui/game menu/mainmenu_%s.png" action MainMenu() hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
 
-            imagebutton auto "gui/game menu/quitgame_%s.png" action Quit(confirm=not main_menu)
+            imagebutton auto "gui/game menu/quitgame_%s.png" action Quit(confirm=not main_menu) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
 
 
 style navigation_button is gui_button
@@ -433,7 +435,7 @@ screen main_menu():
 
 
     key "ctrl_shift_K_q" action renpy.quit
-    key "K_SPACE" action ShowMenu("continue")
+    key "K_SPACE" action Play("sound", "audio/ui/menu_activate.ogg"), ShowMenu("continue")
 
     ## This ensures that any other menu screen is replaced.
     tag menu
@@ -452,35 +454,45 @@ screen main_menu():
 
         add gui.game_title
 
-    fixed:
+    imagebutton auto "gui/main menu/epSel_%s.png":
         xpos 20
         ypos 270
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/menu_activate.ogg"
 
-        imagebutton auto "gui/main menu/epSel_%s.png" action ShowMenu("ep_select") at mm_zoom
+        action ShowMenu("ep_select") at mm_zoom
 
-    fixed:
+    imagebutton auto "gui/main menu/continue_%s.png":
         xpos 100
         ypos 395
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/menu_activate.ogg"
 
-        imagebutton auto "gui/main menu/continue_%s.png" action ShowMenu("continue") at mm_zoom
+        action ShowMenu("continue") at mm_zoom
 
-    fixed:
+    imagebutton auto "gui/main menu/extras_%s.png":
         xpos 20
         ypos 510
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/menu_activate.ogg"
 
-        imagebutton auto "gui/main menu/extras_%s.png" action ShowMenu("mm_preferences") at mm_zoom
+        action ShowMenu("mm_preferences") at mm_zoom
 
-    fixed:
+    imagebutton auto "gui/main menu/settings_%s.png":
         xpos 100
         ypos 628
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/menu_activate.ogg"
 
-        imagebutton auto "gui/main menu/settings_%s.png" action ShowMenu("mm_preferences") at mm_zoom
+        action ShowMenu("mm_preferences") at mm_zoom
 
-    fixed:
+    imagebutton auto "gui/main menu/exit_%s.png":
         xpos 250
         ypos 628
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/menu_activate.ogg"
 
-        imagebutton auto "gui/main menu/exit_%s.png" action Quit(confirm=not main_menu) at mm_zoom
+        action Quit(confirm=not main_menu) at mm_zoom
 
     # if gui.show_name:
 
@@ -685,7 +697,7 @@ screen save():
     tag menu
 
     key "s" action Return()
-    key "d" action ShowMenu("preferences")
+    key "d" action Play("sound", "audio/ui/menu_activate.ogg"), ShowMenu("preferences")
 
     default page_name_value = FilePageNameInputValue(pattern=_("page {}"))
 
@@ -734,23 +746,29 @@ screen save():
                             style "slot_name_text"
 
             ## Buttons to delete, save, or load a file :)
-            fixed:
+            imagebutton auto "gui/save menu/save_%s.png":
                 xpos 200
                 ypos 450
+                hover_sound "audio/ui/menu_hover.ogg"
+                activate_sound "audio/ui/save_activate.ogg"
 
-                imagebutton auto "gui/save menu/save_%s.png" action [ Function(savefile, slot), SensitiveIf(saveable == True) ] #FileSave(slot, confirm=True, newest=True)
+                action [ Function(savefile, slot), SensitiveIf(saveable == True) ] #FileSave(slot, confirm=True, newest=True)
 
-            fixed:
+            imagebutton auto "gui/save menu/play_%s.png":
                 xpos 460
                 ypos 450
+                hover_sound "audio/ui/menu_hover.ogg"
+                activate_sound "audio/ui/epstart_menu_activate.ogg"
 
-                imagebutton auto "gui/save menu/play_%s.png" action Function(loadfile, slot) #FileLoad(slot)
+                action Function(loadfile, slot), SensitiveIf(FileLoadable(1, page_name_value.get_page()))  #FileLoad(slot)
 
-            fixed:
+            imagebutton auto "gui/save menu/trash_%s.png":
                 xpos 720
                 ypos 450
+                hover_sound "audio/ui/menu_hover.ogg"
+                activate_sound "audio/ui/trash_activate.ogg"
 
-                imagebutton auto "gui/save menu/trash_%s.png" action FileDelete(slot)
+                action FileDelete(slot)
 
 
             ## Buttons to access other pages.
@@ -762,8 +780,16 @@ screen save():
 
                 spacing gui.page_spacing
 
-                textbutton _("<") action FilePagePrevious(max=6, wrap=True, auto=False, quick=False)
-                textbutton _(">") action FilePageNext(max=6, wrap=True, auto=False, quick=False)
+                textbutton _("<"):
+                    hover_sound "audio/ui/menu_hover.ogg"
+                    activate_sound "audio/ui/menu_activate.ogg"
+
+                    action FilePagePrevious(max=6, wrap=True, auto=False, quick=False)
+                textbutton _(">"):
+                    hover_sound "audio/ui/menu_hover.ogg"
+                    activate_sound "audio/ui/menu_activate.ogg"
+
+                    action FilePageNext(max=6, wrap=True, auto=False, quick=False)
 
                 ## Number of save sloterinos
                 # for page in range(1, 6):
@@ -831,20 +857,20 @@ screen preferences():
                     vbox:
                         style_prefix "check"
                         label _("skip unseen text?")
-                        textbutton _("no") action Preference("skip", "seen")
-                        textbutton _("yeah") action Preference("skip", "all")
+                        textbutton _("no") action Preference("skip", "seen") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                        textbutton _("yeah") action Preference("skip", "all") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
                     vbox:
                         style_prefix "check"
                         label _("confirm saving/loading?")
-                        textbutton _("yeah") action SetField(persistent, "confirm_saveload", True)
-                        textbutton _("n o") action SetField(persistent, "confirm_saveload", False)
+                        textbutton _("yeah") action SetField(persistent, "confirm_saveload", True) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                        textbutton _("n o") action SetField(persistent, "confirm_saveload", False) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
                     vbox:
                         style_prefix "radio"
                         label _("display type?")
-                        textbutton _("window") action Preference("display", "window")
-                        textbutton _("fullscreen") action Preference("display", "fullscreen")
+                        textbutton _("window") action Preference("display", "window") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                        textbutton _("fullscreen") action Preference("display", "fullscreen") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
             null height (0.1 * gui.pref_spacing)
 
@@ -892,9 +918,9 @@ screen preferences():
                 vbox:
                     style_prefix "radio"
                     label _("text speed")
-                    textbutton _("chill :)") action Preference("text speed", 20)
-                    textbutton _("default steve") action Preference("text speed", 40)
-                    textbutton _("SPEEEEEED") action Preference("text speed", 60)
+                    textbutton _("chill :)") action Preference("text speed", 20) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton _("default steve") action Preference("text speed", 40) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton _("SPEEEEEED") action Preference("text speed", 60) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
                     text ("") size 23
 
@@ -903,6 +929,8 @@ screen preferences():
 
                         textbutton _("mute all"):
                             action Preference("all mute", "toggle")
+                            hover_sound "audio/ui/menu_hover.ogg"
+                            activate_sound "audio/ui/settings_menu_activate.ogg"
                             style "mute_all_button"
 
 
@@ -1035,16 +1063,21 @@ screen ep_select():
             hbox:
                 spacing 10
 
-                imagebutton auto "gui/ep select/ep buttons/1_%s.PNG" action Function(show_ep_desc, 0) at select_options
-                imagebutton auto "gui/ep select/ep buttons/2_%s.PNG" action Function(show_ep_desc, 1) at select_options
-                imagebutton auto "gui/ep select/ep buttons/3_%s.PNG" action Function(show_ep_desc, 2) at select_options
-                imagebutton auto "gui/ep select/ep buttons/4_%s.PNG" action Function(show_ep_desc, 3) at select_options
-                imagebutton auto "gui/ep select/ep buttons/5_%s.PNG" action Function(show_ep_desc, 4) at select_options
+                for i in range(5):
+                    imagebutton auto "gui/ep select/ep buttons/" + str(i+1) + "_%s.PNG":
+                        hover_sound "audio/ui/menu_hover.ogg"
+                        activate_sound "audio/ui/menu_activate.ogg"
+
+                        action Function(show_ep_desc, i)
+                        at select_options
+
         bar value XScrollValue("ep_list")
 
     imagebutton auto "gui/x_%s.png":
         xpos 17
         ypos 17
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/menu_activate.ogg"
 
         action Function(exit_ep_sel)
 
@@ -1057,14 +1090,19 @@ screen ep_desc(title, desc, thumb, l):
         text title font "gui/fonts/BigJohnPRO-Bold.otf" xsize 630 size 40
         text desc xsize 650 size 30
     add thumb xpos 100 ypos 40 zoom 0.35
-    imagebutton auto "gui/main menu/start_%s.png" action Function(load_start, Start(l)) xpos 100 ypos 300
+    imagebutton auto "gui/main menu/start_%s.png":
+        action Function(load_start, Start(l))
+        xpos 100
+        ypos 300
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/epstart_menu_activate.ogg"
 
 
 ################################################################################
 ## Loading screen
 ###
 
-#TODO UH THE BOOP BOOP BOOPS
+#TODO: LOADING SOUND FX
 
 screen loading_screen(what, img, tip, tip_font, tip_color):
     python:
@@ -1136,25 +1174,25 @@ screen mm_preferences():
                     vbox:
                         style_prefix "check"
                         label _("skip unseen text?")
-                        textbutton _("no") action Preference("skip", "seen")
-                        textbutton _("yeah") action Preference("skip", "all")
+                        textbutton _("no") action Preference("skip", "seen") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                        textbutton _("yeah") action Preference("skip", "all") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
                     vbox:
                         style_prefix "check"
                         label _("confirm saving/loading?")
-                        textbutton _("yeah") action SetField(persistent, "confirm_saveload", True)
-                        textbutton _("n o") action SetField(persistent, "confirm_saveload", False)
+                        textbutton _("yeah") action SetField(persistent, "confirm_saveload", True) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                        textbutton _("n o") action SetField(persistent, "confirm_saveload", False) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
                     vbox:
                         style_prefix "radio"
                         label _("display type?")
-                        textbutton _("window") action Preference("display", "window")
-                        textbutton _("fullscreen") action Preference("display", "fullscreen")
+                        textbutton _("window") action Preference("display", "window") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                        textbutton _("fullscreen") action Preference("display", "fullscreen") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
                     vbox:
                         style_prefix "check"
                         label _("tato heat death")
-                        textbutton _(":(") action Function(heat_death)
+                        textbutton _(":(") action Function(heat_death) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
             null height (0.1 * gui.pref_spacing)
 
@@ -1203,9 +1241,9 @@ screen mm_preferences():
                 vbox:
                     style_prefix "radio"
                     label _("text speed")
-                    textbutton _("chill :)") action Preference("text speed", 20)
-                    textbutton _("default steve") action Preference("text speed", 40)
-                    textbutton _("SPEEEEEED") action Preference("text speed", 60)
+                    textbutton _("chill :)") action Preference("text speed", 20) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton _("default steve") action Preference("text speed", 40) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton _("SPEEEEEED") action Preference("text speed", 60) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
                     text ("") size 23
 
@@ -1214,6 +1252,8 @@ screen mm_preferences():
 
                         textbutton _("mute all"):
                             action Preference("all mute", "toggle")
+                            hover_sound "audio/ui/menu_hover.ogg"
+                            activate_sound "audio/ui/settings_menu_activate.ogg"
                             style "mute_all_button"
 
 
@@ -1222,17 +1262,19 @@ screen mm_preferences():
                     label _("window size")
                     text "(if in fullscreen, will switch to window mode)" size 23 color "#330066"
 
-                    textbutton "bite sized" action Preference("display", 0.3)
-                    textbutton "640 x 360" action Preference("display", 0.5)
-                    textbutton "960 x 540" action Preference("display", 0.75)
-                    textbutton "1280 x 720" action Preference("display", 1.0)
-                    textbutton "1920 x 1080" action Preference("display", 1.5)
+                    textbutton "bite sized" action Preference("display", 0.3) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton "640 x 360" action Preference("display", 0.5) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton "960 x 540" action Preference("display", 0.75) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton "1280 x 720" action Preference("display", 1.0) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton "1920 x 1080" action Preference("display", 1.5) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
 
 
     imagebutton auto "gui/x_%s.png":
         xpos 17
         ypos 17
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/menu_activate.ogg"
 
         action Return()
 
@@ -1284,6 +1326,8 @@ screen continue():
                 button:
                     if FileLoadable(1, page_name_value.get_page()):
                         action Function(load_start, FileLoad(slot))
+                        hover_sound "audio/ui/menu_hover.ogg"
+                        activate_sound "audio/ui/epstart_menu_activate.ogg"
 
                     has vbox
 
@@ -1305,13 +1349,22 @@ screen continue():
 
             spacing gui.page_spacing
 
-            textbutton _("<") action FilePagePrevious(max=6, wrap=True, auto=False, quick=False)
-            textbutton _(">") action FilePageNext(max=6, wrap=True, auto=False, quick=False)
+            textbutton _("<"):
+                action FilePagePrevious(max=6, wrap=True, auto=False, quick=False)
+                hover_sound "audio/ui/menu_hover.ogg"
+                activate_sound "audio/ui/menu_activate.ogg"
+
+            textbutton _(">"):
+                action FilePageNext(max=6, wrap=True, auto=False, quick=False)
+                hover_sound "audio/ui/menu_hover.ogg"
+                activate_sound "audio/ui/menu_activate.ogg"
 
 
     imagebutton auto "gui/x_%s.png":
         xpos 17
         ypos 17
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/menu_activate.ogg"
 
         action Return()
 
@@ -1343,6 +1396,7 @@ init python:
 screen confirm(message, yes_action, no_action):
     python:
         renpy.music.stop(channel="blip", fadeout=None)
+        renpy.music.play("audio/ui/confirm.ogg", channel="sound") #TODO WHY DOES THIS PLAY TWICE
 
     ## Ensure other screens do not get input while this screen is displayed.
     modal True
@@ -1377,8 +1431,8 @@ screen confirm(message, yes_action, no_action):
                 xalign 0.5
                 spacing 100
 
-                textbutton _("yes") action Function(replace_yes_action, yes_action, message)
-                textbutton _("nah") action no_action
+                textbutton _("yes") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg" action Function(replace_yes_action, yes_action, message)
+                textbutton _("nah") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg" action no_action
 
 
     ## Right-click and escape answer "no".

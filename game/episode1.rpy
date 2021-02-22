@@ -1422,7 +1422,11 @@ label start:
 
                     $ chara_healths[0] = chara_healths[0] - 3
                     $ chara_healths[1] = chara_healths[1] - 3
+
+                    play sound "audio/fx/slap.ogg"
+
                     rt "HYAH!!!"
+                    
 
                 if slaps == 0:
                     rt "Ow"
