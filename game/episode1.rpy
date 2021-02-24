@@ -14,11 +14,15 @@ label start:
 
     stop music fadeout 1.0
 
+    play sound "audio/fx/windy.ogg" loop
+
     show sky
 
     show obj 1 rumboy at fast_shaking
 
     space ""
+
+    play sound "audio/fx/crash.ogg"
 
     show img 1 rumboy crashed at hpunch
 
@@ -28,18 +32,20 @@ label start:
 
     space ""
 
-    Character("Random Citizen 1", size=25, color="#ffffff",callback=no_blip) "OH MY GOD!!!"
+    Character("Random Citizen 1", size=25, callback=no_blip) "OH MY GOD!!!"
 
-    Character("Random Citizen 2", size=25, color="#ffffff",callback=no_blip) "A GIANT RUMBOY HAS FALLEN FROM THE SKY!!!"
+    Character("Random Citizen 2", size=25, callback=no_blip) "A GIANT RUMBOY HAS FALLEN FROM THE SKY!!!"
 
-    Character("Random Citizen 3", size=25, color="#ffffff",callback=no_blip) "MY TAX DOLLARS WENT INTO THAT FOUNTAIN NOO!!"
+    Character("Random Citizen 3", size=25, callback=no_blip) "MY TAX DOLLARS WENT INTO THAT FOUNTAIN NOO!!"
 
-    Character("Random Citizen 3.5", size=23, color="#ffffff",callback=no_blip) "AHHHHHHHHHHHHHH SCREAMING!!"
+    Character("Random Citizen 3.5", size=23, callback=no_blip) "AHHHHHHHHHHHHHH SCREAMING!!"
 
     show rt disgusted at right
 
     rt "No way..."
 
+
+    play sound "audio/fx/button.ogg"
 
     show img 1 rumboy crashed freezeframe with hpunch
 
@@ -94,6 +100,8 @@ label start:
 
     show rt exasperated
 
+    play sound "audio/fx/cough.ogg"
+
     rt "Then I asked myself why HE got a bed but I didn't."
 
     show rt joy
@@ -101,6 +109,8 @@ label start:
     rt "Oh yeah he was gone too."
 
     rt "I feel like I didn't do that right, wait."
+
+    play sound "audio/fx/punch.ogg"
 
     show rt o with hpunch
 
@@ -1009,13 +1019,13 @@ label start:
 
     space ""
 
-    Character("Random Citizen 1", size=25, color="#ffffff",callback=no_blip) "OH MY GOD!!!"
+    Character("Random Citizen 1", size=25, callback=no_blip) "OH MY GOD!!!"
 
-    Character("Random Citizen 2", size=25, color="#ffffff",callback=no_blip) "A GIANT RUMBOY HAS FALLEN FROM THE SKY!!!"
+    Character("Random Citizen 2", size=25, callback=no_blip) "A GIANT RUMBOY HAS FALLEN FROM THE SKY!!!"
 
-    Character("Random Citizen 3", size=25, color="#ffffff",callback=no_blip) "MY TAX DOLLARS WENT INTO THAT FOUNTAIN NOO!!"
+    Character("Random Citizen 3", size=25, callback=no_blip) "MY TAX DOLLARS WENT INTO THAT FOUNTAIN NOO!!"
 
-    Character("Random Citizen 3.5", size=23, color="#ffffff",callback=no_blip) "AHHHHHHHHHHHHHH SCREAMING"
+    Character("Random Citizen 3.5", size=23, callback=no_blip) "AHHHHHHHHHHHHHH SCREAMING"
 
     rt "No way..."
 
@@ -1029,13 +1039,13 @@ label start:
 
     rt "Is thAT-"
 
-    Character("???", color="#ffffff", size=43, what_size=70, callback=wiz_blip) "..."
+    Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip) "..."
 
-    Character("???", color="#ffffff", size=43, what_size=70, callback=wiz_blip) "NYEHEHEHEH..."
+    Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip) "NYEHEHEHEH..."
 
     show wiz evil 2 at center, Position(ypos=50) with easeinbottom
 
-    Character("???", color="#ffffff", size=43, what_size=70, callback=wiz_blip) "IT IS I, {w=0.3}WIZPOTATo!!!"
+    Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip) "IT IS I, {w=0.3}WIZPOTATo!!!"
 
     wiz_yell "WAIT CRAP!!! {w=0.3}I MISSED!!!!!"
 
@@ -1083,9 +1093,9 @@ label start:
 
     show wiz bruh
 
-    Character("Random Hero 1", size=31, color="#ffffff",callback=no_blip) "Are you kiddin' me?? {w=0.3}THIS GUY AGAIN?!"
+    Character("Random Hero 1", size=31, callback=no_blip) "Are you kiddin' me?? {w=0.3}THIS GUY AGAIN?!"
 
-    Character("Random Citizen 3", size=25, color="#ffffff",callback=no_blip) "MY TAX DOLLARS WERE WASTED FOR THIS????"
+    Character("Random Citizen 3", size=25, callback=no_blip) "MY TAX DOLLARS WERE WASTED FOR THIS????"
 
     rt "GASP!!!!!!"
 
@@ -1426,7 +1436,7 @@ label start:
                     play sound "audio/fx/slap.ogg"
 
                     rt "HYAH!!!"
-                    
+
 
                 if slaps == 0:
                     rt "Ow"

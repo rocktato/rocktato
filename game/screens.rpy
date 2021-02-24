@@ -162,6 +162,7 @@ style namebox:
 
 style say_label:
     properties gui.text_properties("name", accent=True)
+    outlines [ (3, "#FFFFFF") ]
     xalign gui.name_xalign
     yalign 0.5
 
@@ -171,6 +172,7 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
+    outlines [ (3, "#1e146b") ]
 
 ## Input screen ################################################################
 ##
@@ -287,6 +289,7 @@ style fight_choice_button is default:
     properties gui.button_properties("fight_choice_button")
 
 style fight_choice_button_text is default:
+    yoffset 10
     properties gui.button_text_properties("fight_choice_button")
 
 
@@ -758,7 +761,6 @@ screen save():
                 xpos 460
                 ypos 450
                 hover_sound "audio/ui/menu_hover.ogg"
-                activate_sound "audio/ui/epstart_menu_activate.ogg"
 
                 action Function(loadfile, slot), SensitiveIf(FileLoadable(1, page_name_value.get_page()))  #FileLoad(slot)
 
@@ -1088,7 +1090,7 @@ screen ep_desc(title, desc, thumb, l):
         spacing 5
 
         text title font "gui/fonts/BigJohnPRO-Bold.otf" xsize 630 size 40
-        text desc xsize 650 size 30
+        text desc font "gui/fonts/Rouli.ttf" xsize 650 size 30
     add thumb xpos 100 ypos 40 zoom 0.35
     imagebutton auto "gui/main menu/start_%s.png":
         action Function(load_start, Start(l))
@@ -1102,14 +1104,22 @@ screen ep_desc(title, desc, thumb, l):
 ## Loading screen
 ###
 
-#TODO: LOADING SOUND FX
+init python:
+    def renpy_music_stop_action():
+        renpy.music.stop(channel="music", fadeout=None)
+
+
+#TODO: LOADING NOISE
 
 screen loading_screen(what, img, tip, tip_font, tip_color):
+    on 'show' action SetMute('music/asd.mp3', True)
+
     python:
         renpy.music.stop(channel="blip", fadeout=None)
-        renpy.music.stop(channel="music", fadeout=None)
         renpy.music.stop(channel="sound", fadeout=None)
         renpy.music.stop(channel="voice", fadeout=None)
+
+    $ renpy.music.play("audio/ui/loading.ogg", channel="music", loop=True)
 
     key "ctrl_shift_K_q" action renpy.quit
 
@@ -1125,11 +1135,11 @@ screen loading_screen(what, img, tip, tip_font, tip_color):
     $ randomterribleload = renpy.random.randint(1,100)
 
     if randomterribleload == 88:
-        timer 30.0 action what
+        timer 30.0 action what, Function(renpy_music_stop_action)
         text "Did you know that the game has a 1 in 100 chance of the game taking 30 seconds to load!" font tip_font xalign 0.5 ypos 400 text_align 0.5 xsize 1000 size 40 color tip_color
     else:
         $ randomtime = renpy.random.random() + 3.0
-        timer randomtime action what
+        timer randomtime action what, Function(renpy_music_stop_action)
 
         text tip font tip_font xalign 0.5 ypos 400 text_align 0.5 xsize 1000 size 40 color tip_color
 
@@ -1260,7 +1270,7 @@ screen mm_preferences():
                 vbox:
                     xpos 40
                     label _("window size")
-                    text "(if in fullscreen, will switch to window mode)" size 23 color "#330066"
+                    text "(if in fullscreen, will switch to window mode)" size 23 color "#330066" font "gui/fonts/Rouli.ttf"
 
                     textbutton "bite sized" action Preference("display", 0.3) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
                     textbutton "640 x 360" action Preference("display", 0.5) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
@@ -1304,10 +1314,10 @@ screen continue():
                 style "page_label_text"
                 value page_name_value
             fixed:
-                xpos 535
+                xpos 512
                 ypos 550
 
-                text "click on the file to play!" size 25 color "#330066"
+                text "click on the file to play!" size 25 color "#330066" font "gui/fonts/jsbdoublejointed.ttf"
 
 
         ## The grid of file slots.
@@ -1394,9 +1404,6 @@ init python:
             renpy.run(yes_action_baby)
 
 screen confirm(message, yes_action, no_action):
-    python:
-        renpy.music.stop(channel="blip", fadeout=None)
-        renpy.music.play("audio/ui/confirm.ogg", channel="sound") #TODO WHY DOES THIS PLAY TWICE
 
     ## Ensure other screens do not get input while this screen is displayed.
     modal True

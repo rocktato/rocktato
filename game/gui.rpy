@@ -47,14 +47,14 @@ define gui.muted_color = '#c16666'
 define gui.hover_muted_color = '#d69999'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#fffcff'
+define gui.text_color = '#ffffff'
 define gui.interface_text_color = '#000012'
 
 
 ## Fonts and Font Sizes ########################################################
 
 ## The font used for in-game text.
-define gui.text_font = "gui/fonts/Rouli.ttf"
+define gui.text_font = "gui/fonts/ComickBook_Simple.ttf"
 
 ## The font used for character names.
 define gui.name_text_font = "gui/fonts/BigJohnPRO-Bold.otf"
@@ -63,7 +63,7 @@ define gui.name_text_font = "gui/fonts/BigJohnPRO-Bold.otf"
 define gui.interface_text_font = "gui/fonts/jsbdoublejointed.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 42
+define gui.text_size = 30
 
 ## The size of character names.
 define gui.name_text_size = 50
@@ -209,7 +209,7 @@ define gui.choice_button_width = 790
 define gui.choice_button_height = 70
 define gui.choice_button_tile = False
 define gui.choice_button_borders = None
-define gui.choice_button_text_font = gui.text_font
+define gui.choice_button_text_font = "gui/fonts/Rouli.ttf"
 define gui.choice_button_text_size = 62
 define gui.choice_button_text_xalign = 0.5
 define gui.choice_button_text_idle_color = "9c927b"
@@ -221,8 +221,8 @@ define gui.fight_choice_button_width = 270
 define gui.fight_choice_button_height = None
 define gui.fight_choice_button_tile = False
 define gui.fight_choice_button_borders = Borders(100, 5, 100, 5)
-define gui.fight_choice_button_text_font = gui.text_font
-define gui.fight_choice_button_text_size = gui.text_size
+define gui.fight_choice_button_text_font = "gui/fonts/LuckiestGuy-Regular.ttf"
+define gui.fight_choice_button_text_size = 62
 define gui.fight_choice_button_text_xalign = 0.5
 define gui.fight_choice_button_text_idle_color = "#ffffff"
 define gui.fight_choice_button_text_hover_color = "#ffffff"

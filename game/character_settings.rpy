@@ -34,16 +34,16 @@ define no = Character(" ", callback=no_blip)
 define space = Character(" ")
 
 
-define rt = Character("Rocktato", color="#ffffff", callback=rt_blip)
+define rt = Character("Rocktato", color="#bd2919", callback=rt_blip)
 
-define mr = Character("Mr. Rock", color="#ffffff")
+define mr = Character("Mr. Rock", color="#000000")
 
-define wiz = Character("Wizpotato", color="#ffffff", size=43, callback=wiz_blip)
+define wiz = Character("Wizpotato", color="#6c538c", size=43, callback=wiz_blip)
 
-define wiz_yell = Character("WIZPOTATO", color="#ffffff", size=34, what_size=70, callback=wiz_blip)
+define wiz_yell = Character("WIZPOTATO", color="#6c538c", size=34, what_size=50, callback=wiz_blip)
 
-define ph = Character("Phrog", color="#ffffff", callback=ph_blip)
+define ph = Character("Phrog", color="#47a65e", callback=ph_blip)
 
-define bl = Character("Blairic", color="#ffffff", what_font="gui/fonts/calibri/Calibri Regular.ttf", callback=bl_blip)
+define bl = Character("Blairic", color="#142675", what_font="gui/fonts/calibri/Calibri Regular.ttf", callback=bl_blip)
 
-define gin = Character("Gin", color="#ffffff", callback=gin_blip)
+define gin = Character("Gin", color="#c76816", callback=gin_blip)
