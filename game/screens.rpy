@@ -8,8 +8,6 @@ default persistent.confirm_saveload = True
 
 default saveable = True
 
-default persistent.phrog_pisser = False
-
 default choice_screen_type = "choice"
 
 ################################################################################
@@ -432,7 +430,6 @@ init:
 screen main_menu():
     python:
         renpy.music.stop(channel="blip", fadeout=None)
-        renpy.music.stop(channel="music", fadeout=None)
         renpy.music.stop(channel="sound", fadeout=None)
         renpy.music.stop(channel="voice", fadeout=None)
 
@@ -608,6 +605,8 @@ screen game_menu(title, scroll=None, yinitial=0.0):
     imagebutton auto "gui/x_%s.png":
         xpos 17
         ypos 17
+        hover_sound "audio/ui/menu_hover.ogg"
+        activate_sound "audio/ui/menu_activate.ogg"
 
         action Return()
 

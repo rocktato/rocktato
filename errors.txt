@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/episode1.rpy", line 1552: expected statement.
-    rt fight defn 2
-                   ^
-
-File "game/episode1.rpy", line 1559: expected statement.
-    rt fight defn 3
-                   ^
+File "game/script.rpy", line 21: expected statement.
+    "audio/music/midnight stinkies/midnight p" + str(persistent.episode_fin) + ".ogg"
+                                               ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue Feb 16 20:51:34 2021
+Sun Feb 28 17:52:20 2021

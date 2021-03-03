@@ -150,7 +150,13 @@ label start:
 
     rt "I said outloud, {w=0.3}for some reason."
 
+    play sound "audio/fx/woosh.ogg"
+
     show bg beegcity
+
+    queue sound "audio/fx/step.ogg" loop
+
+    play amb "audio/amb/city.ogg" loop
 
     show rt joy 2 at bouncing
 
@@ -174,6 +180,9 @@ label start:
 
     rt "So the first place I went to was the swamp."
 
+    play sound "audio/fx/woosh.ogg"
+
+    play amb "audio/amb/swamp.ogg" loop
 
     show bg swamp
 
@@ -290,6 +299,9 @@ label start:
     ph "ok."
 
 
+    play sound "audio/fx/woosh.ogg"
+
+    play amb "audio/amb/city.ogg" loop
 
     show bg beegcity
 
@@ -345,6 +357,8 @@ label start:
 
     ph "does he do like... {w=0.3}i dunno... "
 
+    play sound "audio/fx/punch.ogg"
+
     show ph o with hpunch
 
     extend "drUG DEALS???"
@@ -359,99 +373,119 @@ label start:
 
     ph "i know i still am :("
 
-    show ph tired
+    # show ph tired
+    #
+    # show rt o
+    #
+    # rt "Now that I think about it...."
+    #
+    # show rt o at shake(rate=0.01,strength=1,loop=3)
+    #
+    # rt "Yeah I think so!!"
+    #
+    # show ph smug 2
+    #
+    # ph "wait what actually lol"
+    #
+    # show rt happy 2 at bounce
+    #
+    # rt "I'm pretty sure Mr. Rock does drugs deals!"
+    #
+    # show ph o
+    #
+    # rt "He's probably in the middle of one right now!"
+    #
+    # ph "how"
+    #
+    # show rt o at shake(rate=0.01,strength=1,loop=3)
+    #
+    # rt "OOH!!!"
+    #
+    # rt "Let's look in that fishy alley!!"
+    #
+    # rt "Maybe he's in there!"
+    #
+    # hide rt
+    #
+    # hide ph
+    #
+    # play sound "audio/fx/stepping.ogg"
+    #
+    # play amb "audio/amb/ominouswind.ogg" loop
+    #
+    # show img 1 alley 1
+    #
+    # with dissolve
+    #
+    # no "Across from them were two buildings that had a convenient amount of space in them."
+    #
+    # no "A space between buildings you'd barely even pay attention to."
+    #
+    # no "The two kids slowly walked up to the spoooooooky alley."
+    #
+    # no "They quietly peeked into the corner and saw something you couldn't describe with words."
+    #
+    ## BTS CONTENT: I was originally gonna have a life scarring noise play here but I can't figure out how to do that so this scene's getting gutted.
+    #
+    # space ""
+    #
+    # space ""
+    #
+    # show img 1 alley 2 with hpunch
+    #
+    # space ""
+    #
+    # space ""
+    #
+    # hide img 1 alley 2
+    #
+    # show bg beegcity
+    #
+    # show ph scared 2 at Position(xpos=900)
+    #
+    # show rt disturbed at Position(xpos=400)
+    #
+    # ph "NOPE NOPE NOPE NOPe!!!!"
+    #
+    # show rt disturbed at shake(rate=0.01,strength=3,loop=7)
+    #
+    # rt "Those poor vegetable kids..."
+    #
+    # rt "They never stood a chance against that tall dealer man."
+    #
+    # show rt joy 2 at bounce
+    #
+    # rt "Now we know why we shouldn't do drugs kids!"
+    #
+    # show rt troubled
+    #
+    # show ph o 2
+    #
+    # rt "There goes our only lead."
+    #
+    # rt "Where do we go now??"
+    #
+    #show ph think 2
 
-    show rt o
+    ph ""
 
-    rt "Now that I think about it...."
-
-    show rt o at shake(rate=0.01,strength=1,loop=3)
-
-    rt "Yeah I think so!!"
-
-    show ph smug 2
-
-    ph "wait what actually lol"
-
-    show rt happy 2 at bounce
-
-    rt "I'm pretty sure Mr. Rock does drugs deals!"
-
-    show ph o
-
-    rt "He's probably in the middle of one right now!"
-
-    ph "how"
-
-    show rt o at shake(rate=0.01,strength=1,loop=3)
-
-    rt "OOH!!!"
-
-    rt "Let's look in that fishy alley!!"
-
-    rt "Maybe he's in there!"
-
-    hide rt
-
-    hide ph
-
-    show img 1 alley 1
-
-    with dissolve
-
-    no "Across from them were two buildings that had a convenient amount of space in them."
-
-    no "A space between buildings you'd barely even pay attention to."
-
-    no "The two kids slowly walked up to the spoooooooky alley."
-
-    no "They quietly peeked into the corner and saw something you couldn't describe with words."
-    #TODO: LIFE SCARRING SOUND EFFECT
-    space ""
-
-    space ""
-
-    show img 1 alley 2 with hpunch
-
-    space ""
-
-    space ""
-
-    hide img 1 alley 2
-
-    show bg beegcity
-
-    show ph scared 2 at Position(xpos=900)
-
-    show rt disturbed at Position(xpos=400)
-
-    ph "NOPE NOPE NOPE NOPe!!!!"
-
-    show rt disturbed at shake(rate=0.01,strength=3,loop=7)
-
-    rt "Those poor vegetable kids..."
-
-    rt "They never stood a chance against that tall dealer man."
-
-    show rt joy 2 at bounce
-
-    rt "Now we know why we shouldn't do drugs kids!"
-
-    show rt troubled
-
-    show ph o 2
-
-    rt "There goes our only lead."
-
-    rt "Where do we go now??"
+    rt ""
 
     show ph think 2
 
-    ph "hey, {w=0.3}isn't blairic around these parts?"
+    ph "hey,"
+
+    ph "we're both moronic children maybe we should ask an adult for help."
+
+    ph "an adult being blairic."
+
+    ph "the only adult i'm willing to talk to."
 
     show rt o at bounce
 
     rt "Oh yeah!!!"
+
+    rt "Blairic!"
 
     show rt joy 2
 
@@ -470,6 +504,10 @@ label start:
     rt "Sounds good to me!"
 
 
+    play sound "audio/fx/woosh.ogg"
+
+    stop amb
+
     show bg bloffice
 
     show rt confused
@@ -478,23 +516,23 @@ label start:
 
     space ""
 
-    rt "Is it just me or does this place look a lot like Blairic's office??"
-
-    show ph bruh 2
-
-    ph "that joke only works if we've seen his office already."
-
-    rt "But we have..."
-
-    show ph bruh 3
-
-    ph ""
-
-    show ph bruh 2
-
-    ph "well..."
-
-    ph "some people haven't..."
+    # rt "Is it just me or does this place look a lot like Blairic's office??"
+    #
+    # show ph bruh 2
+    #
+    # ph "that joke only works if we've seen his office already."
+    #
+    # rt "But we have..."
+    #
+    # show ph bruh 3
+    #
+    # ph ""
+    #
+    # show ph bruh 2
+    #
+    # ph "well..."
+    #
+    # ph "some people haven't..."
 
     show ph o 2
 
@@ -563,6 +601,8 @@ label start:
     bl "Why would he be at a McDonda{w=0.1}{nw}"
 
 
+    play sound "audio/fx/woosh.ogg"
+
     show bg mcdondals
 
     show bl bruh
@@ -580,9 +620,10 @@ label start:
     rt "I don't have any money."
 
     rt "Haha I'm a child."
-    #TODO add vaccum noise
 
-    show rt joy 2 at shake(rate=0.01,strength=5,loop=10)
+    play sound "audio/fx/vacuum.ogg"
+
+    show rt joy 2 at shake(rate=0.01,strength=5,loop=75)
 
     space ""
 
@@ -635,9 +676,12 @@ label start:
     show ph smug 2 at bounce
 
     ph "nah b, {w=0.3}we resting."
-    #TODO SOUND EFFECT
 
     space ""
+
+    play sound "audio/fx/punch.ogg"
+
+    play sound2 "audio/fx/foodtray.ogg"
 
     show rt mad with hpunch
 
@@ -669,8 +713,6 @@ label start:
 
     rt "Okay, {w=0.3}first off, {w=0.3}that's a bit mean Phrog."
 
-    show rt o with hpunch
-
     rt "Second of all, {w=0.3}who KNOWS what's happening to Mr. Rock??"
 
     rt "He could be, {w=0.1}like..."
@@ -686,6 +728,8 @@ label start:
     show rt happy 2 at bounce
 
     rt "C'mon let's go!!!"
+
+    play sound "audio/fx/woosh.ogg"
 
     show bg black
 
@@ -723,6 +767,8 @@ label start:
 
     ph "OKAY OKAY JUST HURRY UP!!{w=0.3}{nw}"
 
+
+    play sound "audio/fx/woosh.ogg"
 
     show bg gamerbar
 
@@ -800,7 +846,9 @@ label start:
 
     rt "I'm doing awesome!!! {w=0.3}Wait, {w=0.3}no I'm not!"
 
-    show rt cry 2 with vpunch
+    play sound "audio/fx/punch.ogg"
+
+    show rt cry 2 with hpunch
 
     rt "Mr. Rock is still gone!!!"
 
@@ -844,6 +892,8 @@ label start:
 
     gin "Mmmm... {w=0.3} just a lil' sippy sipp."
 
+    play sound "audio/fx/sip.ogg"
+
     show gin evil at bounce
 
     show rt joy
@@ -874,7 +924,7 @@ label start:
 
     show rt happy 2 at bounce
 
-    rt "Well... {w=0.3}we went to the swamp, {w=0.3}the rich place area thing, {w=0.3}and the McDonDals!"
+    rt "Well... {w=0.3}we went to the swamp, {w=0.3}some bank, {w=0.3}and the McDonDals!"
 
     show gin happy at bounce
 
@@ -899,6 +949,8 @@ label start:
     rt "Oh yeahhhhhh"
 
 
+    play sound "audio/fx/woosh.ogg"
+
     show bg citypark
 
     show rt joy
@@ -919,7 +971,7 @@ label start:
 
     no "The best we can do is show this background."
 
-    no "Sorry!!!"
+    no "Sorry!"
 
     no "Rocktato stood on top of the center fountain calling out for his best friend."
 
@@ -953,6 +1005,8 @@ label start:
 
     rt "How can I unfairly win again and rub it in his face while feeling better about myself???"
 
+    play sound "audio/fx/punch.ogg"
+
     show rt hurt with hpunch
 
     rt "AHHHHHHHHHH!!!!!"
@@ -960,6 +1014,8 @@ label start:
     show rt o at bounce
 
     rt "..."
+
+    play sound "audio/fx/sniff.ogg"
 
     no "Rocktato suddenly got up and started sniffing."
 
@@ -983,9 +1039,9 @@ label start:
 
     rt "{i}It's the smell of {b}villainy.{/b}{/i}"
 
-    show rt disgusted at shake(rate=0.01,strength=15,loop=5) with hpunch
+    play sound "audio/fx/suspense.ogg"
 
-    space ""
+    show rt disgusted at shake(rate=0.01,strength=15,loop=5) with hpunch
 
     no "Suddenly, {w=0.3}the air turned gray."
 
@@ -1005,11 +1061,15 @@ label start:
 
     show sky
 
+    play sound "audio/fx/windy.ogg" loop
+
     show obj 1 rumboy at fast_shaking
 
     with dissolve
 
     space ""
+
+    play sound "audio/fx/crash.ogg"
 
     show img 1 rumboy crashed at hpunch
 
@@ -1043,27 +1103,39 @@ label start:
 
     Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip) "NYEHEHEHEH..."
 
+    play sound "audio/fx/slidewhistleup.ogg"
+
     show wiz evil 2 at center, Position(ypos=50) with easeinbottom
 
     Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip) "IT IS I, {w=0.3}WIZPOTATo!!!"
 
     wiz_yell "WAIT CRAP!!! {w=0.3}I MISSED!!!!!"
 
+    play sound "audio/fx/squeak.ogg"
+
     show wiz bruh at center, Position(ypos=200) with ease
 
     wiz "uhhhhhhhhh {w=0.3}wait one sec..."
+
+    play sound "audio/fx/squeak.ogg"
 
     show wiz bruh at center, Position(ypos=300) with ease
 
     pause 1.0
 
+    play sound "audio/fx/squeak.ogg"
+
     show wiz bruh at center, Position(ypos=500) with ease
 
     pause 1.0
 
+    play sound "audio/fx/squeak.ogg"
+
     show wiz bruh at center, Position(ypos=800) with ease
 
     pause 1.0
+
+    play sound "audio/fx/squeak.ogg"
 
     show wiz bruh at center, Position(ypos=605) with ease
 
@@ -1077,6 +1149,10 @@ label start:
 
     wiz "okay uhh..."
 
+    wiz "it is I Wizpotato... the uh.."
+
+    play sound "audio/fx/punch.ogg"
+
     show wiz evil 2 with hpunch
 
     wiz_yell "THE GREATEST SUPERVILLAIN TO EVER..."
@@ -1084,6 +1160,8 @@ label start:
     show wiz sad 2
 
     wiz "uh...{w=0.3}{nw}"
+
+    play sound "audio/fx/punch.ogg"
 
     show wiz evil 3 with hpunch
 
@@ -1113,6 +1191,8 @@ label start:
 
     wiz "OKay, "
 
+    play sound "audio/fx/punch.ogg"
+
     show wiz angey 2 with hpunch
 
     extend "WEIRD."
@@ -1127,6 +1207,8 @@ label start:
 
     wiz_yell "IT SEEMS IT HAS BEEN FATED FOR US TO{w=0.3}{nw}"
 
+    play sound "audio/fx/punch.ogg"
+
     show rt mad at shake(rate=0.01,strength=10,loop=2) with hpunch
 
     rt "SHUT UP!!!!!!!!"
@@ -1134,6 +1216,8 @@ label start:
     show rt sad 2
 
     rt "We just wanted to look for Mr. Rock, man."
+
+    play sound "audio/fx/punch.ogg"
 
     show rt hurt at shake(rate=0.01,strength=10,loop=2) with hpunch
 
@@ -1208,15 +1292,14 @@ label start:
 
     show wiz fight idle
 
+    play music "audio/music/too much effort for a one off rocktato joke but whatever lol.wav"
+
     show battlestarttext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
 
     pause 1.0
 
     hide battlestarttext with dissolve
 
-
-    #TODO: BATTLE SPRITES
-    # - DECISION BOXES FIX (use parameters in choice box screen?)
 
     $ chara_healths = [ 100, 100 ]
     $ chara_maxhealths = [ 100, 100 ]
@@ -1269,13 +1352,13 @@ label start:
 
     show rt fight idle
 
-    rt "(Alright, so what are my options?)"
+    rt "{i}Alright, so what are my options?{/i}"
 
-    rt "(Parentheses means thinking, by the way.)"
+    rt "{i}Italics means thinking, by the way.{/i}"
 
     show rt joy 2 at bounce
 
-    rt "(Fun fact!)"
+    rt "{i}Fun fact!{/i}"
 
     label ep1_battle1:
 
@@ -1284,13 +1367,12 @@ label start:
         $ choice_screen_type = "fight_choice"
 
         if moves == 0 and ep1_skiptut2 == False:
-            rt "(Okay, so I can either punch him, which will hurt a bunch!!!)"
-            rt "(Ah, but it might hurt me too though. {w}I'm a sensitive boy :,<.)"
-            rt "(I can stomp him into the ground too, which would be funny.)"
-            rt "(Or... I can defend!!! {w=0.3}So I won't get too big of a hurt myself!"
-            rt ")"
+            rt "{i}Okay, so I can either punch him, which will hurt a bunch!!!{/i}"
+            rt "{i}Ah, but it might hurt me too though. {w}I'm a sensitive boy :,<.{/i}"
+            rt "{i}I can stomp him into the ground too, which would be funny.{/i}"
+            rt "{i}Or... I can defend!!! {w=0.3}So I won't get too big of a hurt myself!{/i}"
 
-            rt "(GO CHOOSE,  {w=0.1}ME!)"
+            rt "{i}GO CHOOSE,  {w=0.1}ME!{/i}"
 
         elif moves == 5:
             show gin evil 2 at Position(xpos=1170) with easeinbottom
@@ -1490,6 +1572,8 @@ label start:
                     jump ep1_battle1
 
                 if stomps >= 5:
+                    play sound "audio/fx/stomp.ogg"
+
                     show rt fight slap at shake(0.05, 4)
 
                     rt "STOMP!"
@@ -1502,6 +1586,7 @@ label start:
 
                 $ stomp_depth = (stomps+1) * 100
 
+                play sound "audio/fx/stomp.ogg"
                 show rt fight slap at shake(0.05, 4)
                 show wiz fight squish at transform_offset(0,stomp_depth, 0.04), transform_zoom(1, 0.7)
 
@@ -1552,6 +1637,8 @@ label start:
                     jump ep1_battle1
 
                 if defends == 0:
+                    play sound "audio/fx/sparkle.ogg"
+                    play sound2 "audio/fx/snapping.ogg"
                     show rt fight defn 1
 
                     rt "*Snapping noises*"
@@ -1561,6 +1648,7 @@ label start:
                     no "(But like, would you count that as defending though?)"
 
                 elif defends == 1:
+                    play sound "audio/fx/sparkle.ogg"
                     show rt fight defn 2
 
                     no "Rocktato does another stupid pose."
@@ -1568,6 +1656,8 @@ label start:
                     no "Alright."
 
                 elif defends == 2:
+                    play sound "audio/fx/sparkle.ogg"
+                    play sound2 "audio/fx/meow.ogg"
                     show rt fight defn 3
 
                     rt "Nyah~!{w=0.2}{nw}"
@@ -1578,6 +1668,7 @@ label start:
                 elif defends == 5:
                     no "Well, {w=0.2}if you say so."
 
+                    play sound "audio/fx/cough.ogg"
                     show rt fight defn terrible
 
                     pause 3.0
@@ -1598,6 +1689,8 @@ label start:
                 if stomps >= 1:
                     no "Gin pulls Wizpotato out of the ground with her massive arms."
 
+                    play sound "audio/fx/dirt.ogg"
+
                     show wiz hurt 2 at transform_zoom(1.0, 1.429), Position(xpos=400, ypos=605) with ease
 
                     wiz "WHYyyyyy????"
@@ -1612,7 +1705,13 @@ label start:
 
     show rt fight idle 1 at funny_expand
 
+    stop music fadeout 1.0
+
+    play sound "audio/fx/transform.ogg"
+
     show fx white with dissolve
+
+    space ""
 
     no "Rocktato started to glow."
 
@@ -1626,6 +1725,8 @@ label start:
 
     rt "My true form...."
 
+    play sound "audio/fx/fart.ogg"
+
     hide fx white
 
     show rt trueform smile at center, Position(ypos=605)
@@ -1637,6 +1738,10 @@ label start:
     show wiz angey at Position(xpos=400, ypos=605) with easeinbottom
 
     rt "Time to show you the power of my super cool Rocktato (TM) kick attack!!"
+
+    play sound "audio/fx/slidewhistleup.ogg"
+
+    queue sound "audio/fx/punch.ogg"
 
     show rt at super_cool_rocktato_tm_kick_attack
 
@@ -1659,6 +1764,8 @@ label start:
     hide wiz
 
     space ""
+
+    play sound "audio/fx/ta da.ogg"
 
     show rt trueform happy 2 at center, Position(ypos=605)
 
@@ -1686,9 +1793,15 @@ label start:
 
     no "Nor any functional bones."
 
-    no "I think?"
+    no "I think."
+
+    no "I'm,"
+
+    no "I'm not sure if he even had bones to begin with."
 
     no "But he gestured towards behind the textbox where, {w=0.2}indeed, {w=0.2}the stupid little stone stood."
+
+    play sound "audio/fx/slidewhistleup.ogg"
 
     show mr at Position(xpos=900,ypos=580) with easeinbottom
 
@@ -1704,118 +1817,134 @@ label start:
 
     rt "IT'S SO GOOD TO SEE YOU!!!!!!!"
 
-    show rt confused
+    # show rt confused
+    #
+    # rt "Wait, {w=0.3}but why would you know that?"
+    #
+    # rt "You weren't even at our quest???"
+    #
+    # show wiz angey 2 at shake(rate=0.01,strength=3,loop=4) with hpunch
+    #
+    # wiz_yell "YOU HAD A WHOLE QUEST LOOKING FOR HIM???"
+    #
+    # wiz_yell "Was he... {w=0.3}THERE THE WHOLE TIME?"
+    #
+    # show rt sad 2
+    #
+    # rt "Well... {w=0.3}now that I think about it...."
+    #
+    # show bg white
+    #
+    # hide rt
+    # hide wiz
+    # hide mr
+    #
+    # with dissolve
+    #
+    #
+    # show rt cry
+    #
+    # show bg rtcave
+    #
+    # with dissolve
+    #
+    # space ""
+    #
+    # show mr at Position(xpos=900,ypos=580) with dissolve
+    #
+    # space ""
+    #
+    # show bg white
+    #
+    # hide rt
+    # hide mr
+    #
+    # with dissolve
+    #
+    # show bg swamp
+    #
+    # show rt sad at Position(xpos=400)
+    #
+    # show ph bruh at Position(xpos=900)
+    #
+    # with dissolve
+    #
+    # space ""
+    #
+    # show mr at Position(xpos=640,ypos=580) with dissolve
+    #
+    # space ""
+    #
+    # show bg white
+    #
+    # hide rt
+    # hide mr
+    # hide ph
+    #
+    # with dissolve
+    #
+    # show bg mcdondals
+    #
+    # show bl bruh at Position(xpos=200)
+    #
+    # show rt joy at Position(xpos=600)
+    #
+    # show ph smug at Position(xpos=1000)
+    #
+    # with dissolve
+    #
+    # space ""
+    #
+    # show mr at Position(xpos=1250,ypos=200) with dissolve
+    #
+    # space ""
+    #
+    # show bg white
+    #
+    # hide rt
+    # hide mr
+    # hide ph
+    # hide bl
+    #
+    # with dissolve
+    #
+    # show bg 1 rumboy crashed
+    #
+    # show wiz angey at Position(xpos=200, ypos=660)
+    #
+    # show rt o at center
+    #
+    # with dissolve
+    #
+    # space ""
+    #
+    # show mr at Position(xpos=900,ypos=580) with dissolve
+    #
+    # space ""
 
-    rt "Wait, {w=0.3}but why would you know that?"
+    no "He hugs the little stone."
 
-    rt "You weren't even at our quest???"
+    rt "Wow, to think we went on a whole quest without seeing you!"
 
-    show wiz angey 2 at shake(rate=0.01,strength=3,loop=4) with hpunch
+    rt "What a crazy, fun time..."
 
-    wiz_yell "YOU HAD A WHOLE QUEST LOOKING FOR HIM???"
+    wiz "what."
 
-    wiz_yell "Was he... {w=0.3}THERE THE WHOLE TIME?"
+    wiz "You.."
 
-    show rt sad 2
-
-    rt "Well... {w=0.3}now that I think about it...."
-
-    show bg white
-
-    hide rt
-    hide wiz
-    hide mr
-
-    with dissolve
-
-
-    show rt cry
-
-    show bg rtcave
-
-    with dissolve
-
-    space ""
-
-    show mr at Position(xpos=900,ypos=580) with dissolve
-
-    space ""
-
-    show bg white
-
-    hide rt
-    hide mr
-
-    with dissolve
-
-    show bg swamp
-
-    show rt sad at Position(xpos=400)
-
-    show ph bruh at Position(xpos=900)
-
-    with dissolve
-
-    space ""
-
-    show mr at Position(xpos=640,ypos=580) with dissolve
-
-    space ""
-
-    show bg white
-
-    hide rt
-    hide mr
-    hide ph
-
-    with dissolve
-
-    show bg mcdondals
-
-    show bl bruh at Position(xpos=200)
-
-    show rt joy at Position(xpos=600)
-
-    show ph smug at Position(xpos=1000)
-
-    with dissolve
-
-    space ""
-
-    show mr at Position(xpos=1250,ypos=200) with dissolve
-
-    space ""
-
-    show bg white
-
-    hide rt
-    hide mr
-    hide ph
-    hide bl
-
-    with dissolve
-
-    show bg 1 rumboy crashed
-
-    show wiz angey at Position(xpos=200, ypos=660)
-
-    show rt o at center
-
-    with dissolve
-
-    space ""
-
-    show mr at Position(xpos=900,ypos=580) with dissolve
-
-    space ""
+    ph "yeah, {w=0.3}a whooooole adventure."
 
     wiz_yell "DID NONE OF YOU IDIOTS SAY ANYTHING TO HIM?"
 
     ph "nyehhhhhhhhh {w=0.3}i was too lazy to."
 
-    gin "I jus' assumed it was like a... {w=0.3}a lil' game? {w=0.3}Or somethin'.."
+    gin "I jus' assumed it was like a... {w=0.3}a lil' game?"
 
-    bl "Apologies, {w=0.2}my friends, {w=0.2}for leaving but... {w=0.3}uh..."
+    gin "Or somethin'.."
+
+    bl "Apologies, {w=0.2}my friends, {w=0.2}for leaving but..."
+
+    bl "uh..."
 
     bl "I'm not going to touch this one."
 
@@ -1841,10 +1970,6 @@ label start:
 
     with dissolve
 
-    rt "You really were here this... {w=0.3}this whole time??"
-
-    mr "{w=0.6}.{w=0.6}.{w=0.6}."
-
     rt "Man... {w=0.3}Aaaa I'm sorry I didn't notice you."
 
     rt "It's just... {w=0.3}really hard since you can't talk!"
@@ -1857,7 +1982,9 @@ label start:
 
     mr "{w=0.6}.{w=0.6}.{w=0.6}."
 
-    rt "Cookie dough after?? {w=0.3}Heck yeah!"
+    rt "Cookie dough?? {w=0.3}Heck yeah!"
+
+    play sound "audio/fx/stepping.ogg"
 
     show bg black
 
@@ -1871,6 +1998,12 @@ label start:
 
     space ""
 
+    space ""
+
     ph "that was a waste of time."
 
-    $ persistent.episode_fin = 1
+    if persistent.episode_fin == 0:
+        $ persistent.episode_fin = 2
+
+
+    return()

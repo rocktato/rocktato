@@ -22,7 +22,7 @@ define gui.show_name = False
 
 ## The version of the game.
 
-define config.version = "0.0"
+define config.version = "0.1"
 
 
 ## Text that is placed on the game's about screen. Place the text between the
@@ -50,6 +50,9 @@ define config.has_voice = True
 
 init python:
     renpy.music.register_channel("blip", mixer="blip")
+    renpy.music.register_channel("amb", mixer="music")
+
+    renpy.music.register_channel("sound2", mixer="sound", loop=False)
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
@@ -64,7 +67,7 @@ init python:
 ## the player is at the main menu. This file will continue playing into the
 ## game, until it is stopped or another file is played.
 
-#define config.main_menu_music = "audio/music/midnight stinkies/midnight p3.wav"
+define config.main_menu_music = "audio/music/midnight stinkies/midnight stinkies p" + str(persistent.episode_fin) + ".wav"
 
 
 ## Transitions #################################################################
@@ -91,7 +94,7 @@ define config.after_load_transition = None
 
 ## Used when entering the main menu after the game has ended.
 
-define config.end_game_transition = Dissolve
+define config.end_game_transition = None
 
 
 ## A variable to set the transition used when the game starts does not exist.
