@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 21: expected statement.
-    "audio/music/midnight stinkies/midnight p" + str(persistent.episode_fin) + ".ogg"
-                                               ^
+File "game/effects.rpy", line 141: expected statement.
+    subpixel True
+                 ^
+
+File "game/effects.rpy", line 142: expected statement.
+    start
+         ^
+
+File "game/effects.rpy", line 143: expected statement.
+    easein time end
+                   ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Sun Feb 28 17:52:20 2021
+Sun Mar 07 12:01:32 2021

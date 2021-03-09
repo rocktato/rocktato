@@ -47,3 +47,6 @@ define ph = Character("Phrog", color="#47a65e", callback=ph_blip)
 define bl = Character("Blairic", color="#142675", what_font="gui/fonts/calibri/Calibri Regular.ttf", what_size=36, y_offset=300, callback=bl_blip)
 
 define gin = Character("Gin", color="#c76816", callback=gin_blip)
+
+
+define chef = Character("Belle", color="#bfa524", callback=no_blip)

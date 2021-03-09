@@ -10,6 +10,10 @@ default saveable = True
 
 default choice_screen_type = "choice"
 
+default persistent.episode_fin = 0
+
+default persistent.mainmenu_img = 0
+
 ################################################################################
 ## Styles
 ################################################################################
@@ -442,7 +446,7 @@ screen main_menu():
 
     style_prefix "main_menu"
 
-    add gui.main_menu_background at slow_shaking
+    add "gui/ep thumbs/" + str(persistent.mainmenu_img) + ".PNG" at slow_shaking
 
     ## This empty frame darkens the main menu.
     frame:
@@ -678,6 +682,9 @@ style return_button:
 ## https://www.renpy.org/doc/html/screen_special.html#save https://
 ## www.renpy.org/doc/html/screen_special.html#load
 
+default persistent.slot_files = dict()
+default persistent.saveepisode_img = 1
+
 init:
     python:
         def deletefiles():
@@ -689,9 +696,11 @@ init:
 init:
     python:
         def savefile(slot):
+            persistent.slot_files[slot] = persistent.saveepisode_img
             renpy.run(FileSave(slot, confirm=persistent.confirm_saveload, newest=True))
 
         def loadfile(slot):
+            persistent.mainmenu_img = persistent.slot_files.get(slot)
             renpy.run(FileLoad(slot, confirm=persistent.confirm_saveload))
 
 screen save():
@@ -1064,7 +1073,7 @@ screen ep_select():
             hbox:
                 spacing 10
 
-                for i in range(5):
+                for i in range(persistent.episode_fin+1):
                     imagebutton auto "gui/ep select/ep buttons/" + str(i+1) + "_%s.PNG":
                         hover_sound "audio/ui/menu_hover.ogg"
                         activate_sound "audio/ui/menu_activate.ogg"

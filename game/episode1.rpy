@@ -1,5 +1,10 @@
 label start:
 
+    $ persistent.mainmenu_img = 1
+    $ persistent.saveepisode_img = 1
+
+    stop music fadeout 1.0
+
     image battlestarttext:
         "gui/text/battle start.png"
 
@@ -11,8 +16,6 @@ label start:
       "images/imgs/1/bg 1 sky 3.png"
       0.1
       repeat
-
-    stop music fadeout 1.0
 
     play sound "audio/fx/windy.ogg" loop
 
@@ -57,6 +60,8 @@ label start:
 
     rt "Oh, {w=0.3}this is narration by the way."
 
+
+    play music "audio/music/gmoroning.wav" loop
 
     show bg black
 
@@ -109,6 +114,8 @@ label start:
     rt "Oh yeah he was gone too."
 
     rt "I feel like I didn't do that right, wait."
+
+    stop music
 
     play sound "audio/fx/punch.ogg"
 
@@ -166,7 +173,7 @@ label start:
 
     rt "It's beeg!!! {w=0.3}With beeg towers and beeg money!! {w=0.3}And beeg people."
 
-    rt "Well, {w=0.3}some of them are beeg, {w=0.3}but not all of them. {w}I just meant big as in status."
+    rt "Well, {w=0.3}some of them are beeg, {w=0.3}but not all of them. {w}I just meant beeg as in status."
 
     rt "They're really cool people is what I'm trying to say!"
 
@@ -1370,7 +1377,7 @@ label start:
             rt "{i}Okay, so I can either punch him, which will hurt a bunch!!!{/i}"
             rt "{i}Ah, but it might hurt me too though. {w}I'm a sensitive boy :,<.{/i}"
             rt "{i}I can stomp him into the ground too, which would be funny.{/i}"
-            rt "{i}Or... I can defend!!! {w=0.3}So I won't get too big of a hurt myself!{/i}"
+            rt "{i}Or... I can defend!!! {w=0.3}So I won't get too beeg of a hurt myself!{/i}"
 
             rt "{i}GO CHOOSE,  {w=0.1}ME!{/i}"
 
@@ -2003,7 +2010,9 @@ label start:
     ph "that was a waste of time."
 
     if persistent.episode_fin == 0:
-        $ persistent.episode_fin = 2
+        $ persistent.episode_fin = 1
+
+    $ persistent.mainmenu_img = 2
 
 
     return()

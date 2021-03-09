@@ -3,5 +3,5 @@
 
     bl "help help help"
 
-    if persistent.episode_fin == 4:
-        $ persistent.episode_fin = 5
+    if persistent.episode_fin == 3:
+        $ persistent.episode_fin = 4

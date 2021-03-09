@@ -86,7 +86,7 @@ define gui.title_text_size = 0
 ## The images used for the main and game menus.
 define gui.game_title = "gui/game_title.png"
 
-define gui.main_menu_background = "gui/ep thumbs/placeholder_idle.png"
+# define gui.main_menu_background = "gui/ep thumbs/" + str(persistent.mainmenu_img) + ".PNG"
 
 
 ## Dialogue ####################################################################
