@@ -432,19 +432,19 @@ init:
         zoom 0.85
 
 screen main_menu():
-    python:
-        renpy.music.stop(channel="blip", fadeout=None)
-        renpy.music.stop(channel="sound", fadeout=None)
-        renpy.music.stop(channel="voice", fadeout=None)
-
-
     key "ctrl_shift_K_q" action renpy.quit
-    key "K_SPACE" action Play("sound", "audio/ui/menu_activate.ogg"), ShowMenu("continue")
 
     ## This ensures that any other menu screen is replaced.
     tag menu
 
     style_prefix "main_menu"
+
+    python:
+        renpy.music.stop(channel="blip", fadeout=None)
+        renpy.music.stop(channel="sound", fadeout=None)
+        renpy.music.stop(channel="voice", fadeout=None)
+        if renpy.music.is_playing(channel="music") == False and renpy.get_screen("main_menu"):
+            renpy.music.play("audio/music/midnight stinkies/midnight stinkies p" + str(persistent.episode_fin) + ".mp3", channel="music", loop=True, fadeout=None)
 
     add "gui/ep thumbs/" + str(persistent.mainmenu_img) + ".PNG" at slow_shaking
 
@@ -472,7 +472,7 @@ screen main_menu():
         hover_sound "audio/ui/menu_hover.ogg"
         activate_sound "audio/ui/menu_activate.ogg"
 
-        action ShowMenu("continue") at mm_zoom
+        action [ SensitiveIf(persistent.mainmenu_img > 0), ShowMenu("continue")] at mm_zoom
 
     imagebutton auto "gui/main menu/extras_%s.png":
         xpos 20

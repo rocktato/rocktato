@@ -8,22 +8,22 @@ init python:
             renpy.music.stop(channel="blip")
 
     def no_blip(event, **kwargs):
-        blip("audio/blips/no.wav", event, **kwargs)
+        blip("audio/blips/no.ogg", event, **kwargs)
 
     def rt_blip(event, **kwargs):
-        blip("audio/blips/rt.wav", event, **kwargs)
+        blip("audio/blips/rt.ogg", event, **kwargs)
 
     def wiz_blip(event, **kwargs):
-        blip("audio/blips/wiz.wav", event, **kwargs)
+        blip("audio/blips/wiz.ogg", event, **kwargs)
 
     def ph_blip(event, **kwargs):
-        blip("audio/blips/ph.wav", event, **kwargs)
+        blip("audio/blips/ph.ogg", event, **kwargs)
 
     def bl_blip(event, **kwargs):
-        blip("audio/blips/bl.wav", event, **kwargs)
+        blip("audio/blips/bl.ogg", event, **kwargs)
 
     def gin_blip(event, **kwargs):
-        blip("audio/blips/gin.wav", event, **kwargs)
+        blip("audio/blips/gin.ogg", event, **kwargs)
 
 
 ## Place to put character settings for the characters who do things

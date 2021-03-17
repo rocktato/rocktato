@@ -61,7 +61,7 @@ label start:
     rt "Oh, {w=0.3}this is narration by the way."
 
 
-    play music "audio/music/gmoroning.wav" loop
+    play music "audio/music/gmoroning.mp3" loop
 
     show bg black
 
@@ -1299,7 +1299,7 @@ label start:
 
     show wiz fight idle
 
-    play music "audio/music/too much effort for a one off rocktato joke but whatever lol.wav"
+    play music "audio/music/too much effort for a one off rocktato joke but whatever lol.mp3"
 
     show battlestarttext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
 
@@ -1416,12 +1416,12 @@ label start:
 
         elif moves == 50:
             if persistent.phrog_pisser == True:
-                ph "yeah ok i'm not gonna give you that dialouge again or new dialouge. {w=0.3}if you don't transform, i'll kill you and rocktato again."
+                ph "Yeah ok i'm not gonna give you that dialouge again or new dialouge. {w=0.3}if you don't transform, i'll kill you and rocktato again."
                 rt "Wait what-{w=0.1}{nw}"
             else:
-                ph "wow."
+                ph "Wow."
 
-                ph "you're a real persistent one, huh?"
+                ph "You're a real persistent one, huh?"
 
         elif moves == 51:
             if persistent.phrog_pisser == True:
@@ -1436,9 +1436,9 @@ label start:
 
             ph "if you keep doing this."
 
-            ph "{b}i'm gonna end you.{\b}"
+            ph "{b}I'm gonna end you.{\b}"
 
-            ph "not just rocktato."
+            ph "not just Rocktato."
 
             ph "but you too."
 
@@ -1446,7 +1446,7 @@ label start:
 
             ph "omg!! {w=0.3}rocktato is secretly edgy!!! {w=0.3}and phrog is sans undertale???"
 
-            ph "no way"
+            ph "no way."
 
             show ph sans at center, Position(ypos=2400), transform_zoom(x=6.0, y=6.0)
 
@@ -1461,7 +1461,7 @@ label start:
 
             ph "why?"
 
-            ph "cus i'm bored lol"
+            ph "cus i'm bored lol."
 
             ph "and a {i}lil'{/i} bit annoyed."
 
@@ -1491,7 +1491,7 @@ label start:
             $ persistent._clear(progress=True)
             $ deletefiles()
             $ persistent.phrog_pisser = True
-            ph "don't say i didn't warn y{w=0.3}{nw}"
+            ph "Don't say I didn't warn y{w=0.3}{nw}"
             $ renpy.quit()
 
         menu:

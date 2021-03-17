@@ -5,6 +5,12 @@
 init:
 
 
+    ## Nothing.
+    transform none:
+        pass
+
+
+
     ## Flips character across y axis yeah MATH
     transform flip:
         xzoom -1.0
@@ -36,5 +42,6 @@ init:
 
     transform transform_ease(start, end, time):
         subpixel True
-        start
-        easein time end
+        xanchor 0.5
+        xpos start
+        easein time xpos end
