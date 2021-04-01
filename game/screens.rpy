@@ -204,11 +204,14 @@ style input_prompt is default
 
 style input_prompt:
     xalign gui.dialogue_text_xalign
+    outlines [ (3, "#1e146b") ]
     properties gui.text_properties("input_prompt")
 
 style input:
     xalign gui.dialogue_text_xalign
     xmaximum gui.dialogue_width
+    color "ffffff"
+    outlines [ (3, "#1e146b") ]
 
 
 ## Choice screen ###############################################################

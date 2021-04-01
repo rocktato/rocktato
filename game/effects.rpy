@@ -28,9 +28,6 @@ init:
 
 
 
-    transform transform_offset(x=0, y=0, speed=0.0):
-        linear speed xoffset x
-        linear speed yoffset y
 
 
 
@@ -39,9 +36,28 @@ init:
         yzoom y
 
 
-
-    transform transform_ease(start, end, time):
+    transform transform_easein_pos(xstart=0, ystart=0, xend=0, yend=0, time):
         subpixel True
         xanchor 0.5
-        xpos start
-        easein time xpos end
+        xpos xstart ypos ystart
+        easein time xpos xend ypos yend
+
+
+    transform transform_easeout_pos(xstart=0, ystart=0, xend=0, yend=0, time):
+        subpixel True
+        xanchor 0.5
+        xpos xstart ypos ystart
+        easeout time xpos xend ypos yend
+
+
+    transform transform_offset(x=0, y=0, speed=0.0):
+        linear speed xoffset x
+        linear speed yoffset y
+
+
+    transform transform_easein_offset(x=0, y=0, time=0.5):
+        easein time xoffset x yoffset y
+
+
+    transform transform_easeout_offset(x=0, y=0, time=0.5):
+        easeout time xoffset x yoffset y

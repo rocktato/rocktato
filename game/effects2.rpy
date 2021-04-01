@@ -4,14 +4,15 @@
 
 init:
 
-    transform phrog_goes_in_and_out_a_door:
+
+    transform phrog_goes_in_and_out_a_door(loop="", where=200, otherwhere=-200):
         subpixel True
         block:
-            easeout 0.5 xpos -200
+            easeout 0.5 xpos otherwhere
             pause 1.0
-            easein 0.5 xpos 200
+            easein 0.5 xpos where
             pause 1.0
-            repeat
+            repeat loop
 
 
 

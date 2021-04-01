@@ -1,36 +1,88 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "renpy/common/00keymap.rpy", line 428, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 428, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 447, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-AttributeError: 'NoneType' object has no attribute 'stores'
+While processing text tag {/b} in u'{/b}Guess the passcode: {b}'.:
+  File "game/episode2.rpy", line 1934, in script
+    ph "how the heck did you get an a in there?"
+  File "game/episode2.rpy", line 1934, in <module>
+    ph "how the heck did you get an a in there?"
+Exception: u'/b' closes a text tag that isn't open.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00keymap.rpy", line 428, in script
-    python hide:
+  File "game/episode2.rpy", line 1934, in script
+    ph "how the heck did you get an a in there?"
   File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "renpy/common/00keymap.rpy", line 428, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 447, in _execute_python_hide
-    renpy.save("_reload-1", "reload save game")
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\loadsave.py", line 398, in save
-    roots = renpy.game.log.freeze(None)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\python.py", line 1925, in freeze
-    self.complete(False)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\python.py", line 1531, in complete
-    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
-AttributeError: 'NoneType' object has no attribute 'stores'
+  File "game/episode2.rpy", line 1934, in <module>
+    ph "how the heck did you get an a in there?"
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\exports.py", line 868, in input
+    rv = renpy.ui.interact(mouse='prompt', type="input", roll_forward=roll_forward)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ui.py", line 297, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\core.py", line 2702, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, **kwargs)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\core.py", line 3194, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\core.py", line 2094, in draw_screen
+    renpy.config.screen_height,
+  File "renpy/display/render.pyx", line 490, in renpy.display.render.render_screen (gen\renpy.display.render.c:6805)
+    rv = render(root, width, height, st, st)
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\screen.py", line 675, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\layout.py", line 722, in render
+    surf = render(child, width, height, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\layout.py", line 1127, in render
+    st, at)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\display\layout.py", line 925, in render
+    surf = render(d, width - x, rh, cst, cat)
+  File "renpy/display/render.pyx", line 166, in renpy.display.render.render (gen\renpy.display.render.c:4075)
+    cpdef render(d, object widtho, object heighto, double st, double at):
+  File "renpy/display/render.pyx", line 259, in renpy.display.render.render (gen\renpy.display.render.c:3520)
+    rv = d.render(widtho, heighto, st, at)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\text\text.py", line 1996, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\text\text.py", line 597, in __init__
+    self.paragraphs = self.segment(text.tokens, style, renders, text)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\text\text.py", line 969, in segment
+    raise Exception("%r closes a text tag that isn't open." % text)
+Exception: u'/b' closes a text tag that isn't open.
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
- 
-Wed Mar 17 13:41:38 2021
+Rocktato and Friends 0.1
+Wed Mar 31 16:08:13 2021

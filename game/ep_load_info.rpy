@@ -3,18 +3,18 @@
 init python:
     ep_titles = [
         "Episode 1 - The Search for Mr. Rock!",
-        "Episode 2 - Wizpotato Hates Kids",
-        "Episode 3 - The Twist!!!",
-        "Episode 4 - Meat, Fish, and Eggs",
-        "Episode 5 - There's a Giant Bug Monster in this Episode"
+        "Episode 2 - Rocktato Struggles To Pay Back His Debt",
+        "Episode 3 - Wizpotato Hates Kids",
+        "Episode 4 - Gin Episode",
+        "Episode 5 - Meat, Fish, and Eggs"
     ]
 
     ep_descs = [
         "Small child Rocktato discovers that his best friend / pet rock Mr. Rock went missing! Oh no! Can he and his friends find him? Probably.",
-        "A bonding of five people (new journey) !! A bonding of five people (new journey) !! A bonding of five people (new journey) !! A bonding of five people (new journey) !! ",
+        "Rocktato and Phrog try to find Mr. Rock a bell when that whole plot gets completely thrown out the window and Rocktato has to pay back his cookie dough debt. Can he? Will he?",
+        "Rocktato, Mr. Rock, and Wizpotato battle for an orphanage.",
         "Rocktato, in the sadness of losing his previous fight, goes to the bar to drink. A friendly friend encounters him there.",
-        "UHHHHHHHHhhhhhh something something meat factory vs fish and oh no oh no i need to maek this loj gensr selnsl fdsa fd oahfo as uhf ashldha fljd",
-        "This one isnt that strong logsg saodgshoa si do osdh osid osai oas doasi fsoa osdo isao d shf odifo adfos o  o aof sof"
+        "UHHHHHHHHhhhhhh something something meat factory vs fish and oh no oh no i need to maek this loj gensr selnsl fdsa fd oahfo as uhf ashldha fljd"
     ]
 
     ep_thumbs = [

@@ -2,6 +2,10 @@
 
     $ persistent.mainmenu_img = 2
     $ persistent.saveepisode_img = 2
+    $ failed = False
+
+    image getreadytext:
+        "gui/text/get ready.png"
 
     stop music fadeout 1.0
 
@@ -115,7 +119,7 @@
 
     pause 4.0
 
-    show chef neutral at transform_ease(1400, 1000, 10.0), flip
+    show chef neutral at transform_easein_pos(1400, 1000, 10.0), flip
 
     pause 4.0
 
@@ -637,7 +641,7 @@
 
     ph ""
 
-    show rt disturbed at transform_ease(-500, 850, 5.0)
+    show rt disturbed at transform_easein_pos(-500, 850, 5.0)
 
     space ""
 
@@ -875,6 +879,8 @@
 
     ph "easy."
 
+    ph ""
+
     show bg beegcity night
 
     show ph bruh 3
@@ -895,6 +901,8 @@
 
     rt "Phrog, {w=0.3}I asked how we were going to rob the thing, {w=0.3}then you said 'easy,' {w=0.3}and then we just... {w=0.5}sat here... {w=0.5}for a few hours..."
 
+    show ph joy at bounce
+
     ph "oh yea!"
 
     ph "well what a coincidence that you asked that RIGHT NOW!"
@@ -903,13 +911,31 @@
 
     ph "and we're gonna sneak in now!"
 
+    show rt o
+
     rt "Okay, {w=0.3}but HOW will we sneak in?"
+
+    show ph smug
 
     ph "easy."
 
+    ph ""
+
+    show rt bruh
+
+    rt "Phrog, please."
+
+    ph "lol, i'm kiddin'."
+
+    show ph joy 2
+
     ph "we just improv and hope it works lol!"
 
-    ph "if it doesn't, {w=0.3}we can just rollback anyway."
+    show ph o 3
+
+    ph "if it doesn't, {w=0.3}we can just rollback."
+
+    show rt confused
 
     rt "What does that mean?"
 
@@ -922,190 +948,1393 @@
     # Oh my god I have to set ALL THE VARIABLES this is gonna SUCK
     $ ep2_choice1_back = False
     $ ep2_choice1_walk = False
-    $ ep2_choice1_roof = True
+    $ ep2_choice1_roof = False
+
+    $ ep2_choice2_disguise = False
+
+    $ ep2_choice2_bomb = False
+
+    $ ep2_choice3_hack = False
+
+    $ ep2_choice4_recipe = False
+    $ ep2_choice4_storage = False
+    $ ep2_choice4_restroom = False
+
+    $ fail_skip = False
 
 
     menu:
-        "Back Door Sneak":
+        "Back Door":
             $ ep2_choice1_back = True
 
-            rt "Let's get in through the back door!"
+            ph "smart."
+
+            jump ep2_seg1_back
+
 
         "Just Walk in LOL":
             $ ep2_choice1_walk = True
 
-            rt "Let's just walk in through the front door."
+            show rt smug 2
 
-            rt "If anyone is in there, they'll be so intimidated by our sheer audacity."
+            rt "If anyone is in there, {w=0.3}they'll be so intimidated by our sheer audacity."
 
-            ph "wait what- {w=0.1}{nw}"
+            show ph o
 
-            rt "Hey hey hey! {w=0.5}What's a poppin'? {w=0.5}I'm definitely not coming here for any malicious intentions! {w=0.5}Don't mind me!!"
+            hide rt with easeoutright
+
+            ph "wait what-{w=0.1}{nw}"
+
+            show bg cookiedoughshop
+
+            show ph bruh at Position(xpos=200)
+
+            show chef what at right, flip
+
+            show rt smug 2 at Position(xpos=500) with easeinleft
+
+            rt "Hey hey hey! {w=0.5}What's a poppin'?{w=1.0}{nw}"
+
+            rt "I'm definitely not coming here for any malicious intentions!{w=1.0}{nw}"
+
+            rt "Don't mind me!!"
 
             chef "."
+
+            jump ep2_seg_end
 
 
         "Enter Thru Roof Like SPY":
             $ ep2_choice1_roof = True
 
+            ph "i mean... {w=0.3}that could work."
 
+            show rt confused
 
+            rt "How do we get up there tho..."
 
-    # SNEAK SEGMENT (sneak into restaurant w/o cook finding out)
+            show ph smug
 
+            ph "i got this."
 
-    if ep2_choice1_back or ep2_choice1_roof:
-        chef "What the hell?!"
+            show ph at bounce
 
-    chef ""
+            no "Phrog picked up Rocktato bridal style and they jumped to the top of the roof."
 
-    chef "Rocktato."
+            show rt o at bounce
 
-    chef "And the frog kid."
+            rt "Woah! {w=0.3}Nice!"
 
-    rt "You..."
+            show rt joy
 
-    rt ""
+            rt "Y'know, {w=0.3}sometimes I forget you have those frog powers n' all."
 
-    rt "What's your name again?"
+            jump ep2_seg1_roof
 
-    chef ""
 
-    chef "What are you doing here."
+    label ep2_seg1_back:
+        show rt o at bounce
 
-    rt ""
+        show ph at bounce
 
-    ph ""
+        no "The two kids skiddered around the building to the back."
 
-    if ep2_choice1_walk == True:
-        ph "you idiot."
+        no "There was indeed a back door; {w=0.5}however when Phrog pulled on the handle, {w=0.3}it wouldn't budge."
 
-        ph "you,"
+        show ph bruh
 
-        ph "quick, {w=0.3}rollback so you can actually play the really cool sneak segment!"
+        ph "locked. {w=0.3}figures."
 
-        rt "No Phrog!!! {w=0.3}I live with the consequences of my actions!"
+        rt "Don't worry! {w=0.3}We'll use a-"
 
-        ph "Pfft.... {w=0.3}sure... {w=0.3}okay then."
+        $ ep2_choice2_disguise = False
 
-    ph "might as well come clean."
+        $ fail_skip = False
 
-    rt ""
+        menu:
+            "Disguise!":
+                $ ep2_choice2_disguise = True
 
-    rt "We... {w=0.3}were gonna rob your secret cookie dough recipe..."
+                space ""
 
-    chef ""
+                ph ""
 
-    chef "Get out."
+                ph "y'kno what."
 
-    rt "WAit!!! {w=0.3}We almost have all the money!"
+                show ph smug
 
-    chef "If you really intended on paying me back, {w=0.5}you wouldn't have tried to steal from me."
+                ph "just go for it. {w=0.3}i wanna see what happens."
 
-    ph ""
+                rt "No c'mon this is gonna be super smart, {w=0.3}watch."
 
-    ph "we weren't intending on paying it back..."
+                show rt at bounce
 
-    rt "What."
+                no "He knocks on the door."
 
-    ph "this whole time we were just trying to find ways to not pay for it."
+                rt "EY EY. {w=0.3}It's the garbage man!!! {w=0.3}Here to eat your garbage!!!"
 
-    ph "we tried to get blairic to pay it,"
+                show ph at Position(xpos=200)
 
-    ph "we tried what i guess can be considered cookie dough piracy (?)"
+                show rt at Position(xpos=500)
 
-    ph "we tried to sue, to steal,"
+                with ease
 
-    ph ""
+                show chef bruh at right, flip with easeinright
 
-    ph "that's probably it maybe."
+                space ""
 
-    rt ""
+                chef "What the hell."
 
-    rt "Oh... {w=0.3}man... {w=0.3}you're totally right.."
+                $ fail_skip = True
 
-    rt ""
+                jump ep2_seg_end
 
-    ph ""
 
-    no "The two kids stood there for a second, {w=0.3}not really knowing what to say {w}because they were massive idiots."
+            "Paperclip!":
+                show rt smug at bounce
 
-    chef ""
+                no "He pulls out a paper clip."
 
-    chef "You kids... {w=0.3}gonna leave?"
+                show rt at shake(rate=0.01,strength=2,loop=7)
 
-    ph "o yeah that's probably a good idea."
+                no "He jams it into the keyhole."
 
+                no ""
 
-    ph "well..."
+                no "He just... {w=0.3}leaves it in there."
 
-    ph "i think we can both can say..."
+                no ""
 
-    ph "that was a day that happened..."
+                rt ""
 
-    ph "i feel like i learned something, but i should've already known..."
+                rt "Yeah, {w=0.3}I don't know how to do this lol."
 
-    rt "Whatd'ya mean?"
+                ph ""
 
-    ph "mmmmmgrmrrrrgmmm..."
+                show img 2 fail
 
-    ph "i should've like know that.."
+                $ _skipping = False
 
-    ph "what we did is bad."
+                space "Rollback to pick a different choice! (Press/hold backspace.)"
 
-    ph "stealing is bad!!"
+                $ renpy.pause(hard=True)
 
-    ph "that’s the moral of the story!!"
 
-    ph "hahah!!"
+            "Gun!":
+                show ph shock
 
-    ph ""
+                ph "what-{w=0.2}{nw}"
 
-    ph "man.."
+                show ph scared 2
 
-    ph "i'm stupid."
+                show rt proud with hpunch
 
-    rt ""
+                space ""
 
-    rt "If it makes you feel better.."
+                ph "ROCKTATO WHAT TTHE HELL!!??"
 
-    rt "we did the criminal activities together!"
+                ph "WAH.."
 
-    rt "So, {w=0.3}we're both stupid!"
+                show ph at shake(rate=0.01,strength=5,loop=20)
 
-    rt "We can be stupid together!"
+                ph "WHERE DID YOU GET THAT??"
 
-    ph "yeah!"
+                show rt o at bounce
 
-    ph "we're the idiot gremlin gang."
+                rt "Oh look the door's open! {w=0.3}Let's goooo."
 
-    rt "That's like alliteration but only like two-thirds of it!"
+                show ph scared
 
-    rt "Good job!"
+                ph "a-"
 
-    ph "thanks."
+                show rt joy
 
-    ph "anyway, i think i can take care of the last 100 monies..."
+                rt "C'mon Phrog."
 
-    ph "i'll just sell my mattress or something."
+                jump ep2_seg2_sneak
 
-    ph "it doesn't matter."
 
-    rt "Woah, really?"
+    label ep2_seg1_roof:
+        ph "yea me too."
 
-    rt "Thanks Phrog!!!"
+        show ph o
 
-    rt "And thanks for sticking with me today!!"
+        ph "remember when super powers were an important gimmick?"
 
-    ph "yeah."
+        show ph joy 2
 
-    ph "like i said, idiot gremlin gang."
+        ph "just kidding!"
 
-    ph "we gotta find you a new favorite food to eat tho."
+        show ph tired 2
 
-    rt "Oh noooOOOOO!!!"
+        ph "it never was..."
 
-    if persistent.episode_fin == 1:
-        $ persistent.episode_fin = 2
+        show ph tired
 
-    $ persistent.mainmenu_img = 3
+        ph ""
+
+        show ph o 2
+
+        show rt confused
+
+        rt "Well... {w=0.3}now that we're here... {w=0.3}how do we actually get in?"
+
+        show ph bruh 2
+
+        ph "the roof was your idea, dingus."
+
+        show rt happy 2
+
+        rt "I've got it! {w=0.3}Let's use..."
+
+        if ep2_choice2_bomb == False:
+            $ ep2_choice2_bomb = False
+        else:
+            $ ep2_choice2_bomb = True
+
+        menu:
+            "A Laser Cutter":
+                show ph bruh
+
+                show rt smug 2 at shake(rate=0.01,strength=5,loop=5)
+
+                rt "EeeheheeheeeyeaAAAAHH."
+
+                no "He slaps some wack lookin' device on the roof and it lasers a medium-size circular hole."
+
+                show ph o
+
+                ph "woah."
+
+                show ph at bounce
+
+                ph "that worked!"
+
+                show ph o 3
+
+                ph "where... {w=0.3}did you get that?"
+
+                show rt happy
+
+                rt "My pocket!"
+
+                ph "how..{w=0.3}{nw}"
+
+                show rt proud at bounce
+
+                rt "Now c'mon, {w=0.3}let's go!"
+
+                show rt at transform_easeout_offset(y=1280)
+
+                ph "how are we getting- {w=0.4}{nw}"
+
+                ph "oh he already jumped down."
+
+                show ph bruh 2
+
+                ph "welp."
+
+                hide ph with easeoutbottom
+
+                hide rt
+
+                space ""
+
+                jump ep2_seg2_office
+
+            "A Fricken' Saw":
+                show rt at shake(rate=0.05,strength=1,loop="")
+
+                show ph bruh
+
+                no "He pulls a fricken' saw out of his pocket and starts scrapping away on the roof."
+
+                no ""
+
+                ph ""
+
+                rt ""
+
+                rt "This..."
+
+                show rt nervous
+
+                rt "uh..."
+
+                rt "this is taking longer than I thought it would..."
+
+                rt ""
+
+                show rt sad at shake(rate=1.00,strength=0,loop=1) with hpunch
+
+                no "The saw snaps in half."
+
+                rt "o"
+
+                show img 2 fail
+
+                $ _skipping = False
+
+                space "Rollback to pick a different choice! (Press/hold backspace.)"
+
+                $ renpy.pause(hard=True)
+
+            "Bomb":
+                $ ep2_choice2_bomb = True
+
+                show rt joy at shake(rate=0.01,strength=1,loop=3)
+
+                show ph bruh
+
+                no "Rocktato drops a bomb at his feet."
+
+                no ""
+
+                no "It isn't lit."
+
+                show ph bruh 2
+
+                ph "it isn't lit, idiot."
+
+                show ph bruh
+
+                rt "Don't worry!"
+
+                show rt happy at bounce
+
+                no "He lights it with a match."
+
+                ph ""
+
+                show ph shock
+
+                ph "wait, {w=0.3}this is a real bomb.."
+
+                show rt happy 2 at bounce
+
+                rt "Yeah!"
+
+                ph ""
+
+                rt ""
+
+                show ph scared 2 with hpunch
+
+                ph "shOULDN'T WE GET OUTTA HERE?"
+
+                rt "Mm."
+
+                show rt joy 2 at bounce
+
+                rt "Nah."
+
+                show ph scared
+
+                ph "but..."
+
+                ph "it says nuke on the side."
+
+                show rt o
+
+                rt "Oh-{w=0.1}{nw}"
+
+                $ renpy.quit()
+
+
+    label ep2_seg2_sneak:
+        no "The two entered the door and found themselves in the kitchen."
+
+        show ph o 2
+
+        ph ""
+
+        ph "holy cannoli it smells delicious in here."
+
+        show rt o
+
+        rt "Woah, {w=0.3}yeah-{w=0.3}{nw}"
+
+        ph "psst get down."
+
+        show ph at transform_easeout_offset(y=1280)
+
+        show rt at transform_easeout_offset(y=1280)
+
+        no "They ducked behind the counters and what nots."
+
+        chef "What was that noise?"
+
+        show chef neutral at right, flip with easeinright
+
+        chef ""
+
+        show chef think
+
+        chef "Eh, {w=0.3}whatever."
+
+        hide chef with easeoutright
+
+        no "She leaves."
+
+        ph ""
+
+        show rt smug at transform_easein_offset(y=120)
+
+        rt "Lol that worked?"
+
+        show rt nervous
+
+        chef "Actually..."
+
+        show rt at transform_easeout_offset(y=1280)
+
+        show chef joy at right, flip with easeinright
+
+        chef "I have a little bit of time. {w=0.3}Might as well make myself a snack before I head home!"
+
+        show chef happy
+
+        chef "Which is here."
+
+        chef "I live here!"
+
+        hide rt
+
+        hide ph
+
+        show chef joy at bounce
+
+        chef "Fun fact!"
+
+        show ph bruh at Position(xpos=200,ypos=810)
+
+        show rt sad at Position(xpos=500, ypos=810)
+
+        with easeinbottom
+
+        ph "ah crud..."
+
+        ph "rocktato, {w=0.3}we need to do some sort of sneak segment to get past her."
+
+        show rt confused
+
+        rt "What?"
+
+        show ph o
+
+        ph "ikr. {w=0.3}a sneak seg in a visual novel... {w=0.3}outstanding..."
+
+        ph "okay, {w=0.3}it's simple."
+
+        ph "when the option comes up, select the one that says 'Sneak.'"
+
+        ph "but you gotta be quick!"
+
+        ph "if you don't do it in time or you select the wrong one, you'll get caught!"
+
+        ph "but if you don't have the reflexes for this one, {w=0.3}that's okay!"
+
+        ph "do you wanna skip this segment?"
+
+        menu:
+            "Yes":
+                show ph joy at bounce
+
+                ph "cool!"
+
+                ph "i'll teleport you to the future in three... {w=1.0}two... {w=1.0}one...{nw}"
+
+                jump ep2_seg2_aftersneak
+
+            "No":
+                show ph smug
+
+                ph "ok then. {w=0.3}it's gaming time."
+
+                rt "What."
+
+            # TODO SNEAK SEG
+
+
+
+
+        $ fail_skip = False
+
+        label ep2_seg2_aftersneak:
+            ph "let's gooo"
+
+            # TODO AFTERSNEAK DIALOUGE
+
+
+            menu:
+                "{i}Sneak a Taste{/i}":
+                    show rt nervous
+
+                    rt ""
+
+                    no "He dips his finger into the mixture and licks it."
+
+                    show rt o
+
+                    rt ""
+
+                    show rt o at shake(rate=0.01,strength=3,loop=5),shake(rate=0.01,strength=6,loop=7), shake(rate=0.01,strength=20,loop=9)
+
+                    no "He vaccuums the whole pot."
+
+                    show ph bruh
+
+                    ph "hey pipe down there c'mon-"
+
+                    ph ""
+
+                    show ph bruh 2
+
+                    ph "seriously."
+
+                    show rt exasperated
+
+                    rt "Okay, c'mon. {w=0.3}It's so good."
+
+                    ph "do you know how loud that was?"
+
+                    ph "i'd be suprised if we didn't get-"
+
+                    show ph o 2
+
+                    ph ""
+
+                    show ph o
+
+                    ph "caught."
+
+                    $ fail_skip = True
+
+                    jump ep2_seg_end
+
+
+                "{i}Don't{/i}":
+                    rt ""
+
+                    no "He exits the kitchen."
+
+        jump ep2_seg3_hall
+
+
+    label ep2_seg2_office:
+        show ph o 2 at bounce, Position(xpos=450)
+
+        show rt happy at bounce, Position(xpos=850)
+
+        no "The two had dropped into some small office."
+
+        show rt happy 2
+
+        rt "Woah! {w=0.3}Place! {w=0.7}Sick!"
+
+        show ph o 3
+
+        ph "hmm"
+
+        ph "alright... {w=0.3}i doubt the recipe's gonna b here.."
+
+        show ph bruh 3
+
+        ph "all of these papers are just tax stuff that i don't understand."
+
+        show rt confused
+
+        rt "Hmm..."
+
+        rt "Let's-"
+
+        $ ep2_choice3_hack = False
+
+        $ fail_skip = False
+
+        menu:
+
+            "Hack Computer Like SPY!":
+                $ ep2_choice3_hack = True
+
+                show rt proud at shake(rate=0.01,strength=5,loop="")
+
+                rt "EHEHEEHE!"
+
+                show ph scared
+
+                no "He hops into the spinny chair and starts smashing the keyboard with his face."
+
+                chef "What the hELL."
+
+                $ fail_skip = True
+
+                jump ep2_seg_end
+
+
+            "Leave.":
+                show rt sad
+
+                rt "You're prolly right."
+
+                show ph o 2 at phrog_goes_in_and_out_a_door(loop=1, where=450, otherwhere=1600)
+
+                no "Phrog opened the door {w=0.7}and then quickly closed it."
+
+                show rt bruh
+
+                rt "What."
+
+                show ph o
+
+                ph "she's coming."
+
+                show rt confused
+
+                show ph at Position(xpos=450)
+
+                rt "Wha-{w=0.1}{nw}"
+
+                show ph at transform_easeout_offset(y=1280)
+
+                show rt at transform_easeout_offset(y=1280)
+
+                no "Phrog dragged Rocktato into a box."
+
+                hide rt
+
+                hide ph
+
+                show chef happy at right, flip with easeinright
+
+                chef "Oh boy! {w=0.3}Taxes!"
+
+                chef "Time to do."
+
+                show ph bruh at Position(xpos=200,ypos=810)
+
+                show rt sad at Position(xpos=500, ypos=810)
+
+                with easeinbottom
+
+                space ""
+
+                ph "oh god. {w=0.3}this is literally the worst case scenario."
+
+                show rt confused
+
+                rt "What do you mean?"
+
+                ph "we gotta do a sneak segment to get past her."
+
+                ph "and in a visual novel, {w=0.2}of all genres."
+
+                show ph bruh 2
+
+                ph "okay, {w=0.3}this is a really easy one."
+
+                ph "just dON'T DO ANYTHING."
+
+                ph "don't talk, {w=0.2}don't move, {w=0.2}don't do any of your classic adhd brain rocktato things."
+
+                show ph think
+
+                ph "can you do that?"
+
+                show rt happy
+
+                rt "Yeeeeeeeeeesssssssss.............."
+
+                show ph o 2
+
+                ph "not very reassuring but ok."
+
+                ph "here we go."
+
+                show getreadytext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
+
+                pause 1.0
+
+                hide getreadytext with dissolve
+
+                no "" 
+
+                # TODO OTHER SNEAKS EG
+
+                jump ep2_seg3_hall
+
+
+    label ep2_seg3_hall:
+        hide chef
+
+        hide rt
+
+        hide ph
+
+        show ph o 2 at Position(xpos=800) with easeinright
+
+        show rt o at Position(xpos=1100) with easeinright
+
+        no "The two found themselves in a hallway."
+
+        if ep2_choice1_roof == True:
+            no "describe hall"
+
+        else:
+            no "describe hall"
+
+        show ph o 3
+
+        ph "which door do we enter?"
+
+        $ ep2_choice4_recipe = False
+        $ ep2_choice4_storage = False
+        $ ep2_choice4_restroom = False
+
+        menu:
+            "GO TO BATHROOM":
+                $ ep2_choice4_restroom = True
+
+                show rt smug
+
+                show ph bruh
+
+                rt ""
+
+                ph ""
+
+                rt ""
+
+                ph ""
+
+                ph "no"
+
+                show img 2 fail
+
+                $ _skipping = False
+
+                space "Rollback to pick a different choice! (Press/hold backspace.)"
+
+                $ renpy.pause(hard=True)
+
+
+            "Storage Room":
+                $ ep2_choice4_storage = True
+
+                show rt confused
+
+                rt "Maybe they're storing the recipe there?"
+
+                show ph bruh
+
+                ph "there's literally a sign that says secret recipe."
+
+                rt "It... {w=0.3}{nw}"
+
+                show rt nervous
+
+                extend " it could be a trap{w=0.3}?"
+
+                ph "that's somewhat logical."
+
+                ph "okay, {w=0.3}sure. {w=0.3}let's try it."
+
+                hide rt
+
+                hide ph
+
+                show ph bruh at Position(xpos=200) with easeinright
+
+                show rt o at Position(xpos=500) with easeinright
+
+                no "They walked into the storage room."
+
+                no "I mean, {w=0.3}where else would they walk into?"
+
+                no "It was just some shelves holding cookie dough or ingredients for cookie dough."
+
+                rt "It could be in a corner or something. {w=0.3}Look around!"
+
+                show rt at bounce
+
+                show ph at bounce
+
+                no "They shuffled around the place for a bit."
+
+                no "This little bounce animation is all our budget can allow, though."
+
+                no "Sorry..."
+
+                show ph bruh 2
+
+                ph "nope."
+
+                ph "i really don't know what you were expecting."
+
+                ph "let's get outta here."
+
+                show rt bruh
+
+                rt "Yeah."
+
+                show rt at Position(xpos=1100) with ease
+
+                space ""
+
+                show rt at shake(rate=0.01,strength=3,loop=3)
+
+                space ""
+
+                show rt troubled
+
+                rt ""
+
+                rt "The door.."
+
+                ph "yes. {w=0.3}that is the door."
+
+                show ph joy 2
+
+                ph "good observation!!"
+
+                rt "Phrog it's locked."
+
+                show rt at Position(xpos=700) with ease
+
+                rt "We're stuck in here."
+
+                show ph shock
+
+                ph "wait what."
+
+                show ph scared
+
+                ph "oh god."
+
+                show ph scared 2
+
+                ph "we'RE GONNA FREEZE TO DEATH!!"
+
+                show rt disturbed
+
+                rt "WE ARE??"
+
+                show ph scared 3 at Position(xpos=400)
+
+                ph "QUICK ROCKTATO."
+
+                ph "WHEN BEAR GORGANGAS GOT TRAPPED IN A FREEZER WHAT DID HE DO?"
+
+                rt "Phrog..."
+
+                rt "He..."
+
+                show chef bruh at Position(xpos=1100)
+
+                rt "He started eating raw eggs..."
+
+                show ph scared 2 at shake(rate=0.02,strength=50,loop=5) with hpunch
+
+                show chef bruh at transform_easein_pos(xstart=2000, xend=1100, time=5.0), flip
+
+                ph "OH GOD NOOO WE'RE GONNA HAVE TO START EATING RAW EGGS."
+
+                ph "NOOOOOo"
+
+                chef ""
+
+                show chef bruh at right with ease
+
+                chef "You kids alright?"
+
+                ph "OH THANK YOU {nw}"
+
+                show ph shock
+
+                extend "Oh."
+
+                jump ep2_seg_end
+
+
+            "Lol Secret Recipe":
+                $ ep2_choice4_recipe = True
+
+                ph "o true."
+
+                ph "makes the most sense, lol."
+
+                hide rt
+
+                hide ph
+
+                show ph o at Position(xpos=200) with easeinright
+
+                show rt o at Position(xpos=500) with easeinright
+
+                no "They enter the room marked 'Secret Recipe.'"
+
+                no "Just kidding, {w=0.3}they didn't."
+
+                show rt sad
+
+                show ph o 2
+
+                no "It was a massive vault that they were locked out of."
+
+                no "They just stood{w} outside it."
+
+                show ph o
+
+                ph "o yeah i forgot people usually lock up important things huh."
+
+                show ph smug
+
+                ph "guess that's why the fbi wants me in prison so bad."
+
+                show ph smug 3
+
+                ph ""
+
+                show ph bruh
+
+                ph "get it because i'm just really cool."
+
+                rt "Hm.... {w=0.3}it seems like it's locked with this four digit number pad."
+
+                show ph bruh 2
+
+                ph "i can see it, {w=0.3}ya don't need to say it lol."
+
+                show rt confused
+
+                rt "Wanna take a crack at this?"
+
+                ph "i wanna take a crack at my skull rn ngl."
+
+                show rt joy 2 at bounce
+
+                show ph bruh
+
+                rt "Alright, {w=0.3}I'm just gonna press a bunch of random numbers and hopefully get it right."
+
+                show rt o
+
+                rt "1... {w=0.5}2... {w=0.5}3.... {w=0.5}4!"
+
+                no ""
+
+                show rt sad
+
+                no "WRONG PASSCODE."
+
+                show ph bruh 2
+
+                ph "lol seriously."
+
+                ph "here let me try."
+
+                show ph smug
+
+                ph "8...{w=0.5}0...{w=0.5}0...{w=0.5}8-{nw}"
+
+                show rt mad with hpunch
+
+                rt "PHROOOOOG!!!"
+
+                rt "That's ina- {w=0.5}inappropRIATE!!!!"
+
+                show ph bruh
+
+                ph "clearly it is cus it didn't work."
+
+                no "WRONG PASSCODE."
+
+                no "1 TRY LEFT."
+
+                show rt confused
+
+                rt "One try left until what?"
+
+                show rt joy
+
+                rt "Ooo! {w=0.3}I hope the building explodes!"
+
+                show ph bruh 2
+
+                ph "what."
+
+                rt "Let me do the last one!"
+
+
+                $ ep2_a_in_pass = False
+
+                $ ep2_passcode = renpy.input("{b}Guess the passcode:{/b}",  length=4, allow="1234567890b")
+
+                if "bbbb" in ep2_passcode:
+                    show ph shock
+
+                    ph ""
+
+                    ph "how the heck did you do that?"
+
+                    ph "wh.."
+
+                    ph "what???"
+
+                    ph "it's just b's,,,,,"
+
+                    ph ""
+
+                elif ep2_passcode == "b":
+                    show ph shock
+
+                    ph ""
+
+                    ph "what does this mean..."
+
+                    ph "it's just b,,,"
+
+
+                elif "b" in ep2_passcode:
+                    show ph o
+
+                    ph "how the heck did you get a b in there?"
+
+                    ph "it's.."
+
+                    ph "it's a number pad..."
+
+                elif "8008" in ep2_passcode:
+                    show ph bruh
+
+                    ph "srsly. {w=0.3}you stole my joke?"
+
+                    ph "uncool.."
+
+                elif "1234" in ep2_passcode:
+                    show ph with hpunch
+
+                    ph "you seRIOUSLY THINK-"
+
+                elif "6969" in ep2_passcode:
+                    show rt smug
+
+                    rt ""
+
+                    show ph smug
+
+                    ph ""
+
+                    ph "yeahhh now that's what i'm talking about."
+
+                elif ep2_passcode == "":
+                    rt ""
+
+                    show ph bruh
+
+                    ph ""
+
+                    rt ""
+
+                    ph ""
+
+                    show ph think 2
+
+                    ph "are you going to type anything?"
+
+                    rt ""
+
+                elif len(ep2_passcode) < 4:
+                    ph "not 4 digits but ok."
+
+                    show ph joy at bounce
+
+                    ph "you tried!"
+
+                    ph "not all of us can count and that's ok!"
+
+                else:
+                    no ""
+
+
+
+                no "WRONG PASSCODE."
+
+                show ph o 2
+
+                show rt o
+
+                no "BEEEEP {w=0.5}BEEEEP {w=0.5}BEEEEP!!"
+
+                no "WAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHHH!!"
+
+                no "The place started flashing red and not red."
+
+                no "The alarm was going beep beep, wahhh, and other stuff like that!"
+
+                show chef angry at right, flip with easeinright
+
+                chef "WHAT THE HELL IS GOIN' ON HERE-"
+
+                jump ep2_seg_end
+
+
+    label ep2_seg_end:
+        show ph o 2 at Position(xpos=200)
+
+        if ep2_choice2_disguise == False:
+            show rt sad at Position(xpos=500)
+        else:
+            show rt at Position(xpos=500)
+
+        show chef bruh at right, flip
+
+        with ease
+
+        chef ""
+
+        chef "Rocktato."
+
+        chef "And the frog kid."
+
+        rt "You..."
+
+        rt ""
+
+        if ep2_choice2_disguise == False:
+            show rt nervous at bounce
+
+        rt "What's your name again?"
+
+        chef ""
+
+        show chef bruh 2
+
+        chef "What are you doing here."
+
+        if ep2_choice2_disguise == True:
+            chef "And why are you dressed in the garbage man's outfit."
+
+            chef "There hasn't been a garbage man since the... {w=1.0}incident."
+
+            chef "That's disrespectful."
+
+            rt "Oh. Sorry."
+
+            rt "I'll just..."
+
+            show rt sad
+
+            no ""
+
+            jump ep2_seg_fail_skip
+
+
+        if ep2_choice3_hack == True:
+            show chef what
+
+            chef "And why are you..."
+
+            chef "Why..."
+
+            chef "Are you okay????"
+
+        show chef bruh
+
+        rt ""
+
+        ph ""
+
+        label ep2_seg_fail_skip:
+            if ep2_choice1_walk == True or fail_skip == True:
+                show ph bruh
+
+                ph "you idiot."
+
+                show ph o 3 at bounce
+
+                ph "quick, {w=0.3}rollback so you can actually play the really cool sneak segment!"
+
+                show rt mad
+
+                rt "No Phrog!!! {w=0.3}I live with the consequences of my actions!"
+
+                show ph bruh
+
+                ph "Pfft.... {w=0.3}sure... {w=0.3}okay then."
+
+                ph "well..."
+
+        show ph o 2
+
+        ph "might as well come clean."
+
+        show rt troubled
+
+        rt ""
+
+        rt "We... {w=0.3}were gonna rob your secret cookie dough recipe..."
+
+        if ep2_choice3_hack == True:
+            rt "By... {w=0.3}hacking into your computer..."
+
+        chef ""
+
+        show chef bruh 2
+
+        chef "Get out."
+
+        show chef bruh
+
+        show rt cry
+
+        rt "WAit!!! {w=0.3}We almost have all the money!"
+
+        show chef bruh 2
+
+        chef "If you really intended on paying me back, {w=0.5}you wouldn't have tried to steal from me."
+
+        show ph o 2
+
+        show chef bruh
+
+        ph ""
+
+        ph "we weren't intending on paying it back..."
+
+        show rt sad 2
+
+        rt "What."
+
+        ph "this whole time we were just trying to find ways to not pay for it."
+
+        ph "we tried to get blairic to pay it,"
+
+        ph "we tried what i guess can be considered cookie dough piracy, (?)"
+
+        ph "we tried to sue, to steal,"
+
+        ph ""
+
+        ph "that's probably it maybe."
+
+        show rt troubled
+
+        rt ""
+
+        rt "Oh... {w=0.3}man... {w=0.5}you're totally right.."
+
+        rt ""
+
+        ph ""
+
+        no "The two kids stood there for a second, {w=0.3}not really knowing what to say {w}because they were massive idiots."
+
+        chef ""
+
+        show chef think
+
+        chef "You kids... {w=0.3}gonna leave?"
+
+        ph "o yeah that's probably a good idea."
+
+
+        show ph at Position(xpos=450)
+
+        show rt at Position(xpos=850)
+
+        hide chef
+
+        show bg beegcity night
+
+        ph "well..."
+
+        ph "i think we can both can say..."
+
+        ph "that was a day that happened..."
+
+        if ep2_choice2_bomb == True:
+            show ph o at bounce
+
+            ph "i think i died!"
+
+            show ph joy
+
+            ph "lol"
+
+        ph ""
+
+        rt ""
+
+        show ph o 3
+
+        ph "we kinda suck lol."
+
+        rt "I guess.."
+
+        show ph shock
+
+        ph "no srsly man"
+
+        show ph o
+
+        ph "stealing is bad!"
+
+        show ph at bounce
+
+        ph "that’s the moral of the story!!"
+
+        show ph joy 2
+
+        ph "hahah!!"
+
+        ph ""
+
+        show ph tired
+
+        ph ""
+
+        show ph tired 2
+
+        ph "man.."
+
+        ph "i'm stupid."
+
+        rt ""
+
+        rt "Yeah, {w=0.3}but,"
+
+        show rt nervous
+
+        rt "like... {w=0.3}I'm stupid too!"
+
+        rt "And... {w=0.3}I guess..."
+
+        show rt joy 2 at bounce
+
+        rt "we can be better!"
+
+        show rt nervous
+
+        rt "And try to be... {w=0.3}like... {w=0.3}less... {w=0.3}stupid??{w=0.3}?"
+
+        show ph o 2
+
+        ph ""
+
+        show ph thankful 2
+
+        ph "yeah, {w=0.3}somethin' like that."
+
+        show ph bruh 2
+
+        ph "we gotta find you a new favorite food to eat tho."
+
+        show rt cry 2 at shake(rate=0.01,strength=5,loop=8) with hpunch
+
+        rt "Oh noooOOOOO!!!"
+
+        if persistent.episode_fin == 1:
+            $ persistent.episode_fin = 2
+
+        $ persistent.mainmenu_img = 3
