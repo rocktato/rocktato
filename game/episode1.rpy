@@ -1415,9 +1415,21 @@ label start:
             hide ph with easeoutbottom
 
         elif moves == 50:
+            # if persistent.phrog_pisser == True and persistent.phrog_vaultbreaker:
+            #     ph "I'm not going to crash the game again."
+            #
+            #     ph "I think.."
+            #
+            #     ph "Oh! {w=0.3}I'll just teleport you to the transformation sequence!"
+            #
+            #     ph "Problem solved!"
+            #
+            #     jump ep1_transform
+            
             if persistent.phrog_pisser == True:
                 ph "Yeah ok i'm not gonna give you that dialouge again or new dialouge. {w=0.3}if you don't transform, i'll kill you and rocktato again."
                 rt "Wait what-{w=0.1}{nw}"
+
             else:
                 ph "Wow."
 
@@ -1706,39 +1718,40 @@ label start:
 
                 hide screen battle_health
 
-    show rt fight idle 1
+    label ep1_transform:
+        show rt fight idle 1
 
-    rt "Okay are you ready for this? {w=0.3}This is gonna be mega cool; {w=0.1}it always is."
+        rt "Okay are you ready for this? {w=0.3}This is gonna be mega cool; {w=0.1}it always is."
 
-    show rt fight idle 1 at funny_expand
+        show rt fight idle 1 at funny_expand
 
-    stop music fadeout 1.0
+        stop music fadeout 1.0
 
-    play sound "audio/fx/transform.ogg"
+        play sound "audio/fx/transform.ogg"
 
-    show fx white with dissolve
+        show fx white with dissolve
 
-    space ""
+        space ""
 
-    no "Rocktato started to glow."
+        no "Rocktato started to glow."
 
-    hide wiz
+        hide wiz
 
-    hide rt
+        hide rt
 
-    no "Everything turned white."
+        no "Everything turned white."
 
-    no "At least our FX budget can afford that."
+        no "At least our FX budget can afford that."
 
-    rt "My true form...."
+        rt "My true form...."
 
-    play sound "audio/fx/fart.ogg"
+        play sound "audio/fx/fart.ogg"
 
-    hide fx white
+        hide fx white
 
-    show rt trueform smile at center, Position(ypos=605)
+        show rt trueform smile at center, Position(ypos=605)
 
-    rt "BEHOLD!"
+        rt "BEHOLD!"
 
     show rt trueform happy 2 at Position(xpos=900) with ease
 

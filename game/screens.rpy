@@ -10,6 +10,10 @@ default saveable = True
 
 default choice_screen_type = "choice"
 
+default choice_screen_shuffle = False
+
+default timed_choices = False
+
 default persistent.episode_fin = 0
 
 default persistent.mainmenu_img = 0
@@ -224,6 +228,27 @@ style input:
 
 # TODO CHOICE BOXES SPRITES
 
+# How long the player has to make a choice in timeout seconds.
+default timeout = 5.0
+
+# The label the player is sent to if they fail to make a choice in the time
+# allotted. If None, the timeout is disabled.
+default timeout_label = None
+
+init python:
+    shuffle_items = range(20)
+
+    def shuffle_menu():
+        global shuffle_items
+        shuffle_items = range(20)
+        shuffle_items.sort(key=lambda x:renpy.random.random())
+        return
+
+    def unshuffle_menu():
+        global shuffle_items
+        shuffle_items = range(20)
+        return
+
 init:
     transform choiceboxfadein:
         subpixel True
@@ -244,8 +269,15 @@ screen choice(items):
                 at choiceboxfadein
                 style str(choice_screen_type) + "_vbox"
 
+                if choice_screen_shuffle:
+                    $ renpy.random.shuffle(items)
+
                 for i in items:
                     textbutton i.caption action i.action
+
+            if (timeout_label is not None) and timed_choices:
+
+                timer timeout action Jump(timeout_label)
 
 
 
@@ -1119,8 +1151,6 @@ init python:
     def renpy_music_stop_action():
         renpy.music.stop(channel="music", fadeout=None)
 
-
-#TODO: LOADING NOISE
 
 screen loading_screen(what, img, tip, tip_font, tip_color):
     on 'show' action SetMute('music/asd.mp3', True)

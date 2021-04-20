@@ -3,16 +3,16 @@
 init python:
     ep_titles = [
         "Episode 1 - The Search for Mr. Rock!",
-        "Episode 2 - Rocktato Struggles To Pay Back His Debt",
-        "Episode 3 - Wizpotato Hates Kids",
+        "Episode 2 - Wizpotato Hates Kids",
+        "Episode 3 - Rocktato Struggles To Pay Back His Debt",
         "Episode 4 - Gin Episode",
         "Episode 5 - Meat, Fish, and Eggs"
     ]
 
     ep_descs = [
         "Small child Rocktato discovers that his best friend / pet rock Mr. Rock went missing! Oh no! Can he and his friends find him? Probably.",
-        "Rocktato and Phrog try to find Mr. Rock a bell when that whole plot gets completely thrown out the window and Rocktato has to pay back his cookie dough debt. Can he? Will he?",
         "Rocktato, Mr. Rock, and Wizpotato battle for an orphanage.",
+        "Rocktato has to pay back his enourmous cookie dough debt he racked up over the years. Can he? Will he? I'm not really sure.",
         "Rocktato, in the sadness of losing his previous fight, goes to the bar to drink. A friendly friend encounters him there.",
         "UHHHHHHHHhhhhhh something something meat factory vs fish and oh no oh no i need to maek this loj gensr selnsl fdsa fd oahfo as uhf ashldha fljd"
     ]

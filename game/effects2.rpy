@@ -5,6 +5,12 @@
 init:
 
 
+    transform falling_over:
+        yanchor 0.875
+        linear 1.0 yoffset 1000 rotate 50.0
+
+
+
     transform phrog_goes_in_and_out_a_door(loop="", where=200, otherwhere=-200):
         subpixel True
         block:
