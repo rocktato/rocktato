@@ -7,10 +7,10 @@
     image getreadytext:
         "gui/text/get ready.png"
 
-    image chef 2 breakdown 2 to 3:
-      "images/side chars/chef/2/chef 2 breakdown 2.png"
+    image chef 3 breakdown 2 to 3:
+      "images/side chars/chef/2/chef 3 breakdown 2.png"
       0.1
-      "images/side chars/chef/2/chef 2 breakdown 3.png"
+      "images/side chars/chef/2/chef 3 breakdown 3.png"
       0.1
       repeat
 
@@ -1191,6 +1191,8 @@
             "\"Disguise!\"":
                 $ ep3_choice2_disguise = True
 
+                show rt 3 trashcan 1
+
                 play sound "audio/fx/pickup.ogg"
 
                 space ""
@@ -1205,7 +1207,7 @@
 
                 rt "No c'mon this is gonna be super smart, {w=0.3}watch."
 
-                show rt at bounce
+                show rt 3 trashcan 2 at bounce
 
                 play sound "audio/fx/doorbang.ogg"
 
@@ -1235,6 +1237,8 @@
 
                 no "He pulls out a paper clip."
 
+                no "{image=images/imgs/2/txt 3 paperclip.png}"
+
                 show rt at shake(rate=0.01,strength=2,loop=7)
 
                 play sound "audio/fx/drill.ogg"
@@ -1255,7 +1259,7 @@
 
                 play sound "audio/fx/punch.ogg"
 
-                show img 2 fail
+                show img 3 fail
 
                 $ _skipping = False
 
@@ -1426,7 +1430,7 @@
 
                 rt "o"
 
-                show img 2 fail
+                show img 3 fail
 
                 $ _skipping = False
 
@@ -1442,13 +1446,15 @@
 
                 play sound "audio/fx/drop.ogg"
 
+                show obj 3 plant at center
+
                 no "He aggressively pulls a medium-sized potted plant out of his pocket and sets it on the roof."
 
                 rt ""
 
                 rt "Eee hee hee I love plants."
 
-                show img 2 fail
+                show img 3 fail
 
                 $ _skipping = False
 
@@ -2686,7 +2692,7 @@
 
                     $ renpy.pause(1.25, hard=True)
 
-                    show chef 2 breakdown 2 to 3 at none
+                    show chef 3 breakdown 2 to 3 at none
 
                     $ renpy.pause(1.5, hard=True)
 
@@ -2772,61 +2778,61 @@
                 label ep3_seg2_office_sneak_4:
                     space "{nw}"
 
-                    show chef 2 breakdown 4 at none
+                    show chef 3 breakdown 4 at none
 
                     $ renpy.pause(1.5, hard=True)
 
-                    show chef 2 breakdown 5 at shake(rate=0.1,strength=2,loop=1)
+                    show chef 3 breakdown 5 at shake(rate=0.1,strength=2,loop=1)
 
                     $ renpy.pause(2.0, hard=True)
 
-                    show chef 2 breakdown 6 at shake(rate=0.05,strength=0.75,loop=1)
+                    show chef 3 breakdown 6 at shake(rate=0.05,strength=0.75,loop=1)
 
                     $ renpy.pause(0.75, hard=True)
 
-                    show chef 2 breakdown 7 at none
+                    show chef 3 breakdown 7 at none
 
                     $ renpy.pause(0.75, hard=True)
 
-                    show chef 2 breakdown 8
+                    show chef 3 breakdown 8
 
                     $ renpy.pause(0.25, hard=True)
 
-                    show chef 2 breakdown 7
+                    show chef 3 breakdown 7
 
                     $ renpy.pause(1.75, hard=True)
 
-                    show chef 2 breakdown 8
+                    show chef 3 breakdown 8
 
                     $ renpy.pause(0.5, hard=True)
 
-                    show chef 2 breakdown 7
+                    show chef 3 breakdown 7
 
                     show rt sad
 
                     $ renpy.pause(0.75, hard=True)
 
-                    show chef 2 breakdown 8
+                    show chef 3 breakdown 8
 
                     $ renpy.pause(1.0, hard=True)
 
-                    show chef 2 breakdown 7
+                    show chef 3 breakdown 7
 
                     $ renpy.pause(4.5, hard=True)
 
-                    show chef 2 breakdown 8
+                    show chef 3 breakdown 8
 
                     $ renpy.pause(0.5, hard=True)
 
-                    show chef 2 breakdown 7
+                    show chef 3 breakdown 7
 
                     $ renpy.pause(5.0, hard=True)
 
-                    show chef 2 breakdown 8
+                    show chef 3 breakdown 8
 
                     $ renpy.pause(1.0, hard=True)
 
-                    show chef 2 breakdown 7
+                    show chef 3 breakdown 7
 
                     $ renpy.pause(3.0, hard=True)
 
@@ -3814,6 +3820,8 @@
             chef "There hasn't been a garbage man since the... {w=1.0}incident."
 
             chef "That's disrespectful."
+
+            show rt 3 trashcan 1
 
             rt "Oh. Sorry."
 
