@@ -74,7 +74,7 @@ init python:
         [
         # RT TIPS
             "Yogurt is a good egg substitute!",
-            "Play HOUSE! If its finished!",
+            "Play HOUSE! If it's finished! (It's never gonna be finished)",
             "Hold BACKSPACE to time travel to the past!",
             "Press SPACE if you're bored!",
             "Press CTRL SHIFT Q to kill me!",

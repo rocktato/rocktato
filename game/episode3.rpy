@@ -2,6 +2,9 @@
 
     $ persistent.mainmenu_img = 3
     $ persistent.saveepisode_img = 3
+
+    stop music fadeout 1.0
+
     $ failed = False
 
     image getreadytext:
@@ -14,7 +17,6 @@
       0.1
       repeat
 
-    stop music fadeout 1.0
 
     ph "so, what'dya need me for again?"
 
@@ -192,7 +194,7 @@
 
     no "She pulls three tubs of cookie dough out of her pockets and sets them on the counter."
 
-    chef "Here you go! {w=0.3}That'll be 10 monies."
+    chef "Here you go! {w=0.3}That'll be 30 monies."
 
     show rt happy at bounce
 
@@ -236,7 +238,7 @@
 
     chef "Haha.. {w=0.3}I'm such a prankster!"
 
-    chef "You only owe us 25k."
+    chef "You only owe us 30k."
 
     chef ""
 
@@ -284,23 +286,15 @@
 
     chef "Uh... {w=0.3}don't you have parents or a guardian or something?"
 
-    show rt joy 2
+    show rt confused
 
-    rt "No!"
+    rt "Well, {w=0.3}there's Blairic?? {w=0.3}He basically treats me like his kid, but he tells me to never refer to him as a parental figure in public."
 
-    show chef neutral
+    rt "I think because he doesn't wanna be seen as a softie."
 
-    chef "Wait..."
+    show rt smug at bounce
 
-    chef "Really?"
-
-    chef "Dang..."
-
-    rt "Oh don't worry about it! {w=0.3}Parents are disgusting."
-
-    show ph smug 2
-
-    ph "facts."
+    rt "Well, I know his secret. {w=0.3}He may seem tough and cold and 'legal', but he's the nicest!"
 
     show rt o at bounce
 
@@ -330,6 +324,10 @@
 
     show chef joy
 
+    chef "I'm part of the city-wide cookie dough leauge!"
+
+    chef "Anger one of us and you're done for. {w=0.5}Cookie dough-wise."
+
     chef "Maybe a day is a bit cruel, {w=0.3}but it's sure to make some funny shenanigans..."
 
     chef "Man, {w=0.3}I'm real good at being threatening!"
@@ -340,7 +338,7 @@
 
     show chef angry
 
-    chef "Oh c'mon... {w=0.3}Wait!!{nw}"
+    chef "Oh c'mon... {w=0.3}Wait!!{w=0.1}{nw}"
 
 
     show ph at Position(xpos=450)
@@ -436,7 +434,7 @@
 
     rt "What??"
 
-    show bl uncomfortable
+    show bl uncomfortable at flip
 
     bl "How the hell does one spend twenty-five thousand on cookie dough!?"
 
@@ -444,7 +442,7 @@
 
     show ph bruh 2
 
-    ph "to b fair, {w=0.3}he had the tab open for like, {w=0.3}three years?"
+    ph "to b fair, {w=0.3}they had the tab open for like, {w=0.3}four years?"
 
     ph "the fact that he got away without paying for so long is more impressive, tbh."
 
@@ -462,7 +460,7 @@
 
     ph "what's your net worth."
 
-    bl "I'm not-{w=0.5}{nw}"
+    bl "I'm not-{w=0.8}{nw}"
 
     show ph bruh 2
 
@@ -472,13 +470,13 @@
 
     ph "he's lying, rocktato."
 
-    show bl bruh 2
+    show bl bruh 2 at flip
 
     bl "Put a sock in it, Phrog."
 
     bl "Okay, {w=0.3}fine."
 
-    bl "I shall pay for-{w=0.15}{nw}"
+    bl "I shall pay for-{w=0.2}{nw}"
 
     show rt joy 2 at shake(rate=0.01,strength=20,loop=6)
 
@@ -502,7 +500,7 @@
 
     ph "nothin's free in life, kid."
 
-    show bl happy 3 at bounce
+    show bl happy 3 at flip, bounce
 
     bl "Good luck!"
 
@@ -1049,7 +1047,7 @@
 
     show ph o 3
 
-    ph "if it doesn't, {w=0.3}we can just rollback."
+    ph "if it doesn't, {w=0.3}we can just rollback by pressing BACKSPACE or the BACKWARDS ARROW at the top of the screen."
 
     show rt confused
 
@@ -1123,9 +1121,11 @@
 
             show rt smug 2 at Position(xpos=500) with easeinleft
 
-            rt "Hey hey hey! {w=0.5}What's a poppin'?{w=1.0}{nw}"
+            rt "Hey hey hey! {w=0.5}What's a poppin'?"
 
-            rt "I'm definitely not coming here for any malicious intentions!{w=1.0}{nw}"
+            rt "I'm definitely not coming here for any malicious intentions!"
+
+            rt "Me?? {w=0.3}Mistrustful? {w=0.3}NEVER."
 
             rt "Don't mind me!!"
 
@@ -3999,7 +3999,7 @@
 
         rt ""
 
-        if $ ep3_choice4_recipe == True:
+        if ep3_choice4_recipe == True:
             rt "You ever wonder what the passcode was?"
 
             ph "oh, {w=0.3}trust me rt."
@@ -4128,3 +4128,6 @@
             $ persistent.episode_fin = 3
 
         $ persistent.mainmenu_img = 4
+
+
+        return()

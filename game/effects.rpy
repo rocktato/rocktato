@@ -63,3 +63,12 @@ init:
 
     transform transform_easeout_offset(x=0, y=0, tom=0.5):
         easeout tom xoffset x yoffset y
+
+
+    transform transform_rotate(degs=0.0):
+        rotate degs
+
+
+    transform transform_fade_in(speed=1.0):
+        alpha 0.0
+        easein speed alpha 1.0

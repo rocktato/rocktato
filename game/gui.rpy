@@ -86,7 +86,7 @@ define gui.title_text_size = 0
 ## The images used for the main and game menus.
 define gui.game_title = "gui/game_title.png"
 
-# define gui.main_menu_background = "gui/ep thumbs/" + str(persistent.mainmenu_img) + ".PNG"
+define gui.main_menu_background = "gui/ep thumbs/" + str(persistent.mainmenu_img) + ".PNG"
 
 
 ## Dialogue ####################################################################
@@ -212,21 +212,22 @@ define gui.choice_button_borders = None
 define gui.choice_button_text_font = "gui/fonts/Rouli.ttf"
 define gui.choice_button_text_size = 62
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = "9c927b"
-define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = "#444444"
+define gui.choice_button_text_idle_color = "#ffffff"
+define gui.choice_button_text_hover_color = "#c3c9de"
+define gui.choice_button_text_insensitive_color = "#a4aabd"
 
 
-define gui.fight_choice_button_width = 270
-define gui.fight_choice_button_height = None
+define gui.fight_choice_button_width = 280
+define gui.fight_choice_button_height = 60
 define gui.fight_choice_button_tile = False
 define gui.fight_choice_button_borders = Borders(100, 5, 100, 5)
 define gui.fight_choice_button_text_font = "gui/fonts/LuckiestGuy-Regular.ttf"
-define gui.fight_choice_button_text_size = 62
+define gui.fight_choice_button_text_size = 40
 define gui.fight_choice_button_text_xalign = 0.5
+define gui.fight_choice_button_text_yalign = 0.5
 define gui.fight_choice_button_text_idle_color = "#ffffff"
 define gui.fight_choice_button_text_hover_color = "#ffffff"
-define gui.fight_choice_button_text_insensitive_color = "#b3b3cc"
+define gui.fight_choice_button_text_insensitive_color = "#a4aabd"
 
 
 ## File Slot Buttons ###########################################################

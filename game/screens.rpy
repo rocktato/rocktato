@@ -226,8 +226,6 @@ style input:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
 
-# TODO CHOICE BOXES SPRITES
-
 # How long the player has to make a choice in timeout seconds.
 default timeout = 5.0
 
@@ -333,20 +331,20 @@ style fight_choice_button_text is default:
 ## The Pause sCREen #############################################################
 ##
 
-## TODO FIX
 
-screen pause():
-    python:
-        renpy.music.stop(channel="blip", fadeout=None)
-
-    tag menu
-    zorder 1000
-    modal True
-
-    key "K_ESCAPE" action Return()
-
-    fixed:
-        add "gui/pause_screen.png"
+#
+# screen pause():
+#     python:
+#         renpy.music.stop(channel="blip", fadeout=None)
+#
+#     tag menu
+#     zorder 1000
+#     modal True
+#
+#     key "K_ESCAPE" action Return()
+#
+#     fixed:
+#         add "gui/pause_screen.png"
 
 
 ## Quick Menu screen ###########################################################
@@ -361,7 +359,7 @@ screen quick_menu():
 
     # KEYMAPS
     key "ctrl_shift_K_q" action renpy.quit
-    key "K_ESCAPE" action Play("sound", "audio/ui/pause.ogg"), ShowMenu("pause")
+    # key "K_ESCAPE" action Play("sound", "audio/ui/pause.ogg"), ShowMenu("pause")
     key "a" action MainMenu()
     key "s" action ShowMenu("save")
     key "d" action ShowMenu('preferences')

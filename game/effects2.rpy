@@ -52,13 +52,13 @@ init:
 
 
     ## Repeated bouncing!
-    transform bouncing:
+    transform bouncing(speed=0.175, extrawait=0.325):
         yoffset 0.0
-        easein 0.175 yoffset -20
-        easeout 0.075 yoffset 0
-        easein 0.175 yoffset -4
-        easeout 0.075 yoffset 0
-        linear 0.5 yoffset 0.0
+        easein speed yoffset -20
+        easeout speed yoffset 0
+        easein speed yoffset -4
+        easeout speed yoffset 0
+        linear extrawait + speed yoffset 0.0
         repeat
 
 

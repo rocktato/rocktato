@@ -23,7 +23,7 @@ label start:
 
     show obj 1 rumboy at fast_shaking
 
-    space ""
+    space "{w=5.0}{size=-5}(LEFT CLICK or press SPACE to continue!){/size}"
 
     play sound "audio/fx/crash.ogg"
 
@@ -32,6 +32,7 @@ label start:
     hide sky
 
     hide obj
+
 
     space ""
 
@@ -73,7 +74,7 @@ label start:
 
     rt "Today started just like every other morning."
 
-    rt "The air was crisp with whatever air has."
+    # rt "The air was crisp with whatever air has."
 
     rt "I got out of bed with naive optimism, {w=0.3}wondering what adventures awaited me today."
 
@@ -89,19 +90,23 @@ label start:
 
     show rt happy 2 with dissolve
 
-    rt "So anyway, I got out of bed, right?"
+    rt "So anyway, I got out of 'bed', right?"
+
+    rt "I put on this killer cape on my shoulders, {w=0.3}I brushed and floofed up my hair, {w=0.3}and I stuffed some good ol' cookie dough in my mouth for breakfast."
 
     show rt joy 2 at bounce
 
-    rt "I went to greet my best friend, {w=0.3}Mr. Rock, {w=0.3}good morning."
+    rt "Then, I went to greet my best friend, {w=0.3}Mr. Rock, good morning!"
 
-    rt "You know that guy, right? {w}What a good guy..."
+    rt "Love that guy."
+
+    # rt "You know that guy, right? {w}What a good guy..."
 
     show rt joy
 
-    rt "I remember that one time when I greeted him good morning yesterday!"
+    # rt "I remember that one time when I greeted him good morning yesterday!"
 
-    rt "So I looked at his bed, {w=0.3}yeah?"
+    rt "I looked at his bed, {w=0.3}yeah?"
 
     show rt exasperated
 
@@ -141,7 +146,7 @@ label start:
 
     show rt sad 2 at shake(rate=0.005,strength=1,loop=7)
 
-    rt "MR. ROCK??? Do you hear me??? Make a noise or something!!"
+    rt "\"MR. ROCK??? Do you hear me??? Make a noise or something!!\""
 
     rt "Those were the words that came out of my mouth."
 
@@ -153,9 +158,9 @@ label start:
 
     show rt joy 2 at shake(rate=0.005,strength=1,loop=5)
 
-    rt "Let's go!!!!!!!"
+    rt "\"Let's go!!!!!!!\""
 
-    rt "I said outloud, {w=0.3}for some reason."
+    rt "I said out loud, {w=0.3}for some reason."
 
     play sound "audio/fx/woosh.ogg"
 
@@ -173,13 +178,13 @@ label start:
 
     rt "It's beeg!!! {w=0.3}With beeg towers and beeg money!! {w=0.3}And beeg people."
 
-    rt "Well, {w=0.3}some of them are beeg, {w=0.3}but not all of them. {w}I just meant beeg as in status."
-
-    rt "They're really cool people is what I'm trying to say!"
+    # rt "Well, {w=0.3}some of them are beeg, {w=0.3}but not all of them. {w}I just meant beeg as in status."
+    #
+    # rt "They're really cool people is what I'm trying to say!"
 
     rt "This place is filled with awesome superheroes with awesome superpowers!!"
 
-    rt "The city has so many sections too!! {w=0.3}It's for everyone!!"
+    rt "There are so many sections too!! {w=0.3}There's a little something for everyone!"
 
     show rt sad 2 at bouncing
 
@@ -212,6 +217,12 @@ label start:
     ph "i literally LIVE here."
 
     ph "i've lived in beeg city for like fifty years or smth probably."
+
+    ph "why did i even sit through that?"
+
+    ph "could've just skipped by pressing TAB or the DOUBLE ARROW BUTTON at the top of the screen."
+
+    rt "What?"
 
     ph "but.."
 
@@ -261,7 +272,7 @@ label start:
 
     show rt confused at bounce
 
-    rt "Why did you say sighs audbily??"
+    rt "Why did you say sighs audibly??"
 
     show ph o 2
 
@@ -358,125 +369,59 @@ label start:
 
     ph "o."
 
-    show ph think 2
-
-    ph "uhhhhh what does mr. rock do in his free time?"
-
-    ph "does he do like... {w=0.3}i dunno... "
-
-    play sound "audio/fx/punch.ogg"
-
-    show ph o with hpunch
-
-    extend "drUG DEALS???"
-
-    show ph o 3 at bounce
-
-    ph "maybe he's on the run from the FBI?"
-
-    show ph tired 2
-
-    ph "sigh..."
-
-    ph "i know i still am :("
-
-    # show ph tired
-    #
-    # show rt o
-    #
-    # rt "Now that I think about it...."
-    #
-    # show rt o at shake(rate=0.01,strength=1,loop=3)
-    #
-    # rt "Yeah I think so!!"
-    #
-    # show ph smug 2
-    #
-    # ph "wait what actually lol"
-    #
-    # show rt happy 2 at bounce
-    #
-    # rt "I'm pretty sure Mr. Rock does drugs deals!"
-    #
-    # show ph o
-    #
-    # rt "He's probably in the middle of one right now!"
-    #
-    # ph "how"
-    #
-    # show rt o at shake(rate=0.01,strength=1,loop=3)
-    #
-    # rt "OOH!!!"
-    #
-    # rt "Let's look in that fishy alley!!"
-    #
-    # rt "Maybe he's in there!"
-    #
-    # hide rt
-    #
-    # hide ph
-    #
-    # play sound "audio/fx/stepping.ogg"
-    #
-    # play amb "audio/amb/ominouswind.ogg" loop
-    #
-    # show img 1 alley 1
-    #
-    # with dissolve
-    #
-    # no "Across from them were two buildings that had a convenient amount of space in them."
-    #
-    # no "A space between buildings you'd barely even pay attention to."
-    #
-    # no "The two kids slowly walked up to the spoooooooky alley."
-    #
-    # no "They quietly peeked into the corner and saw something you couldn't describe with words."
-    #
-    ## BTS CONTENT: I was originally gonna have a life scarring noise play here but I can't figure out how to do that so this scene's getting gutted.
-    #
-    # space ""
-    #
-    # space ""
-    #
-    # show img 1 alley 2 with hpunch
-    #
-    # space ""
-    #
-    # space ""
-    #
-    # hide img 1 alley 2
-    #
-    # show bg beegcity
-    #
-    # show ph scared 2 at Position(xpos=900)
-    #
-    # show rt disturbed at Position(xpos=400)
-    #
-    # ph "NOPE NOPE NOPE NOPe!!!!"
-    #
-    # show rt disturbed at shake(rate=0.01,strength=3,loop=7)
-    #
-    # rt "Those poor vegetable kids..."
-    #
-    # rt "They never stood a chance against that tall dealer man."
-    #
-    # show rt joy 2 at bounce
-    #
-    # rt "Now we know why we shouldn't do drugs kids!"
-    #
-    # show rt troubled
-    #
-    # show ph o 2
-    #
-    # rt "There goes our only lead."
-    #
-    # rt "Where do we go now??"
-    #
-    #show ph think 2
+    show ph o 2
 
     ph ""
 
-    rt ""
+    show rt at bounce
+
+    show ph at bounce
+
+    no "The two just wandered around for a little bit, {w=0.3}occasionally touching some of the rocks they saw."
+
+    show ph bruh
+
+    ph "dude, we're just wander around occasionally touching some of the rocks we see."
+
+    ph "is this seriously what you dragged me out here to do?"
+
+    show rt angry
+
+    rt "Phrog, {w=0.3}I am not dealing with your negativity today!"
+
+    rt "I can deal with it most days, but my best friend disappeared and I am relatively stressed (but not that stressed since I'm Rocktato and I'm never stressed)."
+
+    rt "Why are you always such a sack of ANGer?"
+
+    show ph smug 2
+
+    ph "again, it's my one personality trait, dude."
+
+    show ph joy at bounce
+
+    ph "i'm aiming to be the most hated character, hehe-"
+
+    show rt at bounce
+
+    rt "SHSHSHSHSH!"
+
+    rt "IT'S ANOTHER MR. ROCK SHAPED ROCK!"
+
+    no "He flips it over."
+
+    show rt hurt with hpunch
+
+    rt "NOOOOO!!"
+
+    rt "DANG IT!"
+
+    show rt sad
+
+    rt "This is gonna be harder than I thought it'd be."
+
+    show ph bruh
+
+    ph "i don't get paid enough for this."
 
     show ph think 2
 
@@ -504,11 +449,11 @@ label start:
 
     show ph bruh 2
 
-    ph "buhhhhhhh idk probably a bank or something."
+    ph "idk probably the meat factory that he OWNS."
 
     show rt joy 2 at bounce
 
-    rt "Sounds good to me!"
+    rt "Oh yeah! {w=0.3}Sounds good to me!"
 
 
     play sound "audio/fx/woosh.ogg"
@@ -559,13 +504,15 @@ label start:
 
     rt "BLAIRIC!!!"
 
+    no "He runs up to Blairic and hugs him."
+
     show ph smug 2 at bounce
 
     ph "yo b."
 
     show bl o at bounce
 
-    bl "What are you children doing in a bank of all places?"
+    bl "What are you children doing here?"
 
     show rt o
 
@@ -674,11 +621,11 @@ label start:
 
     bl "This uh..."
 
-    bl "This does not really feel like a search."
+    bl "This does not really feel like a proper search."
 
     show bl bruh 2
 
-    bl "You kids just amused yourselves in the McDonDals playplace for an hour..."
+    bl "You kids just{w=0.3} amused yourselves in the McDonDals play place for an hour..."
 
     show ph smug 2 at bounce
 
@@ -692,7 +639,7 @@ label start:
 
     show rt mad with hpunch
 
-    no "Rocktato suddenly stood up and AGGRESSIVELY threw his food tray onto the ground!"
+    no "Rocktato suddenly stood up and AGGRESSIVELY threw their food tray onto the ground!"
 
     no "Then he picked it up and properly put his trash and tray at the correct places."
 
@@ -764,7 +711,7 @@ label start:
 
     show bl o at bounce
 
-    bl "She usually hangs around the gamer bar, {w=0.1}correct?"
+    bl "They usually hang around the gamer bar, {w=0.1}correct?"
 
     show rt joy 2 at bounce
 
@@ -966,7 +913,7 @@ label start:
 
     show gin evil
 
-    no "We now see our protaginists standing at the center of their beloved Beeg City."
+    no "We now see our protagonists standing at the center of their beloved Beeg City."
 
     no "There were kids eating ice cream and playing insert any sport game here."
 
@@ -1425,9 +1372,9 @@ label start:
             #     ph "Problem solved!"
             #
             #     jump ep1_transform
-            
+
             if persistent.phrog_pisser == True:
-                ph "Yeah ok i'm not gonna give you that dialouge again or new dialouge. {w=0.3}if you don't transform, i'll kill you and rocktato again."
+                ph "Yeah ok i'm not gonna give you that dialogue again or new dialogue. {w=0.3}if you don't transform, i'll kill you and rocktato again."
                 rt "Wait what-{w=0.1}{nw}"
 
             else:
@@ -1694,7 +1641,7 @@ label start:
 
                 elif defends >= 3:
                     no "Rocktato couldn't think of any other pose to do."
-                    no "So... he didn't. {w=0.3}Pose."
+                    no "So... they didn't. {w=0.3}Pose."
 
 
 

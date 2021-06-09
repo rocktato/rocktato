@@ -33,13 +33,15 @@ define no = Character(" ", callback=no_blip)
 
 define space = Character(" ")
 
+define myst = Character("???", callback=no_blip)
+
 
 define rt = Character("Rocktato", color="#bd2919", callback=rt_blip)
+define rt_no = Character("Some Kid", color="#bd2919", size=43, callback=rt_blip)
 
 define mr = Character("Mr. Rock", color="#000000")
 
 define wiz = Character("Wizpotato", color="#6c538c", size=43, callback=wiz_blip)
-
 define wiz_yell = Character("WIZPOTATO", color="#6c538c", size=34, what_size=50, callback=wiz_blip)
 
 define ph = Character("Phrog", color="#47a65e", callback=ph_blip)
@@ -49,4 +51,6 @@ define bl = Character("Blairic", color="#142675", what_font="gui/fonts/calibri/C
 define gin = Character("Gin", color="#c76816", callback=gin_blip)
 
 
-define chef = Character("Belle", color="#bfa524", callback=no_blip)
+define biro = Character("BIRO", callback=no_blip)
+
+define chef = Character("Mangga", color="#bfa524", callback=no_blip)
