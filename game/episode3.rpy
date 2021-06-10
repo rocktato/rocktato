@@ -288,13 +288,17 @@
 
     show rt confused
 
-    rt "Well, {w=0.3}there's Blairic?? {w=0.3}He basically treats me like his kid, but he tells me to never refer to him as a parental figure in public."
+    rt "Hmm..."
 
-    rt "I think because he doesn't wanna be seen as a softie."
+    rt "Nope lol!"
 
-    show rt smug at bounce
-
-    rt "Well, I know his secret. {w=0.3}He may seem tough and cold and 'legal', but he's the nicest!"
+    # rt "Well, {w=0.3}there's Blairic?? {w=0.3}He basically treats me like his kid, but he tells me to never refer to him as a parental figure in public."
+    #
+    # rt "I think because he doesn't wanna be seen as a softie."
+    #
+    # show rt smug at bounce
+    #
+    # rt "Well, I know his secret. {w=0.3}He may seem tough and cold and 'legal', but he's the nicest!"
 
     show rt o at bounce
 
@@ -2585,7 +2589,7 @@
 
                 ph "just dON'T DO ANYTHING."
 
-                ph "don't talk, {w=0.2}don't move, {w=0.2}don't do any of your classic adhd brain rocktato things."
+                ph "don't talk, {w=0.2}don't move, {w=0.2}don't do any of your classic impulsive rocktato shenanigans."
 
                 show ph think
 

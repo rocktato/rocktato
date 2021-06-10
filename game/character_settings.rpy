@@ -51,6 +51,7 @@ define bl = Character("Blairic", color="#142675", what_font="gui/fonts/calibri/C
 define gin = Character("Gin", color="#c76816", callback=gin_blip)
 
 
-define biro = Character("BIRO", callback=no_blip)
-
 define chef = Character("Mangga", color="#bfa524", callback=no_blip)
+
+define bw = Character("Bowser", color="#784b13", callback=no_blip)
+define bw_que = Character("???", color="#784b13", callback=no_blip)
