@@ -33,9 +33,8 @@ init:
 
 
 
-    transform transform_zoom(x=1.0, y=1.0):
-        xzoom x
-        yzoom y
+    transform transform_zoom(x=1.0, y=1.0, rate=0):
+        linear rate xzoom x yzoom y
 
 
     transform transform_easein_pos(xstart=0, ystart=0, xend=0, yend=0, tom):
@@ -53,8 +52,7 @@ init:
 
 
     transform transform_offset(x=0, y=0, speed=0.0):
-        linear speed xoffset x
-        linear speed yoffset y
+        linear speed xoffset x yoffset y
 
 
     transform transform_easein_offset(x=0, y=0, tom=0.5):
@@ -65,10 +63,15 @@ init:
         easeout tom xoffset x yoffset y
 
 
-    transform transform_rotate(degs=0.0):
-        rotate degs
+    transform transform_rotate(degs=0.0, speed=0):
+        linear speed rotate degs
 
 
     transform transform_fade_in(speed=1.0):
         alpha 0.0
         easein speed alpha 1.0
+
+
+    transform transform_fade_out(speed=1.0):
+        alpha 1.0
+        easein speed alpha 0.0

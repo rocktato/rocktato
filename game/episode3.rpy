@@ -1,11 +1,10 @@
-﻿label ep_3:
+label ep_3:
 
     $ persistent.mainmenu_img = 3
     $ persistent.saveepisode_img = 3
 
     stop music fadeout 1.0
 
-    $ failed = False
 
     image getreadytext:
         "gui/text/get ready.png"
@@ -48,42 +47,6 @@
 
     ph "i should've known."
 
-    # show rt o
-    #
-    # rt "Also! {w=0.3}We're looking for a bell!"
-    #
-    # rt "Mr. Rock is really quiet and it gets hard to remember he exists!"
-    #
-    # show ph tired 2
-    #
-    # ph "bro doesn't even have a dialouge sound."
-    #
-    # show rt happy 2
-    #
-    # show ph bruh
-    #
-    # rt "Yeah! {w=0.3}That!"
-    #
-    # show ph bruh 2
-    #
-    # ph "uh... {w=0.3}are we sure he isn't here right now?"
-    #
-    # show ph bruh
-    #
-    # show rt o at bounce
-    #
-    # no "Rocktato looks around."
-    #
-    # show rt happy
-    #
-    # rt "Probably."
-    #
-    # show ph happy
-    #
-    # ph "k cool just making sure."
-    #
-    # ph "i'm not going through that again."
-
     ph ""
 
     show ph o
@@ -97,12 +60,6 @@
     rt "Oh.."
 
     rt "I don't know."
-
-    # rt "Huh..."
-    #
-    # show rt confused at bounce
-    #
-    # rt "Where the heck {i}ARE{/i} you supposed to get a bell??"
 
     ph "..."
 
@@ -138,49 +95,11 @@
 
     chef "Hello!!"
 
-    # show ph o 2
-    #
-    # ph "wait a second..."
-    #
-    # show ph at phrog_goes_in_and_out_a_door
-
-    # pause 4.0
-    #
-    # show chef neutral at transform_easein_pos(xstart=1400, xend=1000, tom=10.0), flip
-    #
-    # pause 4.0
-    #
-    # chef "Uh… {w=0.3}Can I help you?"
-    #
-    # show ph o at Position(xpos=200)
-    #
-    # ph "o sorry i was just..."
-    #
-    # ph "..."
-    #
-    # ph "uh..."
-    #
-    # show chef polite at Position(xpos=1000)
-    #
-    # chef "You alright?"
-    #
-    # show rt happy 2
-    #
-    # rt "Oh, don't mind Phrog."
-    #
-    # rt "She just.... {w=0.3}"
-    #
-    # show rt confused
-    #
-    # extend "really likes doors...{w=0.3}?"
-    #
-    # show rt happy
-    #
-    # show chef neutral
-    #
-    # chef "Okay..."
+    show p she he at Position(xpos=950, ypos=270) with dissolve
 
     chef "What can I get for you today, {w=0.3}Rocktato and that frog looking kid?"
+
+    hide p she he with dissolve
 
     chef "Just the usual?"
 
@@ -272,8 +191,6 @@
 
     chef "The student debt has been pretty real lately.."
 
-    # chef "Okay, {w=0.3}I'm going to kindly ask you to leave and come back once you decide to pay this back."
-
     show rt nervous at bounce
 
     rt "Aha..."
@@ -363,17 +280,17 @@
 
     show ph bruh
 
-    ph "do you even {i}intend{/i} on paying her back?"
+    ph "do you even {i}intend{/i} on paying him back?"
 
     show rt nervous
 
     rt "Uh... {w=0.5}y{w=0.1}e{w=0.1}e{w=0.1}e{w=0.1}e{w=0.1}e{w=0.1}s{w=0.1}.{w=1.5}.{w=1.5}.{w=5.0}."
 
-    ph "seriously, {w=0.3}you gotta pay her back."
+    ph "seriously, {w=0.3}you gotta pay him back."
 
     rt "Yeah.... {w=0.3}I know, {w=0.3}I know."
 
-    ph "you heard her, {w=0.3}you're gonna b banned."
+    ph "you heard 'em, {w=0.3}you're gonna b banned."
 
     show rt happy 2
 
@@ -1067,6 +984,8 @@
 
     # Oh my god I have to set ALL THE VARIABLES this is gonna SUCK
     # SNEAK SEGMENT BTW
+    $ failed = False
+
     $ ep3_choice1_back = False
     $ ep3_choice1_walk = False
     $ ep3_choice1_roof = False
@@ -1097,7 +1016,7 @@
             jump ep3_seg1_back
 
 
-        "Just Walk in LOL":
+        "Just Walk in LOL" if persistent.episode_fin == 2:
             $ ep3_choice1_walk = True
 
             show rt smug 2
@@ -1263,7 +1182,7 @@
 
                 play sound "audio/fx/punch.ogg"
 
-                show img 3 fail
+                show cg 3 fail
 
                 $ _skipping = False
 
@@ -1434,7 +1353,7 @@
 
                 rt "o"
 
-                show img 3 fail
+                show cg 3 fail
 
                 $ _skipping = False
 
@@ -1458,7 +1377,7 @@
 
                 rt "Eee hee hee I love plants."
 
-                show img 3 fail
+                show cg 3 fail
 
                 $ _skipping = False
 

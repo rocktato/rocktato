@@ -5,21 +5,14 @@ label start:
 
     stop music fadeout 1.0
 
+
     image battlestarttext:
         "gui/text/battle start.png"
 
-    image sky:
-      "images/imgs/1/bg 1 sky.png"
-      0.1
-      "images/imgs/1/bg 1 sky 2.png"
-      0.1
-      "images/imgs/1/bg 1 sky 3.png"
-      0.1
-      repeat
 
     play sound "audio/fx/windy.ogg" loop
 
-    show sky
+    show bg lightblue
 
     show obj 1 rumboy at fast_shaking
 
@@ -27,9 +20,9 @@ label start:
 
     play sound "audio/fx/crash.ogg"
 
-    show img 1 rumboy crashed at hpunch
+    show cg 1 rumboy crashed at hpunch
 
-    hide sky
+    hide bg lightblue
 
     hide obj
 
@@ -44,16 +37,12 @@ label start:
 
     Character("Random Citizen 3.5", size=23, callback=no_blip) "AHHHHHHHHHHHHHH SCREAMING!!"
 
-    show rt disgusted at right
-
     rt "No way..."
 
 
     play sound "audio/fx/button.ogg"
 
-    show img 1 rumboy crashed freezeframe with hpunch
-
-    show rt o at bounce
+    show cg 1 rumboy crashed freezeframe with hpunch
 
     rt "Well this is me."
 
@@ -66,11 +55,9 @@ label start:
 
     show bg black
 
-    hide rt
-
     with dissolve
 
-    hide img 1 rumboy crashed freezeframe
+    hide cg 1 rumboy crashed freezeframe
 
     rt "Today started just like every other morning."
 
@@ -86,11 +73,17 @@ label start:
 
     rt "I'll stay on topic."
 
-    show bg rtcave with dissolve
+    show bg rtcave
 
-    show rt happy 2 with dissolve
+    show rt happy 2
+
+    with dissolve
+
+    show p he they at Position(xpos=500, ypos=450) with dissolve
 
     rt "So anyway, I got out of 'bed', right?"
+
+    hide p he they with dissolve
 
     rt "I put on this killer cape on my shoulders, {w=0.3}I brushed and floofed up my hair, {w=0.3}and I stuffed some good ol' cookie dough in my mouth for breakfast."
 
@@ -212,7 +205,11 @@ label start:
 
     show ph bruh 2
 
+    show p she her at Position(xpos=750, ypos=420) with dissolve
+
     ph "why did you tell me all that????"
+
+    hide p she her dissolve
 
     ph "i literally LIVE here."
 
@@ -385,11 +382,11 @@ label start:
 
     ph "is this seriously what you dragged me out here to do?"
 
-    show rt angry
+    show rt mad
 
     rt "Phrog, {w=0.3}I am not dealing with your negativity today!"
 
-    rt "I can deal with it most days, but my best friend disappeared and I am relatively stressed (but not that stressed since I'm Rocktato and I'm never stressed)."
+    rt "I can deal with it most days, {w=0.3}but my best friend disappeared and I am relatively stressed (but not that stressed since I'm Rocktato and I'm never stressed)."
 
     rt "Why are you always such a sack of ANGer?"
 
@@ -498,9 +495,15 @@ label start:
 
     show bl happy at Position(xpos=200) with easeinbottom
 
-    bl "Pleasant seeing the two of you here!!!"
+    bl "Ah!!!"
+
+    show p he him at Position(xpos=370, ypos=270) with dissolve
 
     show rt happy 2 at bounce
+
+    bl "Pleasant seeing the two of you here!!!"
+
+    hide p he him with dissolve
 
     rt "BLAIRIC!!!"
 
@@ -711,7 +714,7 @@ label start:
 
     show bl o at bounce
 
-    bl "They usually hang around the gamer bar, {w=0.1}correct?"
+    bl "They usually hang around the saloon, {w=0.1}correct?"
 
     show rt joy 2 at bounce
 
@@ -746,6 +749,8 @@ label start:
 
     ph "i hate this place."
 
+    ph "too many people.."
+
     show rt happy 2 at bounce
 
     rt "YO!!! {w=0.3}GIN!!!"
@@ -766,7 +771,11 @@ label start:
 
     show gin o at bounce
 
+    show p she they at Position(xpos=920, ypos=300) with dissolve
+
     gin "What're y'all doin' here??"
+
+    hide p she they with dissolve
 
     show bl o at bounce
 
@@ -1013,7 +1022,7 @@ label start:
 
     hide gin
 
-    show sky
+    show bg lightblue
 
     play sound "audio/fx/windy.ogg" loop
 
@@ -1025,11 +1034,11 @@ label start:
 
     play sound "audio/fx/crash.ogg"
 
-    show img 1 rumboy crashed at hpunch
+    show cg 1 rumboy crashed at hpunch
 
     hide obj
 
-    hide sky
+    hide bg
 
     space ""
 
@@ -1045,7 +1054,7 @@ label start:
 
     show bg 1 rumboy crashed
 
-    hide img 1 rumboy crashed
+    hide cg 1 rumboy crashed
 
     hide rt
 
@@ -1053,15 +1062,17 @@ label start:
 
     rt "Is thAT-"
 
-    Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip) "..."
+    wiz_que "..."
 
-    Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip) "NYEHEHEHEH..."
+    wiz_yell_que "NYEHEHEHEH..."
 
     play sound "audio/fx/slidewhistleup.ogg"
 
     show wiz evil 2 at center, Position(ypos=50) with easeinbottom
 
-    Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip) "IT IS I, {w=0.3}WIZPOTATo!!!"
+    wiz_yell_que "IT IS I, {w=0.3}WIZPOTATo!!!"
+
+    show p he him at Position(xpos=400, ypos=270) with dissolve
 
     wiz_yell "WAIT CRAP!!! {w=0.3}I MISSED!!!!!"
 
@@ -1087,7 +1098,7 @@ label start:
 
     show wiz bruh at center, Position(ypos=800) with ease
 
-    pause 1.0
+    pause 0.5
 
     play sound "audio/fx/squeak.ogg"
 
@@ -1098,6 +1109,8 @@ label start:
     show wiz sus 2 at center, Position(ypos=605)
 
     wiz "okay... {w=0.3}THERE we go..."
+
+    hide p he him with dissolve
 
     show wiz sad 2 at center, Position(ypos=605)
 
@@ -1476,7 +1489,7 @@ label start:
 
                 else:
                     show rt fight slap at shake(0.05, 4)
-                    show wiz fight hurt at shake(0.05, 4)
+                    show wiz hurt at shake(0.05, 4)
 
                     $ chara_healths[0] = chara_healths[0] - 3
                     $ chara_healths[1] = chara_healths[1] - 3
@@ -1521,7 +1534,7 @@ label start:
                     wiz "Ow....."
 
                 elif slaps == 4:
-                    show wiz hurt 2 at shake(0.05, 4)
+                    show wiz cry at shake(0.05, 4)
 
                     wiz "*Sobs*"
 
@@ -1554,9 +1567,9 @@ label start:
 
                 play sound "audio/fx/stomp.ogg"
                 show rt fight slap at shake(0.05, 4)
-                show wiz fight squish at transform_offset(0,stomp_depth, 0.04), transform_zoom(1, 0.7)
+                show wiz hurt at transform_offset(0,stomp_depth, 0.04), transform_zoom(1, 0.7)
 
-                $ chara_healths[0] = chara_healths[0] - 5
+                $ chara_healths[0] = chara_healths[0] - 10
 
                 rt "STOMP!"
 
@@ -1657,18 +1670,23 @@ label start:
 
                     play sound "audio/fx/dirt.ogg"
 
-                    show wiz hurt 2 at transform_zoom(1.0, 1.429), Position(xpos=400, ypos=605) with ease
+                    show wiz cry at transform_zoom(1.0, 1.429), Position(xpos=400, ypos=605) with ease
 
                     wiz "WHYyyyyy????"
 
                     show wiz angey at transform_zoom(1.0, 1.0)
 
-                hide screen battle_health
+                hide screen battle_health with dissolve
 
     label ep1_transform:
         show rt fight idle 1
 
         rt "Okay are you ready for this? {w=0.3}This is gonna be mega cool; {w=0.1}it always is."
+
+        if stomps >= 1:
+            $ persistent.ep1_squished = True
+        else:
+            $ persistent.ep1_squished = False
 
         show rt fight idle 1 at funny_expand
 
@@ -1696,7 +1714,7 @@ label start:
 
         hide fx white
 
-        show rt trueform smile at center, Position(ypos=605)
+        show rt trueform evil 3 at center, Position(ypos=605)
 
         rt "BEHOLD!"
 
@@ -1770,7 +1788,13 @@ label start:
 
     play sound "audio/fx/slidewhistleup.ogg"
 
-    show mr at Position(xpos=900,ypos=580) with easeinbottom
+    show mr bellless at Position(xpos=900,ypos=580) with easeinbottom
+
+    show p he him at Position(xpos=1120, ypos=450) with dissolve
+
+    mr "{w=0.6}.{w=0.6}.{w=0.6}."
+
+    hide p he him with dissolve
 
     wiz "He's been... {w=0.2}been there the whole flip flapperintime!!!!!"
 
@@ -1891,15 +1915,19 @@ label start:
 
     no "He hugs the little stone."
 
-    rt "Wow, to think we went on a whole quest without seeing you!"
+    rt "Wow, {w=0.2}to think we went on a whole quest without seeing you!"
 
     rt "What a crazy, fun time..."
+
+    show wiz sus 2
 
     wiz "what."
 
     wiz "You.."
 
     ph "yeah, {w=0.3}a whooooole adventure."
+
+    show wiz angey 2 with hpunch
 
     wiz_yell "DID NONE OF YOU IDIOTS SAY ANYTHING TO HIM?"
 
@@ -1913,7 +1941,7 @@ label start:
 
     bl "uh..."
 
-    bl "I'm not going to touch this one."
+    bl "I am not going to touch this one."
 
     bl "Oh woopsie me! {w=0.3}Another phone call?"
 
@@ -1925,7 +1953,7 @@ label start:
 
     no "Rocktato picks up Mr. Rock, {w=0.3}looking at his Sharpie-scribbled face."
 
-    show img 1 mr rock
+    show cg 1 mr rock
 
     hide bg
 
@@ -1955,7 +1983,7 @@ label start:
 
     show bg black
 
-    hide img
+    hide cg
 
     with dissolve
 

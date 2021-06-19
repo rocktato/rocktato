@@ -73,17 +73,3 @@ image wiz fight idle:
     "images/main chars/wizpotato/fight/wiz fight idle 2.PNG"
     pause 0.07
     repeat
-
-image wiz fight hurt:
-    "images/main chars/wizpotato/fight/wiz fight hurt 1.PNG"
-    pause 0.05
-    "images/main chars/wizpotato/fight/wiz fight hurt 2.PNG"
-    pause 0.05
-    repeat 5
-
-image wiz fight squish:
-    "images/main chars/wizpotato/fight/wiz fight squish 1.PNG"
-    pause 0.05
-    "images/main chars/wizpotato/fight/wiz fight squish 2.PNG"
-    pause 0.05
-    repeat 5

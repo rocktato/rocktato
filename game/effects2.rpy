@@ -4,6 +4,14 @@
 
 init:
 
+    transform spinny(speed=0.5):
+        block:
+            ycenter 0.5
+            rotate None
+            linear speed rotate 360.0
+
+            repeat
+
 
     transform falling_over:
         yanchor 0.875

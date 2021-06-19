@@ -1,13 +1,13 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing text tag {slow} in u"{fast}Yeah that's cool.. {slow}SHUT UP!!".:
-  File "game/episode2.rpy", line 503, in script
-Exception: Unknown text tag u'slow'
+While processing text tag {0.3} in u'{0.3}{nw}'.:
+  File "game/episode2.rpy", line 1131, in script
+Exception: Unknown text tag u'0.3'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/episode2.rpy", line 503, in script
+  File "game/episode2.rpy", line 1131, in script
   File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ast.py", line 708, in execute
     renpy.exports.say(who, what, *args, **kwargs)
   File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\exports.py", line 1345, in say
@@ -78,9 +78,9 @@ Full traceback:
     self.paragraphs = self.segment(text.tokens, style, renders, text)
   File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\text\text.py", line 1179, in segment
     raise Exception("Unknown text tag %r" % text)
-Exception: Unknown text tag u'slow'
+Exception: Unknown text tag u'0.3'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Rocktato and Friends 0.1
-Mon Jun 07 17:54:37 2021
+Fri Jun 18 18:11:52 2021

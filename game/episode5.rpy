@@ -700,6 +700,14 @@
 
     bl "Rocktato... {w=0.2}this is not a good idea-"
 
+    rt "I've taken too many L's this week."
+
+    rt "YOU!!"
+
+    rt "ARE NOT GETTING!!"
+
+    rt "THIS FACTORY!"
+
     no "He dropped it, {w=0.2}setting a small part of the floor."
 
     wiz "OKAY, {w=0.2}I ACTUALLY WASN'T EXPECTING THAT."
@@ -729,7 +737,7 @@
 
     no ""
 
-    wiz "ROCKTATO!!"
+    wiz "ROCKTATO!?"
 
     rt "WAHHHHHHHH???"
 
@@ -743,21 +751,33 @@
 
     rt "Sorry..."
 
+    wiz "Guhh.."
+
     wiz "Don't... {w=0.2}worry about it.."
 
-    wiz "At least you didn't..."
+    wiz "Thank god you're awake!"
 
-    wiz "Well.. {w=0.2}y'know.."
+    wiz "And..."
 
-    no "He let go a huge sigh of relief."
+    wiz "Y'kno.. {w=0.2}kicking.."
 
-    no "One he's been seeming to hold in for a while."
+    wiz "Are you okay???"
 
-    wiz "Alright.."
+    wiz "Does anything hurt?"
 
-    wiz "Let's try to get you out of this rubble."
+    rt ""
 
-    no "He tried to help Rocktato up, {w=0.2}but they fell right back down again."
+    rt "I'm.. {w=0.2}fine..."
+
+    rt "I think I'm not... {w=0.2}too badly.. {w=0.2}injured."
+
+    rt "That's- {w=0.2}hah.. {w=0.2}lucky."
+
+    rt "Let's... {w=0.2}try to get out of this rubble."
+
+    wiz "Alright."
+
+    no "Wizpotato tried to help Rocktato up, {w=0.2}but they fell right back down again."
 
     rt "GAH!!"
 
@@ -773,43 +793,15 @@
 
     rt "Well this stinks."
 
-    wiz "Uhh... {w=0.2}well it's just this one leg right????"
+    rt "Ahah...."
 
-    rt "Yeah."
-
-    wiz "Let's.. {w=0.2}get you up on the other one then???"
-
-    wiz "And then probably?? {w=0.2}Drive you to a hospital or something.."
-
-    wiz "It's weird Beeg City doesn't have ambulances."
-
-    wiz "That would really help right about now.."
-
-    no ""
-
-    bl "ROCKTATOOOO!!"
+    bl "ROCKTATO!!"
 
     no "Blairic and Bowser arrived at the scene."
 
-    bl ""
+    bl "..."
 
     bl "Kid..."
-
-    wiz "HELP!! {w}Man's got a broken leg!"
-
-    no "As Blairic ran closer towards Rocktato.."
-
-    no ""
-
-    rt ""
-
-    rt "I was... {w=0.2}I-"
-
-    rt "I was so scared.."
-
-    bl ""
-
-    bl ""
 
     space ""
 

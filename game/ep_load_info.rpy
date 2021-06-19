@@ -5,7 +5,7 @@ init python:
         "Episode 1 - The Search for Mr. Rock!",
         "Episode 2 - Wizpotato Hates Kids",
         "Episode 3 - Rocktato Struggles To Pay Back His Debt",
-        "Episode 4 - Gin Episode",
+        "Episode 4 - Gin The Firefighter",
         "Episode 5 - Meat, Fish, and Eggs"
     ]
 
