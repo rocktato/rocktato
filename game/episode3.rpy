@@ -6,9 +6,6 @@ label ep_3:
     stop music fadeout 1.0
 
 
-    image getreadytext:
-        "gui/text/get ready.png"
-
     image chef 3 breakdown 2 to 3:
       "images/side chars/chef/2/chef 3 breakdown 2.png"
       0.1
@@ -1536,11 +1533,11 @@ label ep_3:
         $ saveable = False
 
 
-        show getreadytext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
+        show fx getready at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
 
         $ renpy.pause(1.0, hard=True)
 
-        hide getreadytext with dissolve
+        hide fx getready with dissolve
 
 
         play amb "audio/fx/2/ilovemicrowaves.ogg"
@@ -2544,11 +2541,11 @@ label ep_3:
                 $ saveable = False
 
 
-                show getreadytext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
+                show fx getready at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
 
                 $ renpy.pause(1.0, hard=True)
 
-                hide getreadytext with dissolve
+                hide fx getready with dissolve
 
 
                 play sound "audio/fx/2/chefbreakdownlol.ogg"

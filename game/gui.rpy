@@ -302,7 +302,9 @@ define gui.frame_borders = Borders(4, 4, 4, 4)
 define gui.confirm_frame_borders = Borders(40, 40, 40, 40)
 
 ## The frame that is used as part of the skip screen.
-define gui.skip_frame_borders = Borders(16, 5, 50, 5)
+define gui.skip_frame_borders = Borders(20, 20, 20, 20)
+define gui.skip_frame_button_width = 240
+define gui.skip_frame_button_height = 43
 
 ## The frame that is used as part of the notify screen.
 define gui.notify_frame_borders = Borders(16, 5, 40, 5)

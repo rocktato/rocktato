@@ -6,10 +6,6 @@ label start:
     stop music fadeout 1.0
 
 
-    image battlestarttext:
-        "gui/text/battle start.png"
-
-
     play sound "audio/fx/windy.ogg" loop
 
     show bg lightblue
@@ -1261,11 +1257,11 @@ label start:
 
     play music "audio/music/too much effort for a one off rocktato joke but whatever lol.mp3"
 
-    show battlestarttext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
+    show fx battlestart at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
 
     pause 1.0
 
-    hide battlestarttext with dissolve
+    hide fx battlestart with dissolve
 
 
     $ chara_healths = [ 100, 100 ]

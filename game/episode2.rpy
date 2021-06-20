@@ -632,11 +632,11 @@
 
     play music "audio/music/too much effort for a one off rocktato joke but whatever lol.mp3"
 
-    show battlestarttext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
+    show fx battlestart at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
 
     pause 1.0
 
-    hide battlestarttext with dissolve
+    hide fx battlestart with dissolve
 
     $ funnywizlines = [ "", "gRAA!!!", "AGHHH!!!", "OWIE!!!", "BWAAAGG!", "SCSCSHBBJdhgakKSHkvdjhvkshkkvjdhskvjhhalvjhldvhsldvh;advh;avh;advh;;;;;;;",
     "OOOOG!!!!", "GGGRRRR!!!!!!", "", "Hhhhhhhhhhhhh", "Scskcksbakcakscbskbc *beatboxing*", "SBSHSBHCBHSB OKay...", "I'M DONE WITH THIS!"]
