@@ -1112,6 +1112,8 @@
 
                 space ""
 
+                # TODO
+
                 no "Wizpotato shot!! {w=0.2}But the bullet just bounced off of Rocktato's rock-potatoey skin!"
 
                 show rt trueform evil 3

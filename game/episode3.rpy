@@ -352,7 +352,7 @@ label ep_3:
 
     rt "What??"
 
-    show bl uncomfortable at flip
+    show bl disturbed at flip
 
     bl "How the hell does one spend twenty-five thousand on cookie dough!?"
 
@@ -384,7 +384,7 @@ label ep_3:
 
     ph "wow, {w=0.3}thought so."
 
-    show ph smug 2
+    show ph smug
 
     ph "he's lying, rocktato."
 
@@ -568,7 +568,7 @@ label ep_3:
 
     no "Phrog dug out a tub of cookie dough."
 
-    show ph smug 2 at bounce
+    show ph smug at bounce
 
     ph "tada!"
 
@@ -793,7 +793,7 @@ label ep_3:
 
     rt "No! {w=0.3}But we considered it!"
 
-    show bl uncomfortable
+    show bl disturbed
 
     bl ""
 
@@ -1016,7 +1016,7 @@ label ep_3:
         "Just Walk in LOL" if persistent.episode_fin == 2:
             $ ep3_choice1_walk = True
 
-            show rt smug 2
+            show rt smug
 
             rt "I'm tired of waiting. I'm just going in."
 
@@ -1039,7 +1039,7 @@ label ep_3:
 
             show chef what at right, flip
 
-            show rt smug 2 at Position(xpos=500) with easeinleft
+            show rt smug at Position(xpos=500) with easeinleft
 
             rt "Hey hey hey! {w=0.5}What's a poppin'?"
 
@@ -1111,7 +1111,7 @@ label ep_3:
             "\"Disguise!\"":
                 $ ep3_choice2_disguise = True
 
-                show rt 3 trashcan 1
+                show rt 3 trashcan
 
                 play sound "audio/fx/pickup.ogg"
 
@@ -1127,7 +1127,7 @@ label ep_3:
 
                 rt "No c'mon this is gonna be super smart, {w=0.3}watch."
 
-                show rt 3 trashcan 2 at bounce
+                show rt 3 trashcan at bounce
 
                 play sound "audio/fx/doorbang.ogg"
 
@@ -1235,11 +1235,9 @@ label ep_3:
 
         ph "just kidding!"
 
-        show ph tired 2
+        show ph tired
 
         ph "it never was..."
-
-        show ph tired
 
         ph ""
 
@@ -1261,7 +1259,7 @@ label ep_3:
             "\"A Laser Cutter\"":
                 show ph bruh
 
-                show rt smug 2 at shake(rate=0.01,strength=5,loop=5)
+                show rt smug at shake(rate=0.01,strength=5,loop=5)
 
                 rt "EeeheheeheeeyeaAAAAHH."
 
@@ -1366,7 +1364,7 @@ label ep_3:
 
                 play sound "audio/fx/drop.ogg"
 
-                show obj 3 plant at center
+                show obj plant at center
 
                 no "He aggressively pulls a medium-sized potted plant out of his pocket and sets it on the roof."
 
@@ -2785,7 +2783,7 @@ label ep_3:
 
                 ph "lol probably not!"
 
-                show ph tired 2
+                show ph tired
 
                 ph "just like the rest of us."
 
@@ -3228,7 +3226,7 @@ label ep_3:
 
                 ph "wait what."
 
-                show ph scared
+                show ph ohgod
 
                 ph "oh god."
 
@@ -3240,7 +3238,7 @@ label ep_3:
 
                 rt "WE ARE??"
 
-                show ph scared 3 at Position(xpos=400)
+                show ph at Position(xpos=400)
 
                 ph "QUICK ROCKTATO."
 
@@ -3315,8 +3313,6 @@ label ep_3:
                 show ph smug
 
                 ph "guess that's why the fbi wants me in prison so bad."
-
-                show ph smug 3
 
                 ph ""
 
@@ -3649,7 +3645,7 @@ label ep_3:
 
                     ph ""
 
-                    show ph think 2
+                    show ph think
 
                     ph "are you going to type anything?"
 
@@ -3741,7 +3737,7 @@ label ep_3:
 
             chef "That's disrespectful."
 
-            show rt 3 trashcan 1
+            show rt 3 trashcan
 
             rt "Oh. Sorry."
 

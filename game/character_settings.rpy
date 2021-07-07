@@ -59,11 +59,12 @@ define chef = Character("Mangga", color="#bfa524", callback=no_blip)
 define bt = Character("Bar Tender", color="#1e591a", size=43)
 
 define fm = Character("Fireman", color="#1e591a", size=43)
+define fm_que = Character("???", color="#1e591a", size=43)
 
-define ff1 = Character("Firefighter 1", color="#fa691b", size=43) # Cobs
-define ff2 = Character("Firefighter 2", color="#fa691b", size=43) # Ralph
-define ff3 = Character("Firefighter 3", color="#fa691b", size=43) # Buggie
-define ffu = Character("Unnamed Firefighter", color="#fa691b", size=40)
+define ff1 = Character("Firefighter 1", color="#fa691b", size=38) # Cobs
+define ff2 = Character("Firefighter 2", color="#fa691b", size=38) # Ralph
+define ff3 = Character("Firefighter 3", color="#fa691b", size=38) # Buggie
+define ffu = Character("Unnamed Firefighter", color="#fa691b", size=35)
 
 define bw = Character("Bowser", color="#784b13", callback=no_blip)
 define bw_que = Character("???", color="#784b13", callback=no_blip)

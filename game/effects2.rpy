@@ -4,6 +4,17 @@
 
 init:
 
+    transform motorcycle_vibrate(strength=0.8, rate=0.05):
+
+        block:
+            linear rate yoffset (strength*-6)
+            linear rate yoffset (strength*-2)
+            linear rate yoffset (strength*-2)
+            linear rate yoffset (strength*-6)
+            linear rate yoffset (strength*0)
+            repeat
+
+
     transform spinny(speed=0.5):
         block:
             ycenter 0.5
@@ -19,13 +30,13 @@ init:
 
 
 
-    transform phrog_goes_in_and_out_a_door(loop="", where=200, otherwhere=-200):
+    transform phrog_goes_in_and_out_a_door(loop="", where=50, otherwhere=-50, pausetime=0.2):
         subpixel True
         block:
-            easeout 0.5 xpos otherwhere
-            pause 1.0
-            easein 0.5 xpos where
-            pause 1.0
+            easein 0.5 xoffset otherwhere
+            pause pausetime
+            easein 0.5 xoffset where
+            pause pausetime
             repeat loop
 
 

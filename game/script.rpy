@@ -1,6 +1,6 @@
-image macarooni logo = "gui/macarooni_logo.png"
+image macarooni logo = "gui/main menu/macarooni_logo.png"
 
-image veggiecrew logo = "gui/veggiecrew_logo.png"
+image veggiecrew logo = "gui/main menu/veggiecrew_logo.png"
 
 label splashscreen:
     scene black

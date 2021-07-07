@@ -295,7 +295,7 @@ label start:
 
     rt "Maybe let's explore the rich area place thing first??"
 
-    show ph think 2
+    show ph think
 
     ph "why the frig frog would he be at the rich area place thing?"
 
@@ -386,7 +386,7 @@ label start:
 
     rt "Why are you always such a sack of ANGer?"
 
-    show ph smug 2
+    show ph smug
 
     ph "again, it's my one personality trait, dude."
 
@@ -416,7 +416,7 @@ label start:
 
     ph "i don't get paid enough for this."
 
-    show ph think 2
+    show ph think
 
     ph "hey,"
 
@@ -453,7 +453,7 @@ label start:
 
     stop amb
 
-    show bg bloffice
+    show bg bl lobby
 
     show rt confused
 
@@ -505,7 +505,7 @@ label start:
 
     no "He runs up to Blairic and hugs him."
 
-    show ph smug 2 at bounce
+    show ph smug at bounce
 
     ph "yo b."
 
@@ -582,7 +582,7 @@ label start:
 
     rt "Man, {w=0.3}I'm just in love with these nuggs!!!"
 
-    show ph smug 2 at bounce
+    show ph smug at bounce
 
     ph "b, {w=0.3}you gonna eat any?"
 
@@ -610,7 +610,7 @@ label start:
 
     rt "Too bad Mr. Rock wasn't hidden in the ball pit."
 
-    show ph smug 2
+    show ph smug
 
     ph "yea, {w=0.3}i coulda SWORN i saw him in there."
 
@@ -626,7 +626,7 @@ label start:
 
     bl "You kids just{w=0.3} amused yourselves in the McDonDals play place for an hour..."
 
-    show ph smug 2 at bounce
+    show ph smug at bounce
 
     ph "nah b, {w=0.3}we resting."
 
@@ -646,7 +646,7 @@ label start:
 
     show ph o
 
-    show bl heehee
+    show bl o
 
     rt "For hecks sake!!!"
 
@@ -688,7 +688,7 @@ label start:
 
     show ph scared
 
-    show bl uncomfortable
+    show bl disturbed
 
     space ""
 
@@ -1202,7 +1202,7 @@ label start:
 
     wiz "no????{w=0.2}{nw}"
 
-    show rt smug 2 at bounce
+    show rt smug at bounce
 
     rt "Ooooo, {w=0.3}I'm gonna beat you up so bad!!!"
 
@@ -1983,15 +1983,15 @@ label start:
 
     with dissolve
 
-    no "Rocktato started walking away from the scene and waving to his friends."
-
     rt "See you guys later!!!"
 
-    space ""
+    no "The kid started walking away from the scene and waving to their friends."
 
-    space ""
+    no "He was happy with his latest adventure!"
 
-    ph "that was a waste of time."
+    no "However, {w=0.3}little did he know."
+
+    no "Everything was about to change."
 
     if persistent.episode_fin == 0:
         $ persistent.episode_fin = 1

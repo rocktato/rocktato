@@ -67,6 +67,10 @@ init:
         linear speed rotate degs
 
 
+    transform transform_transparency(trans=0.5):
+        alpha trans
+
+
     transform transform_fade_in(speed=1.0):
         alpha 0.0
         easein speed alpha 1.0

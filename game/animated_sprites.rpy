@@ -54,7 +54,6 @@ image rt fight defn 3:
     "images/main chars/rocktato/fight/rt fight defn 3 2.PNG"
 
 
-
 image wiz fight idle:
     "images/main chars/wizpotato/fight/wiz fight idle 1.PNG"
     pause 0.07
@@ -72,4 +71,21 @@ image wiz fight idle:
     pause 0.07
     "images/main chars/wizpotato/fight/wiz fight idle 2.PNG"
     pause 0.07
+    repeat
+
+
+
+## Bike ride sprites
+
+image obj bikeride:
+    "images/objs/bikeride/obj bikeride 1.png"
+    pause 0.07
+    "images/objs/bikeride/obj bikeride 2.png"
+    pause 0.06
+    "images/objs/bikeride/obj bikeride 3.png"
+    pause 0.06
+    "images/objs/bikeride/obj bikeride 4.png"
+    pause 0.07
+    "images/objs/bikeride/obj bikeride 2.png"
+    pause 0.06
     repeat

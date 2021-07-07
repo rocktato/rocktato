@@ -155,7 +155,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    background Image("gui/quick menu/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -164,7 +164,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    # background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -329,24 +329,6 @@ style fight_choice_button_text is default:
     properties gui.button_text_properties("fight_choice_button")
 
 
-## The Pause sCREen #############################################################
-##
-
-
-#
-# screen pause():
-#     python:
-#         renpy.music.stop(channel="blip", fadeout=None)
-#
-#     tag menu
-#     zorder 1000
-#     modal True
-#
-#     key "K_ESCAPE" action Return()
-#
-#     fixed:
-#         add "gui/pause_screen.png"
-
 
 ## Quick Menu screen ###########################################################
 ##
@@ -422,7 +404,7 @@ screen navigation():
         xpos gui.navigation_xpos
         yalign 0.3
 
-        add "gui/game menu/geeary.png"
+        add "gui/preferences/geeary.png"
 
     vbox:
         style_prefix "navigation"
@@ -432,17 +414,17 @@ screen navigation():
 
         spacing gui.navigation_spacing
 
-        imagebutton auto "gui/game menu/savefiles_%s.png" action ShowMenu("save") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
+        imagebutton auto "gui/preferences/savefiles_%s.png" action ShowMenu("save") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
 
-        imagebutton auto "gui/game menu/settings_%s.png" action ShowMenu("preferences") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
+        imagebutton auto "gui/preferences/settings_%s.png" action ShowMenu("preferences") hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
 
         # if _in_replay:
             # textbutton _("End Replay") action EndReplay(confirm=True)
 
         if not main_menu:
-            imagebutton auto "gui/game menu/mainmenu_%s.png" action MainMenu() hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
+            imagebutton auto "gui/preferences/mainmenu_%s.png" action MainMenu() hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
 
-            imagebutton auto "gui/game menu/quitgame_%s.png" action Quit(confirm=not main_menu) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
+            imagebutton auto "gui/preferences/quitgame_%s.png" action Quit(confirm=not main_menu) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/menu_activate.ogg"
 
 
 style navigation_button is gui_button
@@ -640,7 +622,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     use navigation
 
-    imagebutton auto "gui/x_%s.png":
+    imagebutton auto "gui/button/x_%s.png":
         xpos 17
         ypos 17
         hover_sound "audio/ui/menu_hover.ogg"
@@ -671,7 +653,7 @@ style game_menu_outer_frame:
     bottom_padding 30
     top_padding 120
 
-    background "gui/overlay/game_menu.png"
+    background "gui/preferences/preferences_bg.png"
 
 style game_menu_navigation_frame:
     xsize 280
@@ -1117,7 +1099,7 @@ screen ep_select():
 
         bar value XScrollValue("ep_list")
 
-    imagebutton auto "gui/x_%s.png":
+    imagebutton auto "gui/button/x_%s.png":
         xpos 17
         ypos 17
         hover_sound "audio/ui/menu_hover.ogg"
@@ -1134,7 +1116,7 @@ screen ep_desc(title, desc, thumb, l):
         text title font "gui/fonts/BigJohnPRO-Bold.otf" xsize 630 size 40
         text desc font "gui/fonts/Rouli.ttf" xsize 650 size 30
     add thumb xpos 100 ypos 40 zoom 0.35
-    imagebutton auto "gui/main menu/start_%s.png":
+    imagebutton auto "gui/ep select/start_%s.png":
         action Function(load_start, Start(l))
         xpos 100
         ypos 300
@@ -1320,7 +1302,7 @@ screen mm_preferences():
 
 
 
-    imagebutton auto "gui/x_%s.png":
+    imagebutton auto "gui/button/x_%s.png":
         xpos 17
         ypos 17
         hover_sound "audio/ui/menu_hover.ogg"
@@ -1329,7 +1311,7 @@ screen mm_preferences():
         action Return()
 
 style mm_preferences_bg:
-    background "gui/main menu/settings_bg.png"
+    background "gui/main menu/mmpreferences_bg.png"
 
 
 ################################################################################
@@ -1410,7 +1392,7 @@ screen continue():
                 activate_sound "audio/ui/menu_activate.ogg"
 
 
-    imagebutton auto "gui/x_%s.png":
+    imagebutton auto "gui/button/x_%s.png":
         xpos 17
         ypos 17
         hover_sound "audio/ui/menu_hover.ogg"
@@ -1452,7 +1434,7 @@ screen confirm(message, yes_action, no_action):
 
     style_prefix "confirm"
 
-    add "gui/overlay/confirm.png"
+    add "gui/quick menu/confirm.png"
 
     frame:
 
@@ -1528,7 +1510,7 @@ screen skip_indicator():
 
 style skip_frame:
     ypos gui.skip_ypos
-    background Frame("gui/skip.png")
+    background Frame("gui/quick menu/skip.png")
     xsize gui.skip_frame_button_width ysize gui.skip_frame_button_height
 
 

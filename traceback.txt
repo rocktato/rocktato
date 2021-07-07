@@ -1,40 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "renpy/common/00start.rpy", line 82, in _init_language
-    renpy.change_language(language)
-  File "game/screens.rpy", line 1554, in <module>
-    frame at notify_appear:
-AttributeError: 'StoreModule' object has no attribute 'skip_frame_borders'
+While running game code:
+  File "game/episode5.rpy", line 1723, in script
+  File "game/episode5.rpy", line 1723, in <module>
+TypeError: movie_cutscene() got an unexpected keyword argument 'channel'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\main.py", line 578, in main
-    run(restart)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\main.py", line 75, in run
-    renpy.translation.init_translation()
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\translation\__init__.py", line 558, in init_translation
-    renpy.store._init_language()  # @UndefinedVariable
-  File "renpy/common/00start.rpy", line 82, in _init_language
-    renpy.change_language(language)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\translation\__init__.py", line 638, in change_language
-    new_change_language(tl, language)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\translation\__init__.py", line 604, in new_change_language
-    i.apply()
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ast.py", line 2553, in apply
-    value = renpy.python.py_eval(expr)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\python.py", line 2059, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/screens.rpy", line 1554, in <module>
-    frame at notify_appear:
-AttributeError: 'StoreModule' object has no attribute 'skip_frame_borders'
+  File "game/episode5.rpy", line 1723, in script
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\hazel\Documents\RenPy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "game/episode5.rpy", line 1723, in <module>
+TypeError: movie_cutscene() got an unexpected keyword argument 'channel'
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Rocktato and Friends 0.1
-Sat Jun 19 22:57:36 2021
+Tue Jul 06 19:05:09 2021
