@@ -31,40 +31,43 @@ init python:
 
 define no = Character(" ", callback=no_blip)
 
-define space = Character(" ")
-
 define que = Character("???", callback=no_blip)
 
 
-define rt = Character("Rocktato", color="#bd2919", callback=rt_blip)
-define rt_no = Character("Some Kid", color="#bd2919", size=43, callback=rt_blip)
-define rt_que = Character("???", color="#bd2919", callback=rt_blip)
+define rt = Character("Rocktato", color="#bd2919", callback=rt_blip, what_prefix='"', what_suffix='"')
+define rt_nar = Character("Rocktato", color="#bd2919", callback=rt_blip)
+define rt_que = Character("???", color="#bd2919", callback=rt_blip, what_prefix='"', what_suffix='"')
+define rt_nar_que = Character("???", color="#bd2919", callback=rt_blip)
+define rt_no = Character("Some Kid", color="#bd2919", size=43, callback=rt_blip, what_prefix='"', what_suffix='"')
+define rt_nar_no = Character("Some Kid", color="#bd2919", size=43, callback=rt_blip)
 
-define mr = Character("Mr. Rock", color="#000000")
+define mr = Character("Mr. Rock", color="#000000", what_prefix='"', what_suffix='"')
+define mr_nar = Character("Mr. Rock", color="#000000")
 
-define wiz = Character("Wizpotato", color="#6c538c", size=43, callback=wiz_blip)
-define wiz_yell = Character("WIZPOTATO", color="#6c538c", size=34, what_size=50, callback=wiz_blip)
-define wiz_que = Character("???", color="#6c538c", size=43, callback=wiz_blip)
-define wiz_yell_que = Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip)
+define wiz = Character("Wizpotato", color="#6c538c", size=43, callback=wiz_blip, what_prefix='"', what_suffix='"')
+define wiz_nar = Character("Wizpotato", color="#6c538c", size=43, callback=wiz_blip)
+define wiz_yell = Character("WIZPOTATO", color="#6c538c", size=34, what_size=50, callback=wiz_blip, what_prefix='"', what_suffix='"')
+define wiz_que = Character("???", color="#6c538c", size=43, callback=wiz_blip, what_prefix='"', what_suffix='"')
+define wiz_yell_que = Character("???", color="#6c538c", size=43, what_size=50, callback=wiz_blip, what_prefix='"', what_suffix='"')
 
-define ph = Character("Phrog", color="#47a65e", callback=ph_blip)
+define ph = Character("Phrog", color="#47a65e", callback=ph_blip, what_prefix='"', what_suffix='"')
 
-define bl = Character("Blairic", color="#142675", what_font="gui/fonts/calibri/Calibri Regular.ttf", what_size=36, y_offset=300, callback=bl_blip)
+define bl = Character("Blairic", color="#142675", what_font="gui/fonts/calibri/Calibri Regular.ttf", what_size=36, y_offset=300, callback=bl_blip, what_prefix='"', what_suffix='"')
 
-define gin = Character("Gin", color="#c76816", callback=gin_blip)
+define gin = Character("Gin", color="#c76816", callback=gin_blip, what_prefix='"', what_suffix='"')
 
 
-define chef = Character("Mangga", color="#bfa524", callback=no_blip)
+define chef = Character("Mangga", color="#bfa524", callback=no_blip, what_prefix='"', what_suffix='"')
 
-define bt = Character("Bar Tender", color="#1e591a", size=43)
+define bt = Character("Bar Tender", color="#1e591a", size=43, what_prefix='"', what_suffix='"')
 
-define fm = Character("Fireman", color="#1e591a", size=43)
-define fm_que = Character("???", color="#1e591a", size=43)
+define fm = Character("Fireman", color="#1e591a", size=43, what_prefix='"', what_suffix='"')
+define fm_que = Character("???", color="#1e591a", size=43, what_prefix='"', what_suffix='"')
 
-define ff1 = Character("Firefighter 1", color="#fa691b", size=38) # Cobs
-define ff2 = Character("Firefighter 2", color="#fa691b", size=38) # Ralph
-define ff3 = Character("Firefighter 3", color="#fa691b", size=38) # Buggie
-define ffu = Character("Unnamed Firefighter", color="#fa691b", size=35)
+define ff1 = Character("Firefighter 1", color="#fa691b", size=38, what_prefix='"', what_suffix='"') # Cobs
+define ff2 = Character("Firefighter 2", color="#fa691b", size=38, what_prefix='"', what_suffix='"') # Ralph
+define ff3 = Character("Firefighter 3", color="#fa691b", size=38, what_prefix='"', what_suffix='"') # Buggie
+define ffu = Character("Unnamed Firefighter", color="#fa691b", size=35, what_prefix='"', what_suffix='"')
 
-define bw = Character("Bowser", color="#784b13", callback=no_blip)
-define bw_que = Character("???", color="#784b13", callback=no_blip)
+define bw = Character("Bowser", color="#784b13", callback=no_blip, what_prefix='"', what_suffix='"')
+define bw_que = Character("???", color="#784b13", callback=no_blip, what_prefix='"', what_suffix='"')

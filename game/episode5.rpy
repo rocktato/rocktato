@@ -825,7 +825,7 @@
 
     show fx black with dissolve
 
-    space ""
+    ""
 
 
     hide rt
@@ -1181,7 +1181,7 @@
 
     show bw shady at Position(xpos=180) with easeinleft
 
-    space ""
+    ""
 
     show rt confused at flip
 
@@ -1193,7 +1193,7 @@
 
     show bw cross with dissolve
 
-    space ""
+    ""
 
     bw "Eyeah"
 
@@ -1334,7 +1334,7 @@
 
     show fx black with dissolve
 
-    space ""
+    ""
 
     hide rt
 
@@ -1398,7 +1398,7 @@
 
     with easeoutbottom
 
-    space ""
+    ""
 
     show bg bl hallway ground
 
@@ -1560,7 +1560,7 @@
 
     show wiz smug at Position(xpos=1000, ypos=605) with dissolve
 
-    space ""
+    ""
 
     show rt waah at bounce
 
@@ -1726,7 +1726,7 @@
 
     hide rtsuit
 
-    space ""
+    ""
 
     $ renpy.block_rollback()
 
@@ -1741,95 +1741,95 @@
 
     $ saveable = True
 
-    space ""
+    ""
 
     wiz "ROCKTATO!?"
 
-    #rewrite this later
-
-    hide fx
-
-    show rt hurt at Position(xpos=500, ypos=800)
-
-    show wiz uncomfortable at Position(xpos=1000, ypos=605)
-
-    show bg 5 aftermath
-
-    rt "WAHHHHHHHH???"
-
-    show wiz screaming at transform_easein_offset(x=150, y=500, tom=0.3), transform_rotate(degs=30.0, speed=0.3)
-
-    wiz "AHAHGHHGHGHGHHG!!!!??"
-
-    wiz "OH MY GOD!!"
-
-    show rt headempty
-
-    no "Wizpotato fell over."
-
-    rt "W- {w=0.2}woops.."
-
-    rt "Sorry..."
-
-    hide wiz
-
-    show wiz sad 2 at bounce, Position(xpos=1000, ypos=605)
-
-    wiz "Guhh.."
-
-    wiz "Don't... {w=0.2}worry about it.."
-
-    show wiz screaming at shake(0.02, 2.5, 2)
-
-    wiz "DuDE, {w=0.3}WHAT HAPPENED?"
-
-    show wiz uncomfortable
-
-    wiz "Are you okay???"
-
-    wiz "Does anything hurt?"
-
-    rt ""
-
-
-
-    rt "I'm.. {w=0.2}fine..."
-
-    rt "I think I'm not... {w=0.2}too badly.. {w=0.2}injured."
-
-    rt "That's- {w=0.2}hah.. {w=0.2}lucky."
-
-    rt "Let's... {w=0.2}try to get out of this rubble."
-
-    wiz "Alright."
-
-    no "Wizpotato tried to help Rocktato up, {w=0.2}but they fell right back down again."
-
-    rt "GAH!!"
-
-    wiz "CRAP!!"
-
-    wiz "What is it?"
-
-    rt "I think my leg's broken."
-
-    wiz "Oh..."
-
-    wiz "Oh no..."
-
-    rt "Well this stinks."
-
-    rt "Ahah...."
-
-    bl "ROCKTATO!!"
-
-    no "Blairic and Bowser arrived at the scene."
-
-    bl "..."
-
-    bl "Kid..."
-
-    space ""
+    # #rewrite this later
+    #
+    # hide fx
+    #
+    # show rt hurt at Position(xpos=500, ypos=800)
+    #
+    # show wiz uncomfortable at Position(xpos=1000, ypos=605)
+    #
+    # show bg 5 aftermath
+    #
+    # rt "WAHHHHHHHH???"
+    #
+    # show wiz screaming at transform_easein_offset(x=150, y=500, tom=0.3), transform_rotate(degs=30.0, speed=0.3)
+    #
+    # wiz "AHAHGHHGHGHGHHG!!!!??"
+    #
+    # wiz "OH MY GOD!!"
+    #
+    # show rt headempty
+    #
+    # no "Wizpotato fell over."
+    #
+    # rt "W- {w=0.2}woops.."
+    #
+    # rt "Sorry..."
+    #
+    # hide wiz
+    #
+    # show wiz sad 2 at bounce, Position(xpos=1000, ypos=605)
+    #
+    # wiz "Guhh.."
+    #
+    # wiz "Don't... {w=0.2}worry about it.."
+    #
+    # show wiz screaming at shake(0.02, 2.5, 2)
+    #
+    # wiz "DuDE, {w=0.3}WHAT HAPPENED?"
+    #
+    # show wiz uncomfortable
+    #
+    # wiz "Are you okay???"
+    #
+    # wiz "Does anything hurt?"
+    #
+    # rt ""
+    #
+    #
+    #
+    # rt "I'm.. {w=0.2}fine..."
+    #
+    # rt "I think I'm not... {w=0.2}too badly.. {w=0.2}injured."
+    #
+    # rt "That's- {w=0.2}hah.. {w=0.2}lucky."
+    #
+    # rt "Let's... {w=0.2}try to get out of this rubble."
+    #
+    # wiz "Alright."
+    #
+    # no "Wizpotato tried to help Rocktato up, {w=0.2}but they fell right back down again."
+    #
+    # rt "GAH!!"
+    #
+    # wiz "CRAP!!"
+    #
+    # wiz "What is it?"
+    #
+    # rt "I think my leg's broken."
+    #
+    # wiz "Oh..."
+    #
+    # wiz "Oh no..."
+    #
+    # rt "Well this stinks."
+    #
+    # rt "Ahah...."
+    #
+    # bl "ROCKTATO!!"
+    #
+    # no "Blairic and Bowser arrived at the scene."
+    #
+    # bl "..."
+    #
+    # bl "Kid..."
+    #
+    # ""
 
     # if persistent.episode_fin == 4:
     #     $ persistent.episode_fin = 5

@@ -4,6 +4,14 @@
 
 init:
 
+    transform flipper(rate=0.1):
+        xzoom 1.0
+        block:
+            linear rate xzoom -1.0
+            linear rate xzoom 1.0
+            repeat
+
+
     transform motorcycle_vibrate(strength=0.8, rate=0.05):
 
         block:

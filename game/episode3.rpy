@@ -24,7 +24,7 @@ label ep_3:
 
     play music "audio/music/da beeg city/da beeg city pdefault.mp3" loop
 
-    space ""
+    ""
 
     ph "and can we hurry this up?"
 
@@ -78,7 +78,7 @@ label ep_3:
 
     hide ph
 
-    space ""
+    ""
 
     play sound "audio/fx/shopdoor.ogg"
 
@@ -86,7 +86,7 @@ label ep_3:
 
     show ph happy at Position(xpos=200) with easeinleft
 
-    space ""
+    ""
 
     show chef joy at right, flip with easeinright
 
@@ -299,7 +299,7 @@ label ep_3:
 
     hide rt with easeoutleft
 
-    space ""
+    ""
 
     play sound "audio/fx/stepping.ogg"
 
@@ -426,7 +426,7 @@ label ep_3:
 
     hide bl with easeoutright
 
-    space ""
+    ""
 
 
     show bg beegcity
@@ -439,7 +439,7 @@ label ep_3:
 
     play sound "audio/fx/woosh.ogg"
 
-    space ""
+    ""
 
     rt "How are we going to get all that money???"
 
@@ -453,11 +453,11 @@ label ep_3:
 
     ph "rob a bank!"
 
-    space ""
+    ""
 
     show rt bruh
 
-    space ""
+    ""
 
     rt "I'm not going to rob a bank, Phrog."
 
@@ -663,7 +663,7 @@ label ep_3:
 
     show rt disturbed at transform_easein_pos(xstart=-500, xend=850, tom=5.0)
 
-    space ""
+    ""
 
     rt ""
 
@@ -836,7 +836,7 @@ label ep_3:
 
     hide bl
 
-    space ""
+    ""
 
     rt "Okay, {w=0.3}what is it?"
 
@@ -917,7 +917,7 @@ label ep_3:
 
     show ph bruh 3
 
-    space ""
+    ""
 
     rt ""
 
@@ -1115,7 +1115,7 @@ label ep_3:
 
                 play sound "audio/fx/pickup.ogg"
 
-                space ""
+                ""
 
                 ph ""
 
@@ -1143,7 +1143,7 @@ label ep_3:
 
                 show chef bruh at right, flip with easeinright
 
-                space ""
+                ""
 
                 chef "What the hell."
 
@@ -1157,7 +1157,7 @@ label ep_3:
 
                 no "He pulls out a paper clip."
 
-                no "{image=images/imgs/2/txt 3 paperclip.png}"
+                no "{image=images/imgs/2/txt paperclip.png}"
 
                 show rt at shake(rate=0.01,strength=2,loop=7)
 
@@ -1183,7 +1183,7 @@ label ep_3:
 
                 $ _skipping = False
 
-                space "Rollback to pick a different choice! (Press/hold backspace.)"
+                "Rollback to pick a different choice! (Press/hold backspace.)"
 
                 $ renpy.pause(hard=True)
 
@@ -1199,7 +1199,7 @@ label ep_3:
 
                 show rt proud with hpunch
 
-                space ""
+                ""
 
                 ph "ROCKTATO WHAT TTHE HELL!!??"
 
@@ -1311,7 +1311,7 @@ label ep_3:
 
                 hide rt
 
-                space ""
+                ""
 
                 jump ep3_seg2_office
 
@@ -1352,7 +1352,7 @@ label ep_3:
 
                 $ _skipping = False
 
-                space "Rollback to pick a different choice! (Press/hold backspace.)"
+                "Rollback to pick a different choice! (Press/hold backspace.)"
 
                 $ renpy.pause(hard=True)
 
@@ -1376,7 +1376,7 @@ label ep_3:
 
                 $ _skipping = False
 
-                space "Rollback to pick a different choice! (Press/hold backspace.)"
+                "Rollback to pick a different choice! (Press/hold backspace.)"
 
                 $ renpy.pause(hard=True)
 
@@ -1538,13 +1538,13 @@ label ep_3:
         hide fx getready with dissolve
 
 
-        play amb "audio/fx/2/ilovemicrowaves.ogg"
+        play amb "audio/fx/3/ilovemicrowaves.ogg"
 
         show ph o 2
 
         show rt happy
 
-        space "{nw}"
+        "{nw}"
 
         $ renpy.pause(1.0, hard=True)
 
@@ -1679,7 +1679,7 @@ label ep_3:
 
                 hide rt
 
-                space "{nw}"
+                "{nw}"
 
                 show chef angry at flip, right, shake(rate=0.02, strength=3, loop=1)
 
@@ -1701,7 +1701,7 @@ label ep_3:
 
 
         label ep3_seg2_kitchen_sneak_2:
-            space "{nw}"
+            "{nw}"
 
             show chef at flip
 
@@ -1753,7 +1753,7 @@ label ep_3:
 
                     rt "{nw}"
 
-                    play sound "audio/fx/2/HISMUSICALNUMBER.ogg"
+                    play sound "audio/fx/3/HISMUSICALNUMBER.ogg"
 
                     $ renpy.pause(7.5, hard=True)
 
@@ -1851,7 +1851,7 @@ label ep_3:
 
 
         label ep3_seg2_kitchen_sneak_3:
-            space "{nw}"
+            "{nw}"
 
             show chef at flip
 
@@ -1975,7 +1975,7 @@ label ep_3:
 
 
         label ep3_seg2_kitchen_sneak_4:
-            space "{nw}"
+            "{nw}"
 
             show chef at flip
 
@@ -2112,7 +2112,7 @@ label ep_3:
 
 
         label ep3_seg2_kitchen_sneak_5:
-            space "{nw}"
+            "{nw}"
 
             show chef at flip
 
@@ -2178,11 +2178,11 @@ label ep_3:
         label ep3_seg2_kitchen_sneak_6:
             stop amb
 
-            space "{nw}"
+            "{nw}"
 
             show chef at flip
 
-            play amb "audio/fx/2/ilovemicrowavespt2.ogg"
+            play amb "audio/fx/3/ilovemicrowavespt2.ogg"
 
             show chef neutral at bounce
 
@@ -2485,7 +2485,7 @@ label ep_3:
 
                 with easeinbottom
 
-                space ""
+                ""
 
                 ph "oh god. {w=0.3}this is literally the worst case scenario."
 
@@ -2546,7 +2546,7 @@ label ep_3:
                 hide fx getready with dissolve
 
 
-                play sound "audio/fx/2/chefbreakdownlol.ogg"
+                play sound "audio/fx/3/chefbreakdownlol.ogg"
 
                 $ timeout_label = "ep3_seg2_office_sneak_2"
 
@@ -2560,7 +2560,7 @@ label ep_3:
 
 
                 label ep3_seg2_office_sneak_2:
-                    space "{nw}"
+                    "{nw}"
 
                     show chef at bounce
 
@@ -2646,7 +2646,7 @@ label ep_3:
 
 
                 label ep3_seg2_office_sneak_3:
-                    space "{nw}"
+                    "{nw}"
 
                     # $ renpy.pause(2.25, hard=True)
 
@@ -2694,7 +2694,7 @@ label ep_3:
 
 
                 label ep3_seg2_office_sneak_4:
-                    space "{nw}"
+                    "{nw}"
 
                     show chef 3 breakdown 4 at none
 
@@ -2905,7 +2905,7 @@ label ep_3:
 
         ph "WHAT ARE YOU DOI-{w=0.3}{nw}"
 
-        play sound "audio/fx/2/rtexplodes.ogg"
+        play sound "audio/fx/3/rtexplodes.ogg"
 
         show fx white with Fade(out_time=5.0, hold_time=10.0, in_time=0.0, color="#FFFFFF")
 
@@ -2973,7 +2973,7 @@ label ep_3:
 
         rt "Listen."
 
-        play sound "audio/fx/2/digeridoo.ogg"
+        play sound "audio/fx/3/digeridoo.ogg"
 
         show rt at shake(rate=0.02, strength=5.0, loop="")
 
@@ -3196,13 +3196,13 @@ label ep_3:
 
                 show rt at Position(xpos=1100) with ease
 
-                space ""
+                ""
 
                 play sound "audio/fx/lockeddoor.ogg"
 
                 show rt at shake(rate=0.01,strength=3,loop=3)
 
-                space ""
+                ""
 
                 show rt troubled
 
@@ -3460,7 +3460,7 @@ label ep_3:
                     #
                     #     show bg black
                     #
-                    #     space ""
+                    #     ""
                     #
                     #     ph "..."
                     #

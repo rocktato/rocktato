@@ -5,11 +5,11 @@
     stop music fadeout 1.0
 
 
-    space ""
+    ""
 
     show cg 2 boyinpark with dissolve
 
-    rt_no ""
+    rt_no ".."
 
     no "We see some red sweatered kid and a rock sitting on a park bench."
 
@@ -45,7 +45,7 @@
 
     rt_no "'The city where your favorite superhero movies become reality!'"
 
-    rt_no "I wanted to come here to become the coolest hero on the block! {w=0.2}To beat up bad guys! {w=0.2}To save kittens trapped in trees!"
+    rt_no "I wanted to come here to become the coolest hero on the block! {w=0.2}To beat up bad guys!"
 
     rt_no "Not to be a grocery CASHIER, {w=0.2}who doesn't get the basic respect they deserve."
 
@@ -101,7 +101,7 @@
 
     hide bg black
 
-    show cg 2 savestuff
+    show cg 2 boyinpark 2
 
     with dissolve
 
@@ -158,19 +158,19 @@
     no "Mr. Rock realized he couldn't stop this maniac, {w=0.2}so he just decided to follow them."
 
 
-    show cg 2 apartmentclose
+    show cg 2 door
 
-    rt_no ""
+    rt_nar_no ""
 
-    mr ""
+    mr_nar ""
 
     rt_no "So uh..."
 
     rt_no "Are we supposed to knock? {w=0.2}Or..."
 
-    show cg 2 apartmentopen with hpunch
+    show cg 2 door 2 with hpunch
 
-    space ""
+    ""
 
     rt_no "WOW!!!"
 
@@ -196,7 +196,7 @@
 
     show cg 2 cagedtato
 
-    space ""
+    ""
 
     rt_no "Yeah... {w=0.2}I deserve that."
 
@@ -204,7 +204,7 @@
 
     no "Mr. Rock scootched into the cage with him."
 
-    show cg 2 cagedtatoandwiz
+    show cg 2 cagedtato 2
 
     wiz "NYEHEHEHHE!!! {w=0.2}HELLO THERE YOU-"
 
@@ -228,6 +228,7 @@
 
     wiz "Well.. {w=0.2}you'll do!"
 
+
     wiz "You're here to try to stop me from doing evil, {w=0.2}right?"
 
     rt "Uh huh!!"
@@ -244,9 +245,9 @@
 
     wiz "Healthcare benefits?? {w=0.2}I don't know what that means, but sure-"
 
-    rt_no "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoooooooooooooooooooooooooo!!"
+    rt_no "HWAHH??"
 
-    rt_no "MR. ROCK!! {w=0.2}YOU CAN'T WORK FOR THIS EVIL GUY!!"
+    rt_no "MR. ROCK!! {w=0.2}YOU CAN'T WORK FOR THIS {i}EVIL{/i} GUY!!"
 
     rt_no "I know we're strapped for cash, {w=0.2}but MORALS DUDE!"
 
@@ -260,13 +261,227 @@
 
     wiz "It's so you DON'T beat me up!"
 
-    wiz "You two can be my wacky lackies!"
+    wiz "You two can be my wacky lackeys!"
 
     wiz "All you have to do is be funny and get insulted by me."
 
     wiz "Good pay, {w=0.2}trust me, {w=0.2}I'm loaded."
 
+    mr "{w=0.6}.{w=0.6}.{w=0.6}."
+
+    mr "!"
+
+    wiz "Alright, {w=0.3}cool!"
+
+    wiz "You're both hired!"
+
+    no "The villain flipped a lever, {w=0.3}letting his new hires out of the cage and spawning new outfits on them."
+
+    show cg 2 costumes with dissolve
+
+    rt_no "WHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAATTTTT??!"
+
+    rt_no "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOoooooooooooooooooooooooooo!!"
+
+    rt_no "Mr. Rock,,,"
+
+    rt_no "How coul,d you,.."
+
+    no "Mr. Rock apologized, {w=0.3}as best as he could."
+
+    mr "{w=0.6}.{w=0.6}.{w=0.6}."
+
+    wiz "HERH HERH HERH HERHHH!!"
+
+    wiz "OOooowee I've finally gotten some flunkies to obey my bidding or whatever!"
+
+    wiz "Now those stinkers in the VChan (messageboard for villains that's what the V stands for) will FINALLY take me seriously!"
+
+    wiz "Alright you boys (boys as in gender neutral)! {w=0.4}FIRST task!"
+
+    wiz "Uh.."
+
+    wiz "Can you buy me some coke and some chips?"
+
+    wiz "OOhh get a bunch of shrimp flavored instant noodles too!"
+
+    wiz "Here's some cash."
+
+    wiz "The super mart is just a block from here. {w=0.3}Just walk right and you'll get there."
+
+
+    show cg 2 grocery
+
+    rt_nar_no ""
+
+    mr_nar ""
+
     mr "{w=0.6}.{w=0.6}.{w=0.6}.{nw}"
+
+    rt_no "Yes Mr. Rock, {w=0.3}I see the irony of getting fired from a grocery store and then having to go back and buy stuff from the same grocery store."
+
+    rt_no "Okay, {w=0.3}we got the coke... the noodles... uh.."
+
+    rt_no "Did he say what kinda chips?"
+
+    mr "{w=0.6}."
+
+    rt_no "Hope he likes... {w=0.4}whatever this is."
+
+    no "The kid grabbed a bag of Insert A Clever Knock Off Name of Those Orange Cheesy Stick Chips."
+
+    rt_nar_no ""
+
+    rt_no "I think that's it."
+
+    rt_no "You want anything Mr. Rock?"
+
+    mr "{w=0.6}!"
+
+    no "The stone grabbed a bag of rock food (which was just a bag of pebbles)."
+
+    rt_no "Oh yeah! {w=0.3}Of course."
+
+    show fx black with dissolve
+
+    ""
+
+    hide fx
+
+    show cg 2 eat
+
+    wiz "Eat up!"
+
+    rt_no "Wait! {w=0.3}This is for us??"
+
+    wiz "Yeah!"
+
+    rt_no "Wow.. Jeez..."
+
+    mr "{w=0.6}.{w=0.6}.{w=0.6}."
+
+    wiz "You can only eat rocks? {w=0.3}That's no problem!"
+
+    wiz "Just leave it there or something."
+
+    rt_no "Y'kno.. {w=0.3}you're being awfully nice.. {w=0.3}for a villain."
+
+    wiz "SHUT UP I'm here to discuss the basic rules and stuff and things you'll- {w=0.3}you'll be doing."
+
+    wiz "Let's start with the guidelines!"
+
+    wiz "First of all: {w=0.3}DON'T DIE."
+
+    wiz "I don't want to get sued!"
+
+    rt_no "Ah, you don't have to worry about that!"
+
+    rt_no "We don't have any money so we couldn't lol!"
+
+    wiz "Okay! {w=0.3}Cool!"
+
+    wiz "Second: {w=0.3}uhhh obey everything i ever say."
+
+    wiz "And lastly: {w}BE {w=0.3}EVIL!"
+
+    wiz "Simple, right?"
+
+    no "The red sweatered kid raised their hand."
+
+    wiz "Yes?"
+
+    rt_no "I don't like the last rule."
+
+    wiz "WELL TOO BAD!!!!!!!!!!"
+
+    wiz "HERRRHHHHH HERH HERH HERHH!!"
+
+    wiz "Any other questions?"
+
+    wiz "That was rhetorical I don't care anymore.{fast}"
+
+    wiz "Now, {w=0.3}next up, {w=0.3}what are we doing?"
+
+    wiz "For our first act of {w=0.05}E{w=0.05}V{w=0.05}I{w=0.05}L, {w=0.3}we're gonna rob this really rich guy!"
+
+    wiz "Let's get you boys some money!"
+
+    wiz "And more importantly me."
+
+    rt_no "I thought you said you were loaded?"
+
+    wiz "You must've misheard me."
+
+    wiz "I said I {i}WILL{/i} be loaded."
+
+    rt_no "I can literally rollback and it will say otherwise."
+
+    # $ renpy.block_rollback()
+
+    wiz "Now you can't!"
+
+    rt_no "You.."
+
+    wiz "Anyway the plan is simple."
+
+    wiz "YOu two act as the distraction while I sneak into the factory from the back (yeah this guy has a meat factory crazy right)"
+
+    rt_no "Why are we robbing a meat factory of all places?"
+
+    wiz "First of all, {w=0.3}I already told you this guys rich."
+
+    wiz "Probably has some money in the factory, {w=0.2}right?"
+
+    wiz "And second, {w=0.3}I have been eating nothing but noodles for the two weeks I've been here."
+
+    wiz "I could use some meat."
+
+    rt_no "Fair."
+
+    wiz "Alright, {w=0.3}LET'S DO THIS!!"
+
+    rt_no "WAIT {w=0.4}WHAT-{w=0.3}{nw}"
+
+    show fx black
+
+    no ""
+
+    rt_no "Fine let's get this over with."
+
+    hide fx
+
+    show cg 2 robbery
+
+    rt_no "WAHHHHHHHH THIS IS A ROBBERY OR SOMETHING BBHWBHWBBBJBJBJJBBJJBBKKKKKKKKKKKJJJJJJJJJJNNNNNNJ!!"
+
+    rt_no ""
+
+    # -rt narrowly escapes getting apprehended by some guards or smth
+    # -wiz gets them some money
+    # -rt is like grrr i hate evil people
+    # -rt challenges wiz
+    # -no one wins
+    # - rt starts laughing and is like aha this is the most fun ive ever had
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     rt_no "GASP!!! {w=0.2}NO!!"
 
@@ -549,897 +764,897 @@
     no ""
 
 
-    # NOT FLASHBACK
-
-    show bg citypark
-
-    show wiz happy at left, Position(ypos=605)
-
-    show mr at Position(xpos=1100, ypos=580)
-
-    show rt bruh at Position(xpos=820)
-
-    wiz "Ah... {w}those were some good times.."
-
-    show rt exasperated
-
-    rt "DO YOU SERIOUSLY??"
-
-    rt "HAVE TO FLASH BACK???"
-
-    rt "TO THE FIRST TIME WE MET???"
-
-    show rt with hpunch
-
-    rt "EVERY?? {w=0.2}{nw}"
-
-    show rt with hpunch
-
-    extend "TIME?? {w=0.2}{nw}"
-
-    show rt with hpunch
-
-    extend "WE DUEL???"
-
-    show wiz sad
-
-    wiz ""
-
-    show wiz preach
-
-    wiz "Yes."
-
-    rt ""
-
-    wiz "But anyway."
-
-    show wiz evil 2 at bounce
-
-    wiz "I have this entire ORPHANAGE IN A CAGE!!!"
-
-    wiz "What are you gonna do about it?"
-
-    show rt confused
-
-    rt "Good.. {w=0.2}question..."
-
-    no "Rocktato considered 'saving,' as Phrog advised."
-
-    no "He still didn't know what it meant."
-
-    show rt joy 2 at bounce
-
-    rt "OKAY!!!"
-
-    rt "I have decided..."
-
-    show rt proud at bounce
-
-    rt "WE'RE!! {w=0.3}Gonna BEAT YOU UP!!"
-
-    show mr at bounce
-
-    mr "!!!"
-
-    $ renpy.block_rollback()
-
-    $ saveable = False
-
-
-    show rt fight idle
-
-    show wiz fight idle
-
-    play music "audio/music/too much effort for a one off rocktato joke but whatever lol.mp3"
-
-    show fx battlestart at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
-
-    pause 1.0
-
-    hide fx battlestart with dissolve
-
-    $ funnywizlines = [ "", "gRAA!!!", "AGHHH!!!", "OWIE!!!", "BWAAAGG!", "SCSCSHBBJdhgakKSHkvdjhvkshkkvjdhskvjhhalvjhldvhsldvh;advh;avh;advh;;;;;;;",
-    "OOOOG!!!!", "GGGRRRR!!!!!!", "", "Hhhhhhhhhhhhh", "Scskcksbakcakscbskbc *beatboxing*", "SBSHSBHCBHSB OKay...", "I'M DONE WITH THIS!"]
-
-
-    $ chara_healths = [ 100, 100 ]
-    $ chara_maxhealths = [ 100, 100 ]
-    $ chara_hppositions = [ (200, 490), (700, 490) ]
-    show screen battle_health
-
-    $ moves = 0
-    $ punch = 0
-    $ mrthrow = 0
-
-
-    label ep2_battle1:
-
-        show rt fight idle at bounce
-        show wiz fight idle
-
-        $ choice_screen_type = "fight_choice"
-
-        if moves == 13:
-            jump ep2_battlelose
-
-
-        menu:
-            "{size=19}Epic Rocktato Super Punch!{/size}":
-                $ renpy.block_rollback()
-
-                show rt fight slap at shake(0.05, 4)
-                if moves % 2 == 0:
-                    show wiz hurt at shake(0.05, 4)
-                else:
-                    show wiz evil at bounce
-
-                play sound "audio/fx/punch.ogg"
-
-                rt "POW!!!"
-
-                if punch == 0 and moves == 0:
-                    $ chara_healths[0] = chara_healths[0] - 11.427
-                    if chara_healths[0] < 0:
-                        $ chara_healths[0] = 0
-
-                    no "Rocktato punches Wizpotato in the face!"
-
-                    no "Critical hit!! {w=1.0}{size=14}(I don't know what critical hit meanssss?){/size}"
-
-                    show wiz hurt at shake(0.05, 4)
-
-                    wiz "OOGH!!!!"
-
-                    wiz "MY BEAUTIFUL WIZARD FACE!!!"
-
-                    rt "HAH Haaa!"
-
-                elif punch == 1 and moves % 2 == 1:
-                    no "Wizpotato dodges!!!"
-
-                    show rt hurt at bounce
-
-                    rt "WHAT!!"
-
-                    rt "YOU CAN'T DO THAT!!!"
-
-                    show wiz smug
-
-                    wiz "Who said not??"
-
-                    rt "WAHHHHHHHhh!"
-
-                elif punch == 0 and moves % 2 == 1:
-                    no "Wizpotato dodges Rocktato's punch!"
-
-                    rt "WHAT HOW??"
-
-
-                elif moves % 2 == 1:
-                    no "Wizpotato dodges again!!"
-
-                    show rt hurt at bounce
-
-                    if moves == 3:
-                        wiz "NYeh!!"
-
-                        wiz "I can do this all day!"
-
-                    elif moves == 5:
-                        wiz "Woop!"
-
-                        wiz "Missed me!!"
-
-                        rt "GAH!!!"
-
-                        rt "STOP DOING THAT!"
-
-                    elif moves == 7:
-                        wiz "Caaaaan't catch me!"
-
-                        wiz "Nyehh heee!"
-
-                    elif moves == 9:
-                        wiz "Figure it out yet?"
-
-                        rt "AAAAAAa!"
-
-                    elif moves == 11:
-                        wiz "Wow you suck at this!!!"
-
-
-                elif moves % 2 == 0:
-                    $ chara_healths[0] = chara_healths[0] - 10.999
-                    if chara_healths[0] < 0:
-                        $ chara_healths[0] = 0
-                        jump ep2_battlewin
-
-                    if moves == 2:
-                        wiz "OWWWww!!!!"
-
-                    elif moves == 4:
-                        wiz "AAAaaagggg!!!!!!"
-
-                        wiz "Dude,,"
-
-                    elif moves == 6:
-                        wiz "SKKDSKBAbabpBPABAPBAPBapBAPB."
-
-                        wiz "My face is gonna need some ice or something after this I stg."
-
-                    elif moves == 8:
-                        wiz "w"
-
-                        show wiz cry at bounce
-
-                        wiz "WAHHHHHHAHHHHHHHhhh!!"
-
-                    elif moves == 10:
-                        wiz "BBgbgbgbg"
-
-                        wiz "Ahhahha {w=0.2}owww.."
-
-                    elif moves == 12:
-                        if chara_healths[0] < 0:
-                            jump ep2_battlewin
-
-                        else:
-                            wiz "STBTTOOOPPPP!!!"
-
-                            wiz "NOOO MOReeee!!"
-
-                $ punch = punch + 1
-                $ moves = moves + 1
-
-
-            "Mr. Rock":
-                $ renpy.block_rollback()
-
-                show rt fight slap at shake(0.05, 4)
-                show mr at transform_offset(x=-750, y=-120, speed=0.2)
-
-                show wiz hurt at shake(0.05, 4)
-
-                $ chara_healths[0] = chara_healths[0] - 4
-                if chara_healths[0] < 0:
-                    $ chara_healths[0] = 0
-                    jump ep2_battlewin
-
-                rt "HYEAH!!!"
-
-                if mrthrow == 0:
-                    no "Rocktato throws Mr. Rock and hits Wizpotato's face!"
-
-                    wiz "WAHhhhhHHHhhhHHHhhhHHH!!"
-
-                    wiz "WHY IS IT ALWAYS MY FACE!!"
-
-                    wiz "EVERYTIME YOU HIT ME??"
-
-                    show rt confused
-
-                    rt "I dunno... {w=0.3}Your face is kinda your entire body.."
-
-                    show wiz sad 2 at bounce
-
-                    wiz "True.."
-
-                    show wiz hurt at shake(0.05, 4)
-
-                    wiz "HEY GET OFF ME!"
-
-                    show mr at transform_offset(0, 0, 0)
-
-                    wiz "Ughh"
-
-                elif mrthrow > 0 and mrthrow < 13:
-                    no "Mr. Rock hits Wizpotato's face again!"
-
-                    $ funnywizline = funnywizlines[mrthrow]
-
-                    wiz "[funnywizline]"
-
-                    show mr at transform_offset(0, 0, 0)
-
-
-                $ mrthrow = mrthrow + 1
-                $ moves = moves + 1
-
-            "Dance":
-                $ renpy.block_rollback()
-
-                show rt joy 2 at spinny
-
-                show wiz sad
-
-                rt "WEeeeeeeeeeeeeeeeeeeeeeeeeee"
-
-                $ moves = moves + 1
-
-
-
-        # WIZPOTATO MOVE
-
-        if moves == 1:
-            show wiz angey 2 at bounce
-
-            if mrthrow < 1 and punch < 1:
-                wiz "A"
-
-                wiz "WHAT ARE YOU DOING??"
-
-                wiz "Ehhh nevermind that."
-
-                show wiz sad 2
-
-                wiz "Uhh.."
-
-                show wiz evil 2 at bounce
-
-            else:
-                wiz "GRmrgmrmgrm..."
-
-                wiz "You think I can't fight back??"
-
-                wiz "Ahaha..."
-
-                show wiz evil 2 at bounce
-
-                wiz "AHAHAHA!!!"
-
-            no "He pulls a lever and it summons a giant magic fist, {w=0.3}SQUASHING ROCKTATO!"
-
-            show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
-
-            $ chara_healths[1] = chara_healths[1] - 10
-
-            rt "GACK!!!"
-
-            if persistent.ep1_squished == True:
-                wiz "THAT'S REVENGED FOR THE SQUISHING THAT I WENT THROUGH LAST TIME!!"
-
-                wiz "NYERH HERHEHRHERHHHH!!!"
-
-            else:
-                wiz "NYERH HERH!!!"
-
-                wiz "Check it out!!"
-
-                show wiz o at bounce
-
-                wiz "It's my {w=0.3}BOY SQUISHER!"
-
-            show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
-
-            no "Rocktato unsquishes himself."
-
-            rt "oW DUDE!!"
-
-        elif moves == 2:
-            show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
-
-            $ chara_healths[1] = chara_healths[1] - 10
-
-            rt "STOP DOING THAT????"
-
-            show wiz smug
-
-            wiz "nah"
-
-            rt "M."
-
-            show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
-
-        elif moves == 3:
-            show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
-
-            $ chara_healths[1] = chara_healths[1] - 10
-
-            rt "AAAGG!!"
-
-            show wiz happy
-
-            wiz "Hehe squish"
-
-            show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
-
-        elif moves == 4:
-            show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
-
-            $ chara_healths[1] = chara_healths[1] - 10
-
-            rt "BAHHhh!"
-
-            show wiz happy at bounce
-
-            wiz "This is the most fun I've had in hours!"
-
-            show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
-
-        elif moves == 5:
-            show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
-
-            $ chara_healths[1] = chara_healths[1] - 10
-
-            rt "BLEEhh!"
-
-            show wiz evil 2
-
-            wiz "NOW YOU KNOW HOW IT FEELS, {w=0.2}HAAHH!!!"
-
-            show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
-
-        elif moves == 6:
-            show wiz bruh at bounce
-
-            wiz "Okay I'm done, I'm bored with the squashy thing.."
-
-            wiz "NEW MOVE!!!"
-
-            wiz "UH... {w=0.2}when I come up with it."
-
-            wiz "Yeah... {w=0.2}in a few more moves you're gonna be TOAST!!!"
-
-        elif moves == 9:
-            show rt smug at bounce
-
-            rt "How's that 'super move' comin' along??"
-
-            show wiz hurt at bounce
-
-            wiz "IT'S COMIN' ALONG VERY SMOOTHLY SHUT UP!!!"
-
-        elif moves == 11:
-            show wiz evil 3
-
-            wiz "One last move and then my super ultra secret power up uh.. {w=0.2}awesome move will be UNLEASED!!"
-
-        elif moves == 12:
-            show wiz evil 2
-
-            wiz "YOU READY TO BE ABSOLUTELY DEMOLISHED???"
-
-
-        jump ep2_battle1
-
-
-
-    label ep2_battlewin:
-        $ saveable = True
-
-        wiz "A.."
-
-        wiz "This is IMPOSSIBLE!!"
-
-        show wiz screaming at bounce
-
-        hide screen battle_health with dissolve
-
-        wiz "I'M WIZPOTATO!!"
-
-        wiz "THE GREATEST VILLAIN TO EVER YEAH!"
-
-        wiz "The guy that made sentient robots JUST so they could feel the pain that I feel on a daily basis."
-
-        wiz "THe LEVER MAN!!"
-
-        show wiz cry
-
-        wiz "H- {w=0.3}HOW??"
-
-        wiz "HOW COULD THIS HAPPEN?"
-
-        show rt joy at bounce
-
-        rt "Because we're better than you!"
-
-        mr "{w=2.0}."
-
-        show rt mad
-
-        rt "Now.."
-
-        rt "The orphans."
-
-        rt "Hand 'em over."
-
-        show wiz sad
-
-        wiz ""
-
-        wiz "Hm."
-
-        show wiz evil
-
-        wiz "Hmhmhmmhmh.."
-
-        show wiz happy
-
-        wiz "Herh herh herh..."
-
-        show wiz evil 2
-
-        wiz "HERH HERH HERHHH!!"
-
-        # FAVORITE JOKE OF THE EPISODE FJOTE
-
-        wiz "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH{w}HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH{w}H"
-
-        show wiz smug
-
-        wiz "Hah..."
-
-        wiz "I do not think I will."
-
-        show rt disgusted
-
-        rt "What are you..."
-
-        no "Wizpotato, {w=0.2}as a last ditch attempt, "
-
-        extend "whipped out his gun."
-
-        show wiz evil 2
-
-        show rt disturbed
-
-        rt "WOAHH!!!"
-
-        wiz "NYERH HERH HERHHH!!!!!!"
-
-        wiz "WHAT ARE YOU GONNA DO?"
-
-        rt "Uhh.. {w=0.2}UHHH.."
-
-        show rt o at bounce
-
-        rt "OH!!"
-
-        rt "Duh.."
-
-        menu:
-            "TRANSFORM!!!":
-                $ renpy.block_rollback()
-                space "{nw}"
-
-                show fx white with dissolve
-
-                space ""
-
-                show rt trueform evil 2 at bounce, Position(ypos=655)
-
-                hide fx white
-
-                space ""
-
-                # TODO
-
-                no "Wizpotato shot!! {w=0.2}But the bullet just bounced off of Rocktato's rock-potatoey skin!"
-
-                show rt trueform evil 3
-
-                rt "HAH!! {w=0.2}TAKE THAT!!"
-
-                show wiz cry at bounce
-
-                wiz "NOOOOOOOOOOOOOOOOOOOOOOOOOO!!"
-
-                show rt trueform smug
-
-                rt "End of the line for YOU! {w=0.2}Villain boy.."
-
-                show mr at bounce
-
-                mr "!!"
-
-                show wiz angey 2
-
-                wiz "Ughh..."
-
-                wiz "You..."
-
-                show wiz angey
-
-                wiz ""
-
-                show wiz preach at bounce
-
-                wiz "Well..."
-
-                wiz "I didn't want to have to resort to this.."
-
-                wiz "But.."
-
-                show wiz evil 2
-
-                no "WIZPOTATO WHIPPED OUT A ROCKET LAUNCHER!!"
-
-                show rt trueform confused
-
-                wiz "THERE IS NO WAY I'M LETTING YOU WIN ANOTHER TIME!!"
-
-                wiz "SAY BYEE BYEE HERO BOYY!!!"
-
-                show rt trueform hurt at shake(rate=0.01,strength=3,loop=4)
-
-                rt "AH!!"
-
-                show fx black
-
-                $ renpy.pause(5.0, hard=True)
-
-                space ""
-
-                jump ep2_end
-
-
-
-
-    label ep2_battlelose:
-        $ saveable = True
-
-        show wiz evil 2 at bounce
-
-        wiz "NYEHEHEHEH!!!"
-
-        wiz "THE TIME HAS COME!!"
-
-        wiz "FOR YOU TO DIE!!!!"
-
-        show wiz bruh
-
-        wiz "Well.. not really..."
-
-        show wiz smug at bounce
-
-        wiz "But your HP bar is gonna go dooooooooownnnnnnnnnnnnn.."
-
-        show rt disgusted at bounce
-
-        rt "GASP!!"
-
-        show wiz evil 3 at bounce
-
-        no "The evil man flipped a lever and a GIANT RUMBOY FELL OUT OF THE SKY!!!"
-
-        show wiz 2 onrumboy at bounce
-
-        wiz "REMEMBER THIS THING???"
-
-        wiz "There was NO WAY I was gonna let this bad boy go to waste!"
-
-        wiz "MEET: {w=0.5}RUMBOY!!!"
-
-        show rt cry 2
-
-        rt "OH NO!!!"
-
-        show rt happy
-
-        rt "What does it do?"
-
-        wiz "Watch!"
-
-        no "He flips a lever."
-
-        no "AND THE RUMBOY STARTS SUCKING!!!"
-
-        show rt hurt at fast_shaking
-
-        pause 0.01
-
-        show mr at fast_shaking
-
-        no "AND IT SUCKED HARD!!"
-
-        if persistent.episode_fin == 1:
-            no "That's not funny."
-
-            no "Sh- {w=0.2}shut up."
-
-        rt "MR. ROCK!!!"
-
-        show mr at transform_offset(-900, -100, 0.5), transform_rotate(27, speed=0.4), transform_zoom(x=0.3, y=0.3, rate=0.4), transform_fade_out(0.9)
-
-        no "Mr. Rock got sucked up into the Rumboy."
-
-        rt "NOOOO!!!!"
-
-        no "Rocktato was holding onto little blades of grass for his dear life."
-
-        show rt disturbed
-
-        rt "HOw do I.."
-
-        rt "HOW DO I GET OUT OF THIS!!!??"
-
-        rt ""
-
-        show rt joy 2
-
-        rt "Oh wait."
-
-        menu:
-            "TRANSFORM!!!":
-                $ renpy.block_rollback()
-                space "{nw}"
-
-                show fx white with dissolve
-
-                rt "AH HAH!!!!!"
-
-                hide rt
-
-                show rt trueform cool at bounce, Position(xpos=820, ypos=655)
-
-                hide fx white
-
-                space ""
-
-                wiz "You idiot."
-
-                show rt trueform o
-
-                rt "Oh shoot."
-
-                rt "This form doesn't have hands.."
-
-                rt "I can't hold onto grass."
-
-                show rt trueform cry at transform_offset(-600, -50, 0.5), transform_rotate(27, speed=0.4), transform_zoom(x=0.3, y=0.3, rate=0.4), transform_fade_out(0.9)
-
-                rt "AHHHHHHHHHHHHHHHHHHHHHHHHhhhhhhh{size=15}hhh!{/size}"
-
-                show fx black with dissolve
-
-                # AUDIO WHERE HE GETS SUCKED UP AND DIES AND THEN IT BLOWS UP
-
-                $ renpy.pause(5.0, hard=True)
-
-                $ chara_healths[1] = chara_healths[1] - 10
-
-                $ renpy.pause(4.3, hard=True)
-
-                $ chara_healths[1] = chara_healths[1] - 10
-
-                $ renpy.pause(0.2, hard=True)
-
-                $ chara_healths[1] = chara_healths[1] - 10
-
-                $ renpy.pause(0.3, hard=True)
-
-                $ chara_healths[1] = chara_healths[1] - 10
-
-                $ renpy.pause(3.2, hard=True)
-
-                $ chara_healths[1] = chara_healths[1] - 3
-
-                $ renpy.pause(2.6, hard=True)
-
-                $ chara_healths[1] = chara_healths[1] - 3
-
-                $ renpy.pause(2.1, hard=True)
-
-                $ chara_healths[1] = chara_healths[1] - 3
-
-                $ renpy.pause(5.0, hard=True)
-
-                $ chara_healths[1] = chara_healths[1] - 1
-
-                space "{w=0.3}{nw}"
-
-                hide screen battle_health with dissolve
-
-                space ""
-
-
-    label ep2_end:
-        hide fx
-
-        hide wiz
-
-        hide rt
-
-        hide mr
-
-        show bg swamp
-
-        show ph thankful at right
-
-        ph ""
-
-        ph "hehe. {w=0.5}that's a funny photo."
-
-        show ph at bounce
-
-        ph ""
-
-        show ph bruh
-
-        ph ""
-
-        ph "that isn't as funny."
-
-        show ph at bounce
-
-        ph ""
-
-        show ph o 3
-
-        ph ""
-
-        ph "now that's funny"
-
-        rt_que "{size=15}aaa{/size}aaaaaaAAAAAAAAAAAAAAAHHH!"
-
-        show rt hurt at transform_rotate(degs=180.0), Position(xpos=100, ypos=300), shake(rate=0.01,strength=10,loop=4)
-
-        show mr at transform_rotate(degs=180.0), Position(xpos=-200, ypos=500), shake(rate=0.01,strength=10,loop=3)
-
-        show ph scared 2 at shake(rate=0.005,strength=8,loop=5)
-
-        rt "BBBNnngg!!!"
-
-        ph "WAHHHHH!!!!!!"
-
-        rt "WAAAAAAAAAAAAAHHH!!!!!!!!"
-
-        ph "WHAAAAAATT THE HELLL???"
-
-        hide mr
-
-        show rt happy at bounce, Position(xpos=300, ypos=0)
-
-        show mr at Position(xpos=0, ypos=-130), bounce
-
-        rt "O hey Phrog!!"
-
-        show ph at shake(rate=0.005,strength=20,loop=15)
-
-        ph "WHAAAAAAAAAT??"
-
-        ph "WH- {w=0.3}WHERE DID YOU COME FROM???!!"
-
-        show rt sad 2
-
-        rt "I was fighting Wizpotato..."
-
-        rt "And lost..."
-
-        show ph smug
-
-        ph "pfft lol."
-
-        show rt cry 2
-
-        rt "WAIT NO!!! {w=0.2}WE LOST!!!!"
-
-        mr "{w=0.6}.{w=0.6}.{w=0.6}."
-
-        show rt mad at bounce
-
-        show ph o 2
-
-        rt "Dang it!"
-
-        show rt sad 2
-
-        rt "Those.."
-
-        rt "Those poor orphans..."
-
-        show rt disgusted
-
-        rt "They never stood a chance."
-
-        show fx black
-
-        space ""
-
-        if persistent.episode_fin == 1:
-            $ persistent.episode_fin = 2
-
-        $ persistent.mainmenu_img = 3
-
-
-        return()
+    # # NOT FLASHBACK
+    #
+    # show bg citypark
+    #
+    # show wiz happy at left, Position(ypos=605)
+    #
+    # show mr at Position(xpos=1100, ypos=580)
+    #
+    # show rt bruh at Position(xpos=820)
+    #
+    # wiz "Ah... {w}those were some good times.."
+    #
+    # show rt exasperated
+    #
+    # rt "DO YOU SERIOUSLY??"
+    #
+    # rt "HAVE TO FLASH BACK???"
+    #
+    # rt "TO THE FIRST TIME WE MET???"
+    #
+    # show rt with hpunch
+    #
+    # rt "EVERY?? {w=0.2}{nw}"
+    #
+    # show rt with hpunch
+    #
+    # extend "TIME?? {w=0.2}{nw}"
+    #
+    # show rt with hpunch
+    #
+    # extend "WE DUEL???"
+    #
+    # show wiz sad
+    #
+    # wiz ""
+    #
+    # show wiz preach
+    #
+    # wiz "Yes."
+    #
+    # rt ""
+    #
+    # wiz "But anyway."
+    #
+    # show wiz evil 2 at bounce
+    #
+    # wiz "I have this entire ORPHANAGE IN A CAGE!!!"
+    #
+    # wiz "What are you gonna do about it?"
+    #
+    # show rt confused
+    #
+    # rt "Good.. {w=0.2}question..."
+    #
+    # no "Rocktato considered 'saving,' as Phrog advised."
+    #
+    # no "He still didn't know what it meant."
+    #
+    # show rt joy 2 at bounce
+    #
+    # rt "OKAY!!!"
+    #
+    # rt "I have decided..."
+    #
+    # show rt proud at bounce
+    #
+    # rt "WE'RE!! {w=0.3}Gonna BEAT YOU UP!!"
+    #
+    # show mr at bounce
+    #
+    # mr "!!!"
+    #
+    # $ renpy.block_rollback()
+    #
+    # $ saveable = False
+    #
+    #
+    # show rt fight idle
+    #
+    # show wiz fight idle
+    #
+    # play music "audio/music/too much effort for a one off rocktato joke but whatever lol.mp3"
+    #
+    # show fx battlestart at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
+    #
+    # pause 1.0
+    #
+    # hide fx battlestart with dissolve
+    #
+    # $ funnywizlines = [ "", "gRAA!!!", "AGHHH!!!", "OWIE!!!", "BWAAAGG!", "SCSCSHBBJdhgakKSHkvdjhvkshkkvjdhskvjhhalvjhldvhsldvh;advh;avh;advh;;;;;;;",
+    # "OOOOG!!!!", "GGGRRRR!!!!!!", "", "Hhhhhhhhhhhhh", "Scskcksbakcakscbskbc *beatboxing*", "SBSHSBHCBHSB OKay...", "I'M DONE WITH THIS!"]
+    #
+    #
+    # $ chara_healths = [ 100, 100 ]
+    # $ chara_maxhealths = [ 100, 100 ]
+    # $ chara_hppositions = [ (200, 490), (700, 490) ]
+    # show screen battle_health
+    #
+    # $ moves = 0
+    # $ punch = 0
+    # $ mrthrow = 0
+    #
+    #
+    # label ep2_battle1:
+    #
+    #     show rt fight idle at bounce
+    #     show wiz fight idle
+    #
+    #     $ choice_screen_type = "fight_choice"
+    #
+    #     if moves == 13:
+    #         jump ep2_battlelose
+    #
+    #
+    #     menu:
+    #         "{size=19}Epic Rocktato Super Punch!{/size}":
+    #             $ renpy.block_rollback()
+    #
+    #             show rt fight slap at shake(0.05, 4)
+    #             if moves % 2 == 0:
+    #                 show wiz hurt at shake(0.05, 4)
+    #             else:
+    #                 show wiz evil at bounce
+    #
+    #             play sound "audio/fx/punch.ogg"
+    #
+    #             rt "POW!!!"
+    #
+    #             if punch == 0 and moves == 0:
+    #                 $ chara_healths[0] = chara_healths[0] - 11.427
+    #                 if chara_healths[0] < 0:
+    #                     $ chara_healths[0] = 0
+    #
+    #                 no "Rocktato punches Wizpotato in the face!"
+    #
+    #                 no "Critical hit!! {w=1.0}{size=14}(I don't know what critical hit meanssss?){/size}"
+    #
+    #                 show wiz hurt at shake(0.05, 4)
+    #
+    #                 wiz "OOGH!!!!"
+    #
+    #                 wiz "MY BEAUTIFUL WIZARD FACE!!!"
+    #
+    #                 rt "HAH Haaa!"
+    #
+    #             elif punch == 1 and moves % 2 == 1:
+    #                 no "Wizpotato dodges!!!"
+    #
+    #                 show rt hurt at bounce
+    #
+    #                 rt "WHAT!!"
+    #
+    #                 rt "YOU CAN'T DO THAT!!!"
+    #
+    #                 show wiz smug
+    #
+    #                 wiz "Who said not??"
+    #
+    #                 rt "WAHHHHHHHhh!"
+    #
+    #             elif punch == 0 and moves % 2 == 1:
+    #                 no "Wizpotato dodges Rocktato's punch!"
+    #
+    #                 rt "WHAT HOW??"
+    #
+    #
+    #             elif moves % 2 == 1:
+    #                 no "Wizpotato dodges again!!"
+    #
+    #                 show rt hurt at bounce
+    #
+    #                 if moves == 3:
+    #                     wiz "NYeh!!"
+    #
+    #                     wiz "I can do this all day!"
+    #
+    #                 elif moves == 5:
+    #                     wiz "Woop!"
+    #
+    #                     wiz "Missed me!!"
+    #
+    #                     rt "GAH!!!"
+    #
+    #                     rt "STOP DOING THAT!"
+    #
+    #                 elif moves == 7:
+    #                     wiz "Caaaaan't catch me!"
+    #
+    #                     wiz "Nyehh heee!"
+    #
+    #                 elif moves == 9:
+    #                     wiz "Figure it out yet?"
+    #
+    #                     rt "AAAAAAa!"
+    #
+    #                 elif moves == 11:
+    #                     wiz "Wow you suck at this!!!"
+    #
+    #
+    #             elif moves % 2 == 0:
+    #                 $ chara_healths[0] = chara_healths[0] - 10.999
+    #                 if chara_healths[0] < 0:
+    #                     $ chara_healths[0] = 0
+    #                     jump ep2_battlewin
+    #
+    #                 if moves == 2:
+    #                     wiz "OWWWww!!!!"
+    #
+    #                 elif moves == 4:
+    #                     wiz "AAAaaagggg!!!!!!"
+    #
+    #                     wiz "Dude,,"
+    #
+    #                 elif moves == 6:
+    #                     wiz "SKKDSKBAbabpBPABAPBAPBapBAPB."
+    #
+    #                     wiz "My face is gonna need some ice or something after this I stg."
+    #
+    #                 elif moves == 8:
+    #                     wiz "w"
+    #
+    #                     show wiz cry at bounce
+    #
+    #                     wiz "WAHHHHHHAHHHHHHHhhh!!"
+    #
+    #                 elif moves == 10:
+    #                     wiz "BBgbgbgbg"
+    #
+    #                     wiz "Ahhahha {w=0.2}owww.."
+    #
+    #                 elif moves == 12:
+    #                     if chara_healths[0] < 0:
+    #                         jump ep2_battlewin
+    #
+    #                     else:
+    #                         wiz "STBTTOOOPPPP!!!"
+    #
+    #                         wiz "NOOO MOReeee!!"
+    #
+    #             $ punch = punch + 1
+    #             $ moves = moves + 1
+    #
+    #
+    #         "Mr. Rock":
+    #             $ renpy.block_rollback()
+    #
+    #             show rt fight slap at shake(0.05, 4)
+    #             show mr at transform_offset(x=-750, y=-120, speed=0.2)
+    #
+    #             show wiz hurt at shake(0.05, 4)
+    #
+    #             $ chara_healths[0] = chara_healths[0] - 4
+    #             if chara_healths[0] < 0:
+    #                 $ chara_healths[0] = 0
+    #                 jump ep2_battlewin
+    #
+    #             rt "HYEAH!!!"
+    #
+    #             if mrthrow == 0:
+    #                 no "Rocktato throws Mr. Rock and hits Wizpotato's face!"
+    #
+    #                 wiz "WAHhhhhHHHhhhHHHhhhHHH!!"
+    #
+    #                 wiz "WHY IS IT ALWAYS MY FACE!!"
+    #
+    #                 wiz "EVERYTIME YOU HIT ME??"
+    #
+    #                 show rt confused
+    #
+    #                 rt "I dunno... {w=0.3}Your face is kinda your entire body.."
+    #
+    #                 show wiz sad 2 at bounce
+    #
+    #                 wiz "True.."
+    #
+    #                 show wiz hurt at shake(0.05, 4)
+    #
+    #                 wiz "HEY GET OFF ME!"
+    #
+    #                 show mr at transform_offset(0, 0, 0)
+    #
+    #                 wiz "Ughh"
+    #
+    #             elif mrthrow > 0 and mrthrow < 13:
+    #                 no "Mr. Rock hits Wizpotato's face again!"
+    #
+    #                 $ funnywizline = funnywizlines[mrthrow]
+    #
+    #                 wiz "[funnywizline]"
+    #
+    #                 show mr at transform_offset(0, 0, 0)
+    #
+    #
+    #             $ mrthrow = mrthrow + 1
+    #             $ moves = moves + 1
+    #
+    #         "Dance":
+    #             $ renpy.block_rollback()
+    #
+    #             show rt joy 2 at spinny
+    #
+    #             show wiz sad
+    #
+    #             rt "WEeeeeeeeeeeeeeeeeeeeeeeeeee"
+    #
+    #             $ moves = moves + 1
+    #
+    #
+    #
+    #     # WIZPOTATO MOVE
+    #
+    #     if moves == 1:
+    #         show wiz angey 2 at bounce
+    #
+    #         if mrthrow < 1 and punch < 1:
+    #             wiz "A"
+    #
+    #             wiz "WHAT ARE YOU DOING??"
+    #
+    #             wiz "Ehhh nevermind that."
+    #
+    #             show wiz sad 2
+    #
+    #             wiz "Uhh.."
+    #
+    #             show wiz evil 2 at bounce
+    #
+    #         else:
+    #             wiz "GRmrgmrmgrm..."
+    #
+    #             wiz "You think I can't fight back??"
+    #
+    #             wiz "Ahaha..."
+    #
+    #             show wiz evil 2 at bounce
+    #
+    #             wiz "AHAHAHA!!!"
+    #
+    #         no "He pulls a lever and it summons a giant magic fist, {w=0.3}SQUASHING ROCKTATO!"
+    #
+    #         show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
+    #
+    #         $ chara_healths[1] = chara_healths[1] - 10
+    #
+    #         rt "GACK!!!"
+    #
+    #         if persistent.ep1_squished == True:
+    #             wiz "THAT'S REVENGED FOR THE SQUISHING THAT I WENT THROUGH LAST TIME!!"
+    #
+    #             wiz "NYERH HERHEHRHERHHHH!!!"
+    #
+    #         else:
+    #             wiz "NYERH HERH!!!"
+    #
+    #             wiz "Check it out!!"
+    #
+    #             show wiz o at bounce
+    #
+    #             wiz "It's my {w=0.3}BOY SQUISHER!"
+    #
+    #         show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
+    #
+    #         no "Rocktato unsquishes himself."
+    #
+    #         rt "oW DUDE!!"
+    #
+    #     elif moves == 2:
+    #         show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
+    #
+    #         $ chara_healths[1] = chara_healths[1] - 10
+    #
+    #         rt "STOP DOING THAT????"
+    #
+    #         show wiz smug
+    #
+    #         wiz "nah"
+    #
+    #         rt "M."
+    #
+    #         show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
+    #
+    #     elif moves == 3:
+    #         show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
+    #
+    #         $ chara_healths[1] = chara_healths[1] - 10
+    #
+    #         rt "AAAGG!!"
+    #
+    #         show wiz happy
+    #
+    #         wiz "Hehe squish"
+    #
+    #         show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
+    #
+    #     elif moves == 4:
+    #         show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
+    #
+    #         $ chara_healths[1] = chara_healths[1] - 10
+    #
+    #         rt "BAHHhh!"
+    #
+    #         show wiz happy at bounce
+    #
+    #         wiz "This is the most fun I've had in hours!"
+    #
+    #         show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
+    #
+    #     elif moves == 5:
+    #         show rt hurt at transform_zoom(1, 0.5), transform_offset(0, -100, 0) with hpunch
+    #
+    #         $ chara_healths[1] = chara_healths[1] - 10
+    #
+    #         rt "BLEEhh!"
+    #
+    #         show wiz evil 2
+    #
+    #         wiz "NOW YOU KNOW HOW IT FEELS, {w=0.2}HAAHH!!!"
+    #
+    #         show rt mad at transform_zoom(1, 1), transform_offset(0, 0, 0)
+    #
+    #     elif moves == 6:
+    #         show wiz bruh at bounce
+    #
+    #         wiz "Okay I'm done, I'm bored with the squashy thing.."
+    #
+    #         wiz "NEW MOVE!!!"
+    #
+    #         wiz "UH... {w=0.2}when I come up with it."
+    #
+    #         wiz "Yeah... {w=0.2}in a few more moves you're gonna be TOAST!!!"
+    #
+    #     elif moves == 9:
+    #         show rt smug at bounce
+    #
+    #         rt "How's that 'super move' comin' along??"
+    #
+    #         show wiz hurt at bounce
+    #
+    #         wiz "IT'S COMIN' ALONG VERY SMOOTHLY SHUT UP!!!"
+    #
+    #     elif moves == 11:
+    #         show wiz evil 3
+    #
+    #         wiz "One last move and then my super ultra secret power up uh.. {w=0.2}awesome move will be UNLEASED!!"
+    #
+    #     elif moves == 12:
+    #         show wiz evil 2
+    #
+    #         wiz "YOU READY TO BE ABSOLUTELY DEMOLISHED???"
+    #
+    #
+    #     jump ep2_battle1
+    #
+    #
+    #
+    # label ep2_battlewin:
+    #     $ saveable = True
+    #
+    #     wiz "A.."
+    #
+    #     wiz "This is IMPOSSIBLE!!"
+    #
+    #     show wiz screaming at bounce
+    #
+    #     hide screen battle_health with dissolve
+    #
+    #     wiz "I'M WIZPOTATO!!"
+    #
+    #     wiz "THE GREATEST VILLAIN TO EVER YEAH!"
+    #
+    #     wiz "The guy that made sentient robots JUST so they could feel the pain that I feel on a daily basis."
+    #
+    #     wiz "THe LEVER MAN!!"
+    #
+    #     show wiz cry
+    #
+    #     wiz "H- {w=0.3}HOW??"
+    #
+    #     wiz "HOW COULD THIS HAPPEN?"
+    #
+    #     show rt joy at bounce
+    #
+    #     rt "Because we're better than you!"
+    #
+    #     mr "{w=2.0}."
+    #
+    #     show rt mad
+    #
+    #     rt "Now.."
+    #
+    #     rt "The orphans."
+    #
+    #     rt "Hand 'em over."
+    #
+    #     show wiz sad
+    #
+    #     wiz ""
+    #
+    #     wiz "Hm."
+    #
+    #     show wiz evil
+    #
+    #     wiz "Hmhmhmmhmh.."
+    #
+    #     show wiz happy
+    #
+    #     wiz "Herh herh herh..."
+    #
+    #     show wiz evil 2
+    #
+    #     wiz "HERH HERH HERHHH!!"
+    #
+    #     # FAVORITE JOKE OF THE EPISODE FJOTE
+    #
+    #     wiz "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH{w}HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH{w}H"
+    #
+    #     show wiz smug
+    #
+    #     wiz "Hah..."
+    #
+    #     wiz "I do not think I will."
+    #
+    #     show rt disgusted
+    #
+    #     rt "What are you..."
+    #
+    #     no "Wizpotato, {w=0.2}as a last ditch attempt, "
+    #
+    #     extend "whipped out his gun."
+    #
+    #     show wiz evil 2
+    #
+    #     show rt disturbed
+    #
+    #     rt "WOAHH!!!"
+    #
+    #     wiz "NYERH HERH HERHHH!!!!!!"
+    #
+    #     wiz "WHAT ARE YOU GONNA DO?"
+    #
+    #     rt "Uhh.. {w=0.2}UHHH.."
+    #
+    #     show rt o at bounce
+    #
+    #     rt "OH!!"
+    #
+    #     rt "Duh.."
+    #
+    #     menu:
+    #         "TRANSFORM!!!":
+    #             $ renpy.block_rollback()
+    #             "{nw}"
+    #
+    #             show fx white with dissolve
+    #
+    #             ""
+    #
+    #             show rt trueform evil 2 at bounce, Position(ypos=655)
+    #
+    #             hide fx white
+    #
+    #             ""
+    #
+    #             # TODO
+    #
+    #             no "Wizpotato shot!! {w=0.2}But the bullet just bounced off of Rocktato's rock-potatoey skin!"
+    #
+    #             show rt trueform evil 3
+    #
+    #             rt "HAH!! {w=0.2}TAKE THAT!!"
+    #
+    #             show wiz cry at bounce
+    #
+    #             wiz "NOOOOOOOOOOOOOOOOOOOOOOOOOO!!"
+    #
+    #             show rt trueform smug
+    #
+    #             rt "End of the line for YOU! {w=0.2}Villain boy.."
+    #
+    #             show mr at bounce
+    #
+    #             mr "!!"
+    #
+    #             show wiz angey 2
+    #
+    #             wiz "Ughh..."
+    #
+    #             wiz "You..."
+    #
+    #             show wiz angey
+    #
+    #             wiz ""
+    #
+    #             show wiz preach at bounce
+    #
+    #             wiz "Well..."
+    #
+    #             wiz "I didn't want to have to resort to this.."
+    #
+    #             wiz "But.."
+    #
+    #             show wiz evil 2
+    #
+    #             no "WIZPOTATO WHIPPED OUT A ROCKET LAUNCHER!!"
+    #
+    #             show rt trueform confused
+    #
+    #             wiz "THERE IS NO WAY I'M LETTING YOU WIN ANOTHER TIME!!"
+    #
+    #             wiz "SAY BYEE BYEE HERO BOYY!!!"
+    #
+    #             show rt trueform hurt at shake(rate=0.01,strength=3,loop=4)
+    #
+    #             rt "AH!!"
+    #
+    #             show fx black
+    #
+    #             $ renpy.pause(5.0, hard=True)
+    #
+    #             ""
+    #
+    #             jump ep2_end
+    #
+    #
+    #
+    #
+    # label ep2_battlelose:
+    #     $ saveable = True
+    #
+    #     show wiz evil 2 at bounce
+    #
+    #     wiz "NYEHEHEHEH!!!"
+    #
+    #     wiz "THE TIME HAS COME!!"
+    #
+    #     wiz "FOR YOU TO DIE!!!!"
+    #
+    #     show wiz bruh
+    #
+    #     wiz "Well.. not really..."
+    #
+    #     show wiz smug at bounce
+    #
+    #     wiz "But your HP bar is gonna go dooooooooownnnnnnnnnnnnn.."
+    #
+    #     show rt disgusted at bounce
+    #
+    #     rt "GASP!!"
+    #
+    #     show wiz evil 3 at bounce
+    #
+    #     no "The evil man flipped a lever and a GIANT RUMBOY FELL OUT OF THE SKY!!!"
+    #
+    #     show wiz 2 onrumboy at bounce
+    #
+    #     wiz "REMEMBER THIS THING???"
+    #
+    #     wiz "There was NO WAY I was gonna let this bad boy go to waste!"
+    #
+    #     wiz "MEET: {w=0.5}RUMBOY!!!"
+    #
+    #     show rt cry 2
+    #
+    #     rt "OH NO!!!"
+    #
+    #     show rt happy
+    #
+    #     rt "What does it do?"
+    #
+    #     wiz "Watch!"
+    #
+    #     no "He flips a lever."
+    #
+    #     no "AND THE RUMBOY STARTS SUCKING!!!"
+    #
+    #     show rt hurt at fast_shaking
+    #
+    #     pause 0.01
+    #
+    #     show mr at fast_shaking
+    #
+    #     no "AND IT SUCKED HARD!!"
+    #
+    #     if persistent.episode_fin == 1:
+    #         no "That's not funny."
+    #
+    #         no "Sh- {w=0.2}shut up."
+    #
+    #     rt "MR. ROCK!!!"
+    #
+    #     show mr at transform_offset(-900, -100, 0.5), transform_rotate(27, speed=0.4), transform_zoom(x=0.3, y=0.3, rate=0.4), transform_fade_out(0.9)
+    #
+    #     no "Mr. Rock got sucked up into the Rumboy."
+    #
+    #     rt "NOOOO!!!!"
+    #
+    #     no "Rocktato was holding onto little blades of grass for his dear life."
+    #
+    #     show rt disturbed
+    #
+    #     rt "HOw do I.."
+    #
+    #     rt "HOW DO I GET OUT OF THIS!!!??"
+    #
+    #     rt ""
+    #
+    #     show rt joy 2
+    #
+    #     rt "Oh wait."
+    #
+    #     menu:
+    #         "TRANSFORM!!!":
+    #             $ renpy.block_rollback()
+    #             "{nw}"
+    #
+    #             show fx white with dissolve
+    #
+    #             rt "AH HAH!!!!!"
+    #
+    #             hide rt
+    #
+    #             show rt trueform cool at bounce, Position(xpos=820, ypos=655)
+    #
+    #             hide fx white
+    #
+    #             ""
+    #
+    #             wiz "You idiot."
+    #
+    #             show rt trueform o
+    #
+    #             rt "Oh shoot."
+    #
+    #             rt "This form doesn't have hands.."
+    #
+    #             rt "I can't hold onto grass."
+    #
+    #             show rt trueform cry at transform_offset(-600, -50, 0.5), transform_rotate(27, speed=0.4), transform_zoom(x=0.3, y=0.3, rate=0.4), transform_fade_out(0.9)
+    #
+    #             rt "AHHHHHHHHHHHHHHHHHHHHHHHHhhhhhhh{size=15}hhh!{/size}"
+    #
+    #             show fx black with dissolve
+    #
+    #             # AUDIO WHERE HE GETS SUCKED UP AND DIES AND THEN IT BLOWS UP
+    #
+    #             $ renpy.pause(5.0, hard=True)
+    #
+    #             $ chara_healths[1] = chara_healths[1] - 10
+    #
+    #             $ renpy.pause(4.3, hard=True)
+    #
+    #             $ chara_healths[1] = chara_healths[1] - 10
+    #
+    #             $ renpy.pause(0.2, hard=True)
+    #
+    #             $ chara_healths[1] = chara_healths[1] - 10
+    #
+    #             $ renpy.pause(0.3, hard=True)
+    #
+    #             $ chara_healths[1] = chara_healths[1] - 10
+    #
+    #             $ renpy.pause(3.2, hard=True)
+    #
+    #             $ chara_healths[1] = chara_healths[1] - 3
+    #
+    #             $ renpy.pause(2.6, hard=True)
+    #
+    #             $ chara_healths[1] = chara_healths[1] - 3
+    #
+    #             $ renpy.pause(2.1, hard=True)
+    #
+    #             $ chara_healths[1] = chara_healths[1] - 3
+    #
+    #             $ renpy.pause(5.0, hard=True)
+    #
+    #             $ chara_healths[1] = chara_healths[1] - 1
+    #
+    #             "{w=0.3}{nw}"
+    #
+    #             hide screen battle_health with dissolve
+    #
+    #             ""
+    #
+    #
+    # label ep2_end:
+    #     hide fx
+    #
+    #     hide wiz
+    #
+    #     hide rt
+    #
+    #     hide mr
+    #
+    #     show bg swamp
+    #
+    #     show ph thankful at right
+    #
+    #     ph ""
+    #
+    #     ph "hehe. {w=0.5}that's a funny photo."
+    #
+    #     show ph at bounce
+    #
+    #     ph ""
+    #
+    #     show ph bruh
+    #
+    #     ph ""
+    #
+    #     ph "that isn't as funny."
+    #
+    #     show ph at bounce
+    #
+    #     ph ""
+    #
+    #     show ph o 3
+    #
+    #     ph ""
+    #
+    #     ph "now that's funny"
+    #
+    #     rt_que "{size=15}aaa{/size}aaaaaaAAAAAAAAAAAAAAAHHH!"
+    #
+    #     show rt hurt at transform_rotate(degs=180.0), Position(xpos=100, ypos=300), shake(rate=0.01,strength=10,loop=4)
+    #
+    #     show mr at transform_rotate(degs=180.0), Position(xpos=-200, ypos=500), shake(rate=0.01,strength=10,loop=3)
+    #
+    #     show ph scared 2 at shake(rate=0.005,strength=8,loop=5)
+    #
+    #     rt "BBBNnngg!!!"
+    #
+    #     ph "WAHHHHH!!!!!!"
+    #
+    #     rt "WAAAAAAAAAAAAAHHH!!!!!!!!"
+    #
+    #     ph "WHAAAAAATT THE HELLL???"
+    #
+    #     hide mr
+    #
+    #     show rt happy at bounce, Position(xpos=300, ypos=0)
+    #
+    #     show mr at Position(xpos=0, ypos=-130), bounce
+    #
+    #     rt "O hey Phrog!!"
+    #
+    #     show ph at shake(rate=0.005,strength=20,loop=15)
+    #
+    #     ph "WHAAAAAAAAAT??"
+    #
+    #     ph "WH- {w=0.3}WHERE DID YOU COME FROM???!!"
+    #
+    #     show rt sad 2
+    #
+    #     rt "I was fighting Wizpotato..."
+    #
+    #     rt "And lost..."
+    #
+    #     show ph smug
+    #
+    #     ph "pfft lol."
+    #
+    #     show rt cry 2
+    #
+    #     rt "WAIT NO!!! {w=0.2}WE LOST!!!!"
+    #
+    #     mr "{w=0.6}.{w=0.6}.{w=0.6}."
+    #
+    #     show rt mad at bounce
+    #
+    #     show ph o 2
+    #
+    #     rt "Dang it!"
+    #
+    #     show rt sad 2
+    #
+    #     rt "Those.."
+    #
+    #     rt "Those poor orphans..."
+    #
+    #     show rt disgusted
+    #
+    #     rt "They never stood a chance."
+
+    show fx black
+
+    ""
+
+    if persistent.episode_fin == 1:
+        $ persistent.episode_fin = 2
+
+    $ persistent.mainmenu_img = 3
+
+
+    return()

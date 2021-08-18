@@ -6,13 +6,13 @@
 
     show bg black
 
-    space ""
+    ""
 
     show bg gamerbar at Position(xpos=480)
 
     show gin evil at Position(xpos=400), bounce
 
-    space ""
+    ""
 
     no "After a long hard day of beating up fires, {w=0.2}Gin the epic cowboy arrived at the saloon to get her lunchly dose of Mountain Dew G Fuel."
 
@@ -34,7 +34,7 @@
 
     show rt sad at right with easeinbottom
 
-    space ""
+    ""
 
     show gin o
 
@@ -211,7 +211,7 @@
 
     show fx black
 
-    space ""
+    ""
 
     hide fx black
 
@@ -393,7 +393,7 @@
 
     show fx black with dissolve
 
-    space ""
+    ""
 
     hide rt
 
@@ -408,7 +408,7 @@
 
     with dissolve
 
-    space "{w=0.6}.{w=0.6}.{w=0.6}."
+    "{w=0.6}.{w=0.6}.{w=0.6}."
 
     no "The two sped off into the city!"
 
@@ -450,7 +450,7 @@
 
     rt "WAHHHHHHHHHHHHHHHHH!!!!!!"
 
-    space "        "
+    "        "
 
     gin "HA HAA!!!!"
 
@@ -474,7 +474,7 @@
 
     no "They threw the cover off and then dove right into it."
 
-    space ""
+    ""
 
     gin "Alright, {w=0.2}cover your nose or somethin'."
 
@@ -516,7 +516,7 @@
 
     no "He shoots a few rounds, {w=0.2}creating a big enough hole for them to jump through."
 
-    space ""
+    ""
 
     rt "NICE!!"
 
@@ -653,7 +653,7 @@
 
     show fx white with dissolve
 
-    space ""
+    ""
 
     no "The fire quickly dissipated."
 
@@ -687,7 +687,7 @@
 
     show gin woah
 
-    space ""
+    ""
 
     no "Suddenly, {w=0.2}the blaring sirens of the firetrucks went off."
 
@@ -837,7 +837,7 @@
 
     show fx black with dissolve
 
-    space ""
+    ""
 
     hide rt
 
@@ -854,7 +854,7 @@
 
     with dissolve
 
-    space "{w=0.6}.{w=0.6}.{w=0.6}."
+    "{w=0.6}.{w=0.6}.{w=0.6}."
 
     hide fx
 
@@ -929,7 +929,7 @@
 
     hide rt with easeoutright
 
-    space ""
+    ""
 
     show obj 4 hostages at Position(xpos=1050)
 
@@ -1135,7 +1135,7 @@
 
     show fx black with dissolve
 
-    space ""
+    ""
 
 
     hide gin
@@ -1198,7 +1198,7 @@
 
     show fx black with dissolve
 
-    space ""
+    ""
 
 
 
@@ -1210,7 +1210,7 @@
 
     hide cg
 
-    space "{w=0.6}.{w=0.6}.{w=0.6}."
+    "{w=0.6}.{w=0.6}.{w=0.6}."
 
     gin "You're tired, {w=0.2}aren't ya?"
 
