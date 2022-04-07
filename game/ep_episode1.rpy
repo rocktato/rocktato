@@ -6,6 +6,7 @@ label start:
     stop music fadeout 1.0
 
 
+<<<<<<< HEAD:game/ep_episode1.rpy
     # play sound "audio/fx/windy.ogg" loop
     #
     # show bg lightblue
@@ -45,6 +46,27 @@ label start:
     # rt "You're probably wondering how I got into this situation."
     #
     # rt "Oh, {w=0.3}this is narration by the way."
+=======
+    image battlestarttext:
+        "gui/text/battle start.png"
+
+
+    play sound "audio/fx/windy.ogg" loop
+
+    show bg lightblue
+
+    show obj 1 rumboy at fast_shaking
+
+    space "{w=5.0}{size=-5}(LEFT CLICK or press SPACE to continue!){/size}"
+
+    play sound "audio/fx/crash.ogg"
+
+    show cg 1 rumboy crashed at hpunch
+
+    hide bg lightblue
+
+    hide obj
+>>>>>>> parent of 6ea2c7f (quicksave before i attempt to turn everything into 1080p):game/episode1.rpy
 
 
     show bg black
@@ -1185,11 +1207,11 @@ label start:
 
     play music "audio/music/too much effort for a one off rocktato joke but whatever lol.mp3"
 
-    show fx battlestart at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
+    show battlestarttext at truecenter, shake(rate=0.05,strength=1,loop=2) with dissolve
 
     pause 1.0
 
-    hide fx battlestart with dissolve
+    hide battlestarttext with dissolve
 
 
     $ chara_healths = [ 100, 100 ]
