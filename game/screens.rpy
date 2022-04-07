@@ -1294,11 +1294,11 @@ screen mm_preferences():
                     label _("window size")
                     text "(if in fullscreen, will switch to window mode)" size 23 color "#330066" font "gui/fonts/Rouli.ttf"
 
-                    textbutton "bite sized" action Preference("display", 0.3) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
-                    textbutton "640 x 360" action Preference("display", 0.5) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
-                    textbutton "960 x 540" action Preference("display", 0.75) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
-                    textbutton "1280 x 720" action Preference("display", 1.0) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
-                    textbutton "1920 x 1080" action Preference("display", 1.5) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton "bite sized" action Preference("display", 0.1) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    # textbutton "640 x 360" action Preference("display", 0.3) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton "960 x 540" action Preference("display", 0.5) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton "1280 x 720" action Preference("display", 0.666667) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
+                    textbutton "1920 x 1080" action Preference("display", 1.0) hover_sound "audio/ui/menu_hover.ogg" activate_sound "audio/ui/settings_menu_activate.ogg"
 
 
 
